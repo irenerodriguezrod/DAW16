@@ -70,11 +70,13 @@
         <img src="https://media.tenor.com/uj-429a6v-YAAAAi/pixel-art-gmail.gif" alt="Signo exclamación e interrogación" width="20">
         Asignaturas.
     </h2>
+    <p>A continuación se muestra una tabla con las diferentes asignaturas que se dan </p>
     <table>
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Abreviatura</th>
+                <th>Curso</th>
                 <th>Link</th>
             </tr>
         </thead>
@@ -82,11 +84,85 @@
             <tr>
                 <td>Lenguajes de Marcas y Sistemas de Gestión de Información</td>
                 <td>LMSGI</td>
+                <td>1º</td>
                 <td></td>
             </tr>
             <tr>
-                <td>Lenguajes de Marcas y Sistemas de Gestión de Información</td>
+                <td>Entornos de Desarrollo</td>
                 <td>ED</td>
+                <td>1º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Bases de Datos</td>
+                <td>BDD</td>
+                <td>1º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sistemas Informáticos</td>
+                <td>SI</td>
+                <td>1º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Programación</td>
+                <td>PROG</td>
+                <td>1º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Optativa</td>
+                <td>OPT</td>
+                <td>1º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Fundamentos de contenerización</td>
+                <td>FC</td>
+                <td>1º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Inglés orientado al ámbito de la informática</td>
+                <td>ING</td>
+                <td>1º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Itinerario Personal para la Empleabilidad</td>
+                <td>IPE</td>
+                <td>1º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Desarrollo web en entorno cliente</td>
+                <td>DWEC</td>
+                <td>2º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Desarrollo web en entorno servidor</td>
+                <td>DWES</td>
+                <td>2º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Despliegue de aplicaciones web</td>
+                <td>DAW</td>
+                <td>2º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Diseño de interfaces web</td>
+                <td>DIW</td>
+                <td>2º</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Empresa e iniciativa emprendedora</td>
+                <td>EIE</td>
+                <td>2º</td>
                 <td></td>
             </tr>
         </tbody>
