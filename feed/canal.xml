@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?> <!--Declaración del tipo de documento: versión XML y codificación de los caracteres usados-->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">  <!--Especificación RSS-->
+    
+    <channel> <!--Contenido del RSS-->
+        <atom:link href="https://daw116.ieslossauces.es/feed/rss.xml" rel="self" type="application/rss+xml"/>
+        <language>es-ES</language>
+        <title>DAW116 - Irene Rodríguez Rodríguez</title> <!--Nombre del canal-->
+        <link>http://daw116.ieslossauces.es/</link> <!--URL del sitio web-->
+        <description>Canal RRS de la página web DAW116 - Irene Rodríguez. Aquí se publicarán las modificaciones de las prácticas realizadas durante el curso</description> <!--Descripción del sitio web-->
+        <image>
+            <url>https://daw116.ieslossauces.es/feed/images/logo.png</url>
+            <title>DAW116 - Irene Rodríguez Rodríguez</title>
+            <link>https://daw116.ieslossauces.es/</link>
+        </image>
+        <category>Educación</category>
+        <managingEditor>irene.rodrod.2@educa.jcyl.es(Irene Rodríguez)</managingEditor>
+        <lastBuildDate>Wed, 9 Apr 2025 18:00:00 +0100</lastBuildDate>
+        <skipDays>
+            <day>Saturday</day>
+            <day>Sunday</day>
+        </skipDays>
+        <skipHours>
+            <hour>0</hour>
+            <hour>1</hour>
+            <hour>2</hour>
+            <hour>3</hour>
+            <hour>4</hour>
+            <hour>5</hour>
+            <hour>6</hour>
+            <hour>7</hour>
+            <hour>8</hour>
+        </skipHours>
+        <copyright>2025 Irene Rodríguez. Todos los derechos reservados.</copyright>
+        
+        <!-- Primer item o publicación (unidad 2, práctica 1) -->
+        <item>
+            <title>Unidad 2. Práctica 1. Información de los volcanes más importantes del mundo</title>
+            <link>http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad2/01/</link> <!--Es el link de la práctica que se ha subido-->
+            
+            <description><![CDATA[
+        <img src="https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad2/01/media/images/banner.jpeg" width="100" alt="Imagen volcán"/><br/>
+        En esta práctica se recopila información sobre los volcanes más importantes del mundo, con imágenes, datos y curiosidades.
+        ]]></description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>Tema 2</category>
+            
+            <pubDate>Tue, 10 Dec 2025 15:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad2/01/</guid>
+        </item>
+        
+        <!-- Publicación 2. Añadido el link de GitHub, verificadas todas las páginas-->
+        <item>
+            <title>Añadido el link al repositorio de GitHub</title>
+            <link>https://github.com/irenerodriguezrod/116LMSGIProyectoLMSGI</link>
+            
+            <description><![CDATA[ 
+        <img src="https://daw116.ieslossauces.es/webroot/media/github-logo.png" width="50" height="50" alt="Logo GitHub"/> 
+        Se ha agregado el link que lleva al repositorio que está en la web de GitHub
+        ]]></description>
+            
+            <category>Educación</category>
+            
+            <pubDate>Tue, 14 Jan 2025 10:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="false">https://github.com/irenerodriguezrod/116LMSGIProyectoLMSGI</guid>
+        </item>
+        
+        <!-- Publicación 3. Agregadas nuevas actividades UD4 -->
+        <item>
+            <title>Agregadas nuevas actividades UD4</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/index.html#UD04</link>
+            
+            <description>
+                Se han agregado nuevas prácticas realizadas en la unidad 4.
+            </description>
+            
+            <category>Educación</category>
+            
+            <pubDate>Tue, 21 Jan 2025 10:00:00 +0100</pubDate>
+            
+            <guid isPermaLink="false">Unidad 4 - Actividad 1</guid>
+        </item>
+        
+        <!-- Publicación 4. Markdown UD5 -->
+        <item>
+            <title>Agregadas nuevas actividades UD5</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/index.html#UD05</link>
+            <description>
+                Se han agregado nuevas prácticas realizadas en la unidad 5. Consiste en un documento MarkDown(MD) con rutas XPath de un ejercicio realizado en el tema 4 (el de la universidad)
+            </description>
+            <category>Educación</category>
+            <pubDate>Tue, 28 Jan 2025 10:00:00 +0100</pubDate>
+            <guid isPermaLink="false">Unidad 5 - Actividad 1</guid>
+        </item>
+        
+        <!-- Publicación 5. Agregada nueva sección en el índice de LMSGI -->
+        <item>
+            <title>Agregada nueva sección en el índice de LMSGI</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/index.html</link>
+            <description>
+                Agregada nueva sección "exámenes" al índice de la asignatura.
+            </description>
+            <category>Educación</category>
+            <pubDate>Tue, 2 Feb 2025 10:00:00 +0100</pubDate>
+            <guid isPermaLink="false">Sección exámenes</guid>
+        </item>
+        
+        <!-- Publicación 6. Nuevas prácticas UD5 -->
+        <item>
+            <title>Agregadas nuevas actividades UD5</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/index.html#UD05</link>
+            <description>
+                Se han agregado nuevas prácticas realizadas en la unidad 5: 01, 02, 04, 05 y 06
+            </description>
+            <category>Educación</category>
+            <pubDate>Tue, 20 Feb 2025 10:00:00 +0100</pubDate>
+            <guid isPermaLink="false">Unidad 5</guid>
+        </item>
+        
+        <!-- Publicación 7. Rediseño web (versión 2)-->
+        <item>
+            <title>Rediseño index principal de la web (Versión 2)</title>
+            <link>https://daw116.ieslossauces.es/</link>
+            <description>
+                <![CDATA[ <img src="https://daw116.ieslossauces.es/webroot/images/rediseñoWebV2.png" width="50" height="50" alt="Rediseño Web V2"/> ]]>
+                Se ha cambiado el diseño principal de la web
+            </description>
+            <category>Educación</category>
+            <pubDate>Tue, 27 Feb 2025 10:00:00 +0100</pubDate>
+            <guid isPermaLink="false">Nuevo diseño V2</guid>
+        </item>
+        
+        <!-- Publicación 8. Unidad 2, practica 3(CSS, formulario)-->
+        <item>
+            <title>Agregados estilos</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad2/03/</link>
+            <description><![CDATA[ <img src="https://daw116.ieslossauces.es/webroot/images/estilosFormulario.png" width="50" height="50" alt="Nuevos estilos para el formulario"/>
+        Se han agregado nuevos estilos al formulario ]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>Tema 2</category>
+            
+            <pubDate>Thu, 6 Mar 2025 15:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad2/03/</guid>
+        </item>
+        
+        <!-- P9. -->
+        <item>
+            <title>Agregada nueva asignatura</title>
+            <link>http://daw116.ieslossauces.es/116EDProyectoED</link>
+            <description><![CDATA[ 
+        Se ha agregado una nueva asignatura: Entornos de desarrollo(ED) ]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>ED</category>
+            
+            <pubDate>Wed, 9 Mar 2025 15:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">http://daw116.ieslossauces.es/116EDProyectoED</guid>
+        </item>
+        
+        <!-- P10. -->
+        <item>
+            <title>Agregada nueva tarea</title>
+            <link>http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/01</link>
+            <description><![CDATA[ 
+        Se ha agregado una nueva actividad al tema 3: UD03A01. Acceso y modificación de elementos del DOM ]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Wed, 9 Apr 2025 17:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/01</guid>
+        </item>
+        
+        <!-- P11. -->
+        <item>
+            <title>Agregada nueva tarea</title>
+            <link>http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/02</link>
+            <description><![CDATA[ 
+        Se ha agregado una nueva actividad al tema 3: UD03A02. Añadir elementos al DOM ]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Wed, 9 Apr 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/02</guid>
+        </item>
+        
+        <!-- P12. -->
+        <item>
+            <title>Agregada corrección y pie de página: UD03A02</title>
+            <link>http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/02</link>
+            <description><![CDATA[ 
+        Se ha modificado la actividad del tema 3: UD03A02. Se ha añadido un pie de página y corregido el script ]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Sat, 27 Apr 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/02</guid>
+        </item>
+        
+        <!-- P13. -->
+        <item>
+            <title>Agregada nueva actividad: UD03A03</title>
+            <link>http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/03</link>
+            <description><![CDATA[ 
+                Juego del tablero que genera imágenes aleatorias]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Sun, 27 Apr 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/03</guid>
+        </item>
+        
+        <!-- P14. -->
+        <item>
+            <title>Modificados errores: UD03</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/index.html#UD03</link>
+            <description><![CDATA[ 
+                Corregida la ruta del nombre en el footer]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Wed, 30 Apr 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/index.html#UD03</guid>
+        </item>
+        
+        <!-- P15. -->
+        <item>
+            <title>Agregado tema 6, ejercicio 1: UD06A01</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad6/01/index.html</link>
+            <description><![CDATA[ 
+                Creación de un HTML que carga un documento JSON para cargar datos de una persona]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Mon, 05 May 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad6/01/index.html</guid>
+        </item>
+        
+        <!-- P16. -->
+        <item>
+            <title>Agregadas mejoras al ejercicio: UD03A03</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/03/index.html</link>
+            <description><![CDATA[ 
+                Agregadas mejoras al ejercicio: se han añadido 2 botones (rellenar y vaciar tablero) además de mejorar el hover (realizado con js, anteriormente en css) y agregar las funciones descritas anteriormente al script]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Wed, 07 May 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad6/01/index.html</guid>
+        </item>
+        
+        <!-- P17. -->
+        <item>
+            <title>Agregadas mejoras al ejercicio: UD03A03</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/03/index.html</link>
+            <description><![CDATA[ 
+                Agregadas mejoras al ejercicio: se han añadido 2 botones (rellenar y vaciar tablero) además de mejorar el hover (realizado con js, anteriormente en css) y agregar las funciones descritas anteriormente al script]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Wed, 07 May 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad3/03/index.html</guid>
+        </item>
+        
+        <!-- P18. -->
+        <item>
+            <title>Agregado tema 6, ejercicio 2: UD06A02</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad6/02/index.html</link>
+            <description><![CDATA[ 
+                Consultas con XQuery]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Mon, 19 May 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad6/02/index.html</guid>
+        </item>
+        
+        <!-- P18. -->
+        <item>
+            <title>Agregado tema 6, ejercicio 4: UD06A04</title>
+            <link>https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad6/04/index.html</link>
+            <description><![CDATA[ 
+                Consultas de XQuery. Se ha utilizado BaseX para la realización de las mismas]]>
+            </description>
+            
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>LMSGI</category>
+            
+            <pubDate>Wed, 21 May 2025 18:00:00 +0100</pubDate>
+            
+            <author>irene.rodrod.2@educa.jcyl.es (Irene Rodríguez)</author>
+            
+            <guid isPermaLink="true">https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad6/04/index.html</guid>
+        </item>
+
+    </channel>
+    
+</rss>
