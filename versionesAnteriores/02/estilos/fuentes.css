@@ -1,0 +1,11 @@
+/*Tipografía para el H1*/
+@font-face {
+    font-family: 'TitanOne-Regular';
+    src: url(/webroot/fonts/Titan_One/TitanOne-Regular.ttf);
+}
+
+/*Tipografía para el resto*/
+@font-face {
+    font-family: 'ComicNeue-Regular';
+    src: url(/webroot/fonts/Comic_Neue/ComicNeue-Regular.ttf);
+}
