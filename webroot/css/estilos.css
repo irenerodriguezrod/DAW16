@@ -1,0 +1,265 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-left: auto;
+}
+
+/* Estilo para el título CFGS DAW */
+.titulo-cfgs {
+    text-align: center;
+    margin-top: 20px;
+    /* reducir para menos espacio */
+    margin-bottom: 10px;
+    /* Reducimos el margen inferior */
+    font-size: 28px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Reducir el margen superior del main */
+main {
+    margin-top: 0;
+    /* margen superior de main */
+    margin-bottom: 0;
+}
+
+
+.curso {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.curso-btn {
+    cursor: pointer;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    margin: 0;
+    border: none;
+    text-align: center;
+}
+
+.curso-btn:hover {
+    background-color: #555;
+}
+
+/* Estilos para los cursos */
+.curso-content {
+    display: none;
+    margin-top: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* contenido solo del curso seleccionado */
+input[type="radio"] {
+    display: none;
+    /* Oculta los radios */
+}
+
+input[type="radio"]:checked+.curso-content {
+    display: block;
+}
+
+/* Estilos para las asignaturas */
+.asignaturas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 asignaturas por fila */
+    gap: 30px;
+    /* Aumentar espacio entre asignaturas */
+    margin-top: 20px;
+}
+
+.imagen-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    /* Aumentar el tamaño de las imágenes */
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+}
+
+.imagen-container:hover img {
+    filter: blur(4px);
+    /* Aplica el desenfoque */
+}
+
+.imagen-container:hover .asignatura {
+    opacity: 0;
+    /* Elimina la visibilidad de la abreviatura al hacer hover */
+}
+
+.asignatura {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    /* Aumentar tamaño de la abreviatura */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.asignatura-full {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    /* Ajustar el tamaño de texto */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.imagen-container:hover .asignatura-full {
+    opacity: 1;
+    /* Muestra el nombre completo de la asignatura al hacer hover */
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#redes-sociales a {
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+#redes-sociales a:hover {
+    opacity: 0.7;
+}
+
+#redes-sociales i,
+#redes-sociales img {
+    vertical-align: middle;
+}
+
+#redes-sociales a img {
+    transition: transform 0.3s ease;
+}
+
+#redes-sociales a img:hover {
+    transform: scale(1.1);
+}
+
+/* Para la versión en un color diferente */
+#redes-sociales a {
+    font-weight: bold;
+    color: #F58321;
+}
+
+#textoDF {
+    font-size: 15px;
+}
+
+#textoDF p a {
+    color: #F58321;
+}
+
+#versionesAnteriores {
+    font-size: 15px; /* tamaño */
+    gap: 10px; /* espacio entre elementos */
+}
+
+#versionesAnteriores a {
+    color: bisque;
+    text-decoration: none;
+    gap: 10px; /* Si quieres que los enlaces también tengan menos espacio */
+}
+
+/* 🔹 Diseño Responsive 🔹 */
+@media screen and (max-width: 1024px) {
+
+    /* Adaptación para tablets */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Adaptación para móviles */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Ajustes específicos para pantallas muy pequeñas */
+    header h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
