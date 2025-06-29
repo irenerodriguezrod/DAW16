@@ -1,0 +1,134 @@
+h1 {
+    font-family: 'TitanOne-Regular', sans-serif;
+    font-size: 70px;
+    font-weight: lighter;
+    margin: 10px;
+    text-align: center;
+    color: #ffcb05;
+    text-shadow:
+        /* Capa 1: Azul interno */
+        1px 1px 0 #2a75bb,
+        -1px -1px 0 #2a75bb,
+        1px -1px 0 #2a75bb,
+        -1px 1px 0 #2a75bb,
+
+        /* Capa 2: Azul intermedio */
+        2px 2px 0 #2a75bb,
+        -2px -2px 0 #2a75bb,
+        2px -2px 0 #2a75bb,
+        -2px 2px 0 #2a75bb,
+
+        /* Capa 3: Azul más grueso */
+        4px 4px 0 #2a75bb,
+        -4px -4px 0 #2a75bb,
+        4px -4px 0 #2a75bb,
+        -4px 4px 0 #2a75bb,
+
+        /* Capa 4: Azul aún más grueso */
+        6px 6px 0 #2a75bb,
+        -6px -6px 0 #2a75bb,
+        6px -6px 0 #2a75bb,
+        -6px 6px 0 #2a75bb;
+}
+
+h2 {
+    font-family: 'ComicNeue-Regular';
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #003A70; /* Color de fondo para toda la web */
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    /* espacio entre las imágenes */
+}
+
+section .imagen-container {
+    position: relative;
+    flex-grow: 1;
+    width: 100px;
+    /* ancho */
+    height: 780px;
+    /* alto */
+    transition: flex-grow 0.5s ease;
+}
+
+section .imagen-container:hover {
+    flex-grow: 2;
+    /* La imagen crece al hacer hover */
+}
+
+section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+}
+
+section .imagen-container:hover img {
+    cursor: url;
+    filter: blur(2px);
+    /* Desenfoque en la imagen al hacer hover */
+}
+
+section .imagen-container:not(:hover) img {
+    filter: none;
+    /* Imágenes nítidas cuando no están en hover */
+}
+
+section .asignatura {
+    position: absolute;
+    bottom: 350px;
+    left: 10px;
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+section .imagen-container:hover .asignatura {
+    opacity: 1;
+    /* Muestra el texto al hacer hover */
+}
+
+footer,
+footer a {
+    padding: 20px;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: 24px; 
+    color: white;
+    text-decoration: none;
+}
+
+
+/*
+section {
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+
+section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+} 
+*/
