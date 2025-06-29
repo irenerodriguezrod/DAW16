@@ -1,0 +1,137 @@
+/* Estilos generales */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    padding: 0.5em;
+}
+
+/* Contenedor del cuerpo */
+body {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Estilos de la etiqueta */
+label {
+    font-weight: bold;
+}
+
+/* Contenedor para alinear el número y el botón en línea */
+.input-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    gap: 10px; /* Espacio entre el campo de número y el botón */
+    margin-top: 1em;
+}
+
+/* Estilo del input de número */
+input[type="number"] {
+    border: 2px solid #46AEDD;
+    background-color: #46AEDD;
+    width: 12%;
+    height: 2.5em;
+    color: white;
+    border-radius: 8px;
+    padding: 0 1.5%;
+    font-weight: bold;
+    outline: none; /* Elimina el borde negro al hacer clic */
+}
+
+/* Estilo del botón */
+input[type="button"] {
+    border: 2px solid #8ACCF5;
+    background-color: #8ACCF5;
+    height: 3em;
+    width: 18%; /* Ajustar el tamaño del botón */
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* Estilos para las celdas de la tabla */
+td {
+    border: 2px solid #46AEDD;
+    width: 4%;
+    height: 3em;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 65%;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #333;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* anclar el footer abajo*/
+}
+
+footer p {
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Estilos del enlace */
+footer a {
+    color: #6b911f;
+    text-decoration: none;
+}
+
+
+/*diseño responsive*/
+
+@media (max-width: 768px) { /* Móviles */
+    body {
+        width: 100%;
+    }
+    .input-container {
+        flex-direction: column; /* Pone los elementos en columna */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+        gap: 15px; /* Mayor espacio entre los elementos */
+    }
+    input[type="number"], input[type="button"] {
+        width: 100%; /* Los inputs ocupan todo el ancho */
+        height: 3em; /* Ajusta el alto para móviles */
+    }
+    table {
+        width: 100%; /* Tabla ocupa el 100% del ancho */
+        font-size: 0.9rem; /* Ajusta el tamaño de la fuente para móviles */
+    }
+}
+
+@media (min-width: 1024px) { /* PC */
+    body {
+        width: 80%;
+    }
+    .input-container {
+        flex-direction: row; /* Mantiene los inputs en una fila */
+    }
+    input[type="number"], input[type="button"] {
+        width: 12%; /* Ajusta el tamaño de los inputs para PC */
+    }
+    table {
+        width: 65%;
+        font-size: 1rem;
+    }
+}

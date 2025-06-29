@@ -1,0 +1,210 @@
+/* Declarar las fuentes */
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(/unidad2/02/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(/unidad2/02/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Merriweather', serif;
+    src: url(/unidad2/02/fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Arial', sans-serif;
+    src: url(/unidad2/02/fonts/arial-font/arial.ttf);
+}
+
+/* Estilos del HTML*/
+body {
+    width: 1024px;
+    margin: 0 auto;
+    padding: auto;
+    font-family: 'Arial', sans-serif;
+}
+
+#botoninicio {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#botoninicio img {
+    /* Definir el tamaño de la imagen */
+    height: 40px;
+    width: 40px;
+}
+
+#tituloprincipal {
+    display: flex;
+    justify-content: center;
+    /* Coloca la imagen a la izquierda */
+    align-items: center;
+    background-color: #134678;
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Logo del instituto */
+#tituloprincipal img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* Texto */
+h1 {
+    font-family: 'Roboto Slab';
+    color: white;
+    margin: 0;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+/* Estilos para el nav de la cabecera*/
+
+nav {
+    background-color: #134678;
+    margin: 0;
+    height: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; /* Hace que el nav quede fijado en la parte superior */
+    z-index: 0; /* Es opcional pero funciona cuando otros elementos están encima */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    margin-top: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    border: 1px solid #134678;
+    border-width: 1px;
+    /* Borde tabla que rodea CFGS Desarrollo de Aplicaciones Web */
+    border-radius: 10px;
+    /* Sirve para redondear las esquinas */
+    border-color: #134678;
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+h2 {
+    text-decoration: overline;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    color: #2980b9;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+div {
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    width: 90%;
+    margin: 10px auto; /* Separacion al rededor de  la tabla */
+    border-color: #134678;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #2980b9;
+    color: white;
+}
+
+td {
+    background-color: #ecf0f1;
+    color: #2980b9;
+    text-align: center;
+}
+
+td i { /* Abreviatura nombre profesores en las tablas */
+    color: black;
+}
+
+table td:hover { 
+    background-color: #d5dbdb;
+}
+
+
+
+
+
+/* Color para la celda del recreo. Se declara como main para que no afecte a la tabla del footer */
+main table tr:nth-child(4) td {
+    background-color: #f39c12;
+    color: white;
+    text-align: center;
+}
+
+caption {
+    color: black;
+}
+
+article {
+    border: 1px solid #134678;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-top: 10px;
+}
+
+article h3,
+article footer {
+    padding: 0;
+}
+
+/* Estilos para el footer del html (no el de los articles) */
+body>footer {
+    background-color: #134678;
+    color: white;
+    padding: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+footer th {
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+}
+footer h3 {
+    color: white;
+    margin: 30;
+    padding: 10;
+    text-align: center;
+}

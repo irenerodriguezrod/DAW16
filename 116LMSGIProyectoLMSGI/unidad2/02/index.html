@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Autor: Irene Rodríguez Rodríguez
+    Fecha de creación: 09/10/2024
+    Fecha de modificación: 12/11/2024
+    Descripción: Unidad 2, actividad 2. Creación de un horario principal y de cada uno de las asignaturas, además de la creación de una tabla en la que aparecen reflejados los nombres de los profesores, las asignaturas y las horas semanales de estas.
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD2. 2 Irene Rodríguez Rodríguez</title>
+    <link rel="shortcut icon" type="images/png" href="../../webroot/media/favicon/favicon.ico"> <!--Favicon-->
+    <!--Estilos aplicados a todas las practicas-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css"> <!--Estilos de la practica-->
+</head>
+
+<body>
+
+    <div id="botoninicio"> <!--Boton casita inicio-->
+        <a href="#horario"><img src="images/botoninicio.png" alt="Inicio" title="Inicio"></a>
+    </div>
+
+    <header> <!--En el body primero se define el header-->
+
+        <div id="tituloprincipal">
+            <!--A continuación se define la imagen del logo del instituto-->
+            <img src="images/logo_ieslossauces.png" alt="Logo IES Los Sauces" title="Logo IES Los Sauces">
+            <h1>HORARIO ESCOLAR: CURSO 2024-25</h1>
+            <!--Se define en H1 el titulo principal. Sólo puede haber declarado un H1-->
+
+        </div>
+
+    </header>
+
+    <nav>
+        <!--Se crea un menú de navegación, en este caso en una lista desordenada ya que se ha definido como <ul>. En esta lista se muestran las abreviaturas de las diferentes asignaturas y están enlazadas a los diferentes articulos creados posteriormente-->
+        <ul>
+            <li><a href="#horario">Horario</a></li>
+            <li><a href="#LMSGI">LMSGI</a></li>
+            <li><a href="#BBDD">BD</a></li>
+            <li><a href="#PROG">PROG</a></li>
+            <li><a href="#EDD">ED</a></li>
+            <li><a href="#SI">SI</a></li>
+            <li><a href="#IPE">IPE1</a></li>
+            <li><a href="#OPT">OPT</a></li>
+            <li><a href="#ING">ING</a></li>
+
+        </ul>
+    </nav>
+
+
+    <main>
+        <section>
+            <!-- Se crea una sección en la que irán dentro los articulos con los diferentes IDs que enlazarán con el menú NAV que hemos creado en el HEADER anteriormente -->
+            <h2>CFGS Desarrollo de Aplicaciones Web</h2>
+
+            <article id="horario"> <!-- Se pone sin # porque dentro de ID no es necesario que lo lleve -->
+                <!--Dentro de article, incluimos la palabra ID que lo enlazará con el menú de navegación que creamos en el header-->
+                <h3>Curso 1º</h3>
+                <table> <!--Se crea la tabla-->
+                    <thead> <!--El head de la tabla-->
+                        <tr> <!--La primera fila -->
+                            <th>Hora</th> <!--La primera columna-->
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th> <!--La última columna-->
+                        </tr>
+                    </thead>
+                    <tbody> <!--El body de la tabla-->
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td><abbr
+                                    title="Lenguaje de Marcas y Sistemas de Gestión de Información"><b>LMSGI</b></abbr><br><i>ARN</i>
+                            </td>
+                            <!--ABBR se emplea para poner el nombre de la asignatura, aunque es una etiqueta empleada en abreviaturas-->
+                            <td><abbr
+                                    title="Itinerario Personal para la Empleabilidad I"><b>IPE1</b><br></abbr><i>GFL</i>
+                            </td>
+                            <td rowspan="2"><abbr title="Bases de Datos"><b>BBDD</b><br></abbr><i>HRO</i></td>
+                            <!--ROWSPAN se emplea para combinar columnas, en cambio COLSPAN se emplea para combinar filas-->
+                            <td><abbr title="Sistemas Informáticos"><b>SINF</b></abbr><br><i>JCL</i></td>
+                            <td rowspan="2"><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td><abbr title="Módulo Optativo Profesional"><b>OPT</b></abbr><br><i>AHG</i></td>
+                            <td><abbr title="Módulo Optativo Profesional"><b>OPT</b></abbr><br><i>AHG</i></td>
+                            <td><abbr title="Bases de Datos"><b>BDD</b></abbr><br><i>HRO</i></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td><abbr
+                                    title="Itinerario Personal para la Empleabilidad 1"><b>IPE1</b></abbr><br><i>GFL</i>
+                            </td>
+                            <td><abbr title="Bases de Datos"><b>BBDD</b></abbr><br><i>HRO</i></td>
+                            <td><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                            <td><abbr title="Itinerario Personal para la Empleabilidad"><b>IPE1</b></abbr><br><i>GFL</i>
+                            </td>
+                            <td><abbr title="Bases de Datos"><b>BBDD</b></abbr><br><i>HRO</i></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                            <td><abbr title="Inglés"><b>ING</b></abbr><br><i>MDCS</i></td>
+                            <td><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                            <td><abbr title="Inglés"><b>ING</b></abbr><br><i>MDCS</i></td>
+                            <td rowspan="2"><abbr title="Sistemas Informáticos"><b>SINF</b></abbr><br><i>JCL</i></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                            <td><abbr
+                                    title="Lenguajes de Marcas y Sistemas de Gestión de Información"><b>LMSGI</b></abbr><br><i>ARN</i>
+                            </td>
+                            <td rowspan="2"><abbr title="Entornos de Desarrollo"><b>EDD</b></abbr><br><i>AHG</i></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td><abbr title="Sistemas Informáticos"><b>SINF</b></abbr><br><i>JCL</i></td>
+                            <td><abbr title="Sistemas Informáticos"><b>SINF</b></abbr><br><i>JCL</i></td>
+                            <td><abbr
+                                    title="Lenguajes de Marcas y Sistemas de Gestión de Información"><b>LMSGI</b></abbr><br><i>ARN</i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Tutor. Ambrosio Casado Fernández </p>
+                </footer>
+            </article>
+
+            <article id="LMSGI">
+                <h3>Lenguaje de Marcas y Sistemas de Gestión de Información</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td><abbr
+                                    title="Lenguaje de Marcas y Sistemas de Gestión de Información"><b>LMSGI</b></abbr><br><i>ARN</i>
+                            </td>
+                            <!--BR se emplea para hacer un salto de línea, es una etiqueta que no necesita cierre-->
+                            <td></td>
+                            <!--Se deja sin contenido porque al tratarse de una tabla de una determinada asignatura, no hay que poner el resto de asignaturas, ya que no las necesitamos-->
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"></td>
+                            <td><abbr
+                                    title="Lenguajes de Marcas y Sistemas de Gestión de Información"><b>LMSGI</b></abbr><br><i>ARN</i>
+                            </td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td></td>
+                            <td></td>
+                            <td><abbr
+                                    title="Lenguajes de Marcas y Sistemas de Gestión de Información"><b>LMSGI</b></abbr><br><i>ARN</i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Profesora. Amor Rodríguez Navarro.</p>
+                </footer>
+            </article>
+            <article id="BBDD">
+                <h3>Bases de Datos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"><abbr title="Bases de Datos"><b>BBDD</b><br></abbr><i>HRO</i></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td></td>
+                            <td></td>
+                            <td><abbr title="Bases de Datos"><b>BDD</b></abbr><br><i>HRO</i></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td></td>
+                            <td><abbr title="Bases de Datos"><b>BBDD</b></abbr><br><i>HRO</i></td>
+                            <td></td>
+                            <td></td>
+                            <td><abbr title="Bases de Datos"><b>BBDD</b></abbr><br><i>HRO</i></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Profesora. Hermelinda Ramos Osorio. </p>
+                </footer>
+            </article>
+
+            <article id="PROG">
+                <h3>Programación</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td></td>
+                            <td></td>
+                            <td><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                            <td></td>
+                            <td><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"><abbr title="Programación"><b>PROG</b></abbr><br><i>ACF</i></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Profesor. Ambrosio Casado Fernández </p>
+                </footer>
+            </article>
+            <article id="EDD">
+                <h3>Entornos de Desarrollo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"><abbr title="Entornos de Desarrollo"><b>EDD</b></abbr><br><i>AHG</i></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Profesor. Alejandro Hernández García </p>
+                </footer>
+            </article>
+            <article id="SI">
+                <h3>Sistemas Informáticos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                            <td><abbr title="Sistemas Informáticos"><b>SINF</b></abbr><br><i>JCL</i></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"><abbr title="Sistemas Informáticos"><b>SINF</b></abbr><br><i>JCL</i></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td><abbr title="Sistemas Informáticos"><b>SINF</b></abbr><br><i>JCL</i></td>
+                            <td><abbr title="Sistemas Informáticos"><b>SINF</b></abbr><br><i>JCL</i></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Profesor. Jorge Corral Losada </p>
+                </footer>
+            </article>
+            <article id="IPE">
+                <h3>Itinerario Personal para la Empleabilidad 1</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td></td>
+                            <td><abbr
+                                    title="Itinerario Personal para la Empleabilidad I"><b>IPE1</b><br></abbr><i>GFL</i>
+                            </td>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td><abbr
+                                    title="Itinerario Personal para la Empleabilidad 1"><b>IPE1</b></abbr><br><i>GFL</i>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td><abbr title="Itinerario Personal para la Empleabilidad"><b>IPE1</b></abbr><br><i>GFL</i>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Profesora. Gisela Folgueral Lindoso </p>
+                </footer>
+            </article>
+            <article id="OPT">
+                <h3>Módulo Optativo Profesional</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td><abbr title="Módulo Optativo Profesional"><b>OPT</b></abbr><br><i>AHG</i></td>
+                            <td><abbr title="Módulo Optativo Profesional"><b>OPT</b></abbr><br><i>AHG</i></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Profesor. Alejandro Hernández García </p>
+                </footer>
+            </article>
+            <article id="ING">
+                <h3>Inglés Profesional (GS)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>8:20 - 9:20</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>9:20 - 10:10</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>10:10 - 11:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>11:00 - 11:25</th>
+                            <td colspan="5">Recreo</td>
+                        </tr>
+                        <tr>
+                            <th>11:25 - 12:15</th>
+                            <td rowspan="2"></td>
+                            <td><abbr title="Inglés"><b>ING</b></abbr><br><i>MDCS</i></td>
+                            <td></td>
+                            <td><abbr title="Inglés"><b>ING</b></abbr><br><i>MDCS</i></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>12:15 - 13:05</th>
+                            <td rowspan="2"></td>
+                            <td></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <th>13:05 - 13:55</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer>
+                    <p>Profesora. María Dolores Del Campo Salamanca </p>
+                </footer>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>Claves del profesorado y de los módulos</h3>
+        <!--En el pie de pagina van una tabla con las horas de las asignaturas, los profesores que las imparten y las horas semanales-->
+        <table>
+            <!--Se añade una tabla con las horas que dan clase, la información de los profesores y las materias que imparten-->
+            <thead>
+                <tr>
+                    <th>Horas (30)</th>
+                    <th>Profesores</th>
+                    <th>Materias</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Amor Rodríguez Navarro</td>
+                    <td>Lenguajes de marcas y Sistemas de Gestión de Información(LMSGI)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Jorge Corral Losada</td>
+                    <td>Sistemas Informáticos(SI)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Hermelinda Ramos Osorio</td>
+                    <td>Bases de Datos(BDD)</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Ambrosio Casado Fernández</td>
+                    <td>Programación(PROG)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Alejandro Hernández García</td>
+                    <td>Entornos de Desarrollo(EDD)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>María Dolores del Camino Salamanca</td>
+                    <td>Inglés Profesional GS(ING)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Gisela Folgueral Lindoso</td>
+                    <td>Itinerario Personal para la Empleabilidad 1(IPE1)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Alejandro Hernández García</td>
+                    <td>Módulo Optativo 1 (cuatrimestral) (OPT)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>2024-25 IES LOS SAUCES. &#169; Todos los derechos reservados. <a href="/116LMSGIProyectoLMSGI/index.html">Irene Rodríguez Rodríguez </a> </p>
+        <!--El elemento de copyright se define con &#169;-->
+        <p>Fecha de actualización: <time datetime="2024-11-12">12 de noviembre de 2024</time></p>
+        <!--La etiqueta datetime sirve para poner la fecha de creacion del archivo y se irá modificando comforme se edite el documento-->
+    </footer>
+</body>
+
+</html>

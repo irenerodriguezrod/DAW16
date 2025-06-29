@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--<?xml-stylesheet type="text/xsl" href="../src/05.xsl"?> Esta linea se comenta para que no de fallo-->
+<root>
+<row Anyo="2012" Concepto="Usuarios registrados " Usuarios_registrados="53577"></row>
+<row Anyo="2012" Concepto="Préstamos " Usuarios_registrados="315402"></row>
+<row Anyo="2012" Concepto="Asistentes a actividades de animación" Usuarios_registrados="24461"></row>
+<row Anyo="2012" Concepto="Usos de la sala de lectura" Usuarios_registrados="254146"></row>
+<row Anyo="2012" Concepto="Horas de uso multimedia" Usuarios_registrados="122043"></row>
+<row Anyo="2013" Concepto="Usuarios registrados " Usuarios_registrados="57851"></row>
+<row Anyo="2013" Concepto="Préstamos " Usuarios_registrados="277315"></row>
+<row Anyo="2013" Concepto="Asistentes a actividades de animación" Usuarios_registrados="25512"></row>
+<row Anyo="2013" Concepto="Usos de la sala de lectura" Usuarios_registrados="249417"></row>
+<row Anyo="2013" Concepto="Horas de uso multimedia" Usuarios_registrados="132328"></row>
+<row Anyo="2014" Concepto="Usuarios registrados " Usuarios_registrados="61498"></row>
+<row Anyo="2014" Concepto="Préstamos " Usuarios_registrados="246892"></row>
+<row Anyo="2014" Concepto="Asistentes a actividades de animación" Usuarios_registrados="26400"></row>
+<row Anyo="2014" Concepto="Usos de la sala de lectura" Usuarios_registrados="246892"></row>
+<row Anyo="2014" Concepto="Horas de uso multimedia" Usuarios_registrados="124504"></row>
+<row Anyo="2015" Concepto="Usuarios registrados " Usuarios_registrados="63991"></row>
+<row Anyo="2015" Concepto="Préstamos " Usuarios_registrados="237366"></row>
+<row Anyo="2015" Concepto="Asistentes a actividades de animación" Usuarios_registrados="26900"></row>
+<row Anyo="2015" Concepto="Usos de la sala de lectura" Usuarios_registrados="288624"></row>
+<row Anyo="2015" Concepto="Horas de uso multimedia" Usuarios_registrados="144225"></row>
+<row Anyo="2015" Concepto="Seguidores Twitter" Usuarios_registrados="947"></row>
+<row Anyo="2015" Concepto="Seguidores Facebook" Usuarios_registrados="713"></row>
+<row Anyo="2016" Concepto="Usuarios registrados " Usuarios_registrados="67432"></row>
+<row Anyo="2016" Concepto="Préstamos " Usuarios_registrados="232648"></row>
+<row Anyo="2016" Concepto="Asistentes a actividades de animación" Usuarios_registrados="27815"></row>
+<row Anyo="2016" Concepto="Usos de la sala de lectura" Usuarios_registrados="301053"></row>
+<row Anyo="2016" Concepto="Horas de uso multimedia" Usuarios_registrados="148993"></row>
+<row Anyo="2016" Concepto="Seguidores Twitter" Usuarios_registrados="1127"></row>
+<row Anyo="2016" Concepto="Seguidores Facebook" Usuarios_registrados="874"></row>
+<row Anyo="2017" Concepto="Usuarios registrados " Usuarios_registrados="50464"></row>
+<row Anyo="2017" Concepto="Préstamos " Usuarios_registrados="224711"></row>
+<row Anyo="2017" Concepto="Asistentes a actividades de animación" Usuarios_registrados="26012"></row>
+<row Anyo="2017" Concepto="Usos de la sala de lectura" Usuarios_registrados="284921"></row>
+<row Anyo="2017" Concepto="Horas de uso multimedia" Usuarios_registrados="145012"></row>
+<row Anyo="2017" Concepto="Seguidores Twitter" Usuarios_registrados="1230"></row>
+<row Anyo="2017" Concepto="Seguidores Facebook" Usuarios_registrados="1047"></row>
+<row Anyo="2017" Concepto="Accesos al OPAC (Online Public Access Catalog)" Usuarios_registrados="143561"></row>
+<row Anyo="2018" Concepto="Usuarios registrados " Usuarios_registrados="49238"></row>
+<row Anyo="2018" Concepto="Préstamos " Usuarios_registrados="199224"></row>
+<row Anyo="2018" Concepto="Asistentes a actividades de animación" Usuarios_registrados="27975"></row>
+<row Anyo="2018" Concepto="Usos de la sala de lectura" Usuarios_registrados="307897"></row>
+<row Anyo="2018" Concepto="Horas de uso multimedia" Usuarios_registrados="182154"></row>
+<row Anyo="2018" Concepto="Seguidores Twitter" Usuarios_registrados="1297"></row>
+<row Anyo="2018" Concepto="Seguidores Facebook" Usuarios_registrados="1201"></row>
+<row Anyo="2018" Concepto="Accesos al OPAC (Online Public Access Catalog)" Usuarios_registrados="155116"></row>
+</root>

@@ -1,0 +1,47 @@
+[
+    {
+        "ejercicio": "E01",
+        "imagenXQuery": "/unidad6/04/media/01_XQuery.png",
+        "resultado": "/unidad6/04/media/01_Resultado.png"
+    },
+    {
+        "ejercicio": "E02",
+        "imagenXQuery": "/unidad6/04/media/02_XQuery.png",
+        "resultado": "/unidad6/04/media/02_Resultado.png"
+    },
+    {
+        "ejercicio": "E03",
+        "imagenXQuery": "/unidad6/04/media/03_XQuery.png",
+        "resultado": "/unidad6/04/media/03_Resultado.png"
+    },
+    {
+        "ejercicio": "E04",
+        "imagenXQuery": "/unidad6/04/media/04_XQuery.png",
+        "resultado": "/unidad6/04/media/04_Resultado.png"
+    },
+    {
+        "ejercicio": "E05",
+        "imagenXQuery": "/unidad6/04/media/05_XQuery.png",
+        "resultado": "/unidad6/04/media/05_Resultado.png"
+    },
+    {
+        "ejercicio": "E06",
+        "imagenXQuery": "/unidad6/04/media/06_XQuery.png",
+        "resultado": "/unidad6/04/media/06_Resultado.png"
+    },
+    {
+        "ejercicio": "E07",
+        "imagenXQuery": "/unidad6/04/media/07_XQuery.png",
+        "resultado": "/unidad6/04/media/07_Resultado.png"
+    },
+    {
+        "ejercicio": "E08",
+        "imagenXQuery": "/unidad6/04/media/08_XQuery.png",
+        "resultado": "/unidad6/04/media/08_Resultado.png"
+    },
+    {
+        "ejercicio": "E09",
+        "imagenXQuery": "/unidad6/04/media/09_XQuery.png",
+        "resultado": "/unidad6/04/media/09_Resultado.png"
+    }
+]

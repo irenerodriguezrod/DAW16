@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<!--
+    Autor: Irene Rodríguez Rodríguez
+    Fecha de creación: 11/10/2024
+    Fecha de modificación: 18/10/2024
+    Descripción: Unidad 2, actividad 3. Creación de un formulario con la temática de animales domésticos
+-->
+
+<html lang="es">
+
+
+<head>
+    <!--Especifica la codificacion de la página-->
+    <meta charset="UTF-8">
+    <!--Especifica una breve descripción de la web para que aparezca en los motores de búsqueda-->
+    <meta name="description" content="Formulario para rellenar datos personales de animales domésticos">
+    <!--Especifica el autor de la web-->
+    <meta name="author" content="Irene Rodríguez Rodríguez">
+    <!--Especifica a los robots cómo se puede indexar y seguir la web-->
+    <meta name="robots" content="index, follow">
+    <!--Especifica el idioma de la web-->
+    <meta name="language" content="es">
+    <!--Especifica el editor de código utilizado para crear la web-->
+    <meta name="generator" content="Visual Studio Code">
+    <!--Especifica las palabras clave que contiene la web para que aparezca en los motores de búsqueda-->
+    <meta name="keywords" content="HTML, formulario, animales domésticos, mascotas">
+    <!--Configuración para que la web sea compatible en todos los dispositivos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Título de la web-->
+    <title>UD2. 03 Irene Rodríguez Rodríguez</title>
+    <!--Favicon de la web-->
+    <link rel="shortcut icon" type="images/png" href="../../webroot/media/favicon/favicon.ico">
+    <!--Hoja de estilos-->
+    <link href="estilos/estilos.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body>
+    <header>
+        <h1>Plantilla de formulario de animales domésticos</h1>
+    </header>
+
+    <form action="respuesta.html" method="get">
+        <!--Comienzo del formulario, el archivo respuesta.html es el lugar al que irían las respuestas -->
+        <!-- Primera parte: datos personales -->
+        <div>
+            <h2>Datos personales</h2>
+            <!--Input de tipo texto-->
+            <label for="nombre">Nombre</label><br>
+            <input type="text" name="nombre" id="nombre" placeholder="Introduzca aquí su nombre" required minlength="3"
+                maxlength="50" size="24"><br>
+
+            <br>
+            <label for="apellidos">Apellidos</label><br>
+            <input type="text" name="apellidos" id="apellidos" placeholder="Introduzca sus apellidos" required
+                minlength="3" maxlength="80" size="24"><br>
+
+            <br>
+            <!--Input del tipo tel-->
+            <label for="telefono">Teléfono</label><br>
+            <input type="tel" id="telefono" name="telefono" placeholder="Introduzca su número de teléfono" required
+                pattern="[0-9]{9}" title="El número de teléfono debe tener 9 dígitos" size="24"><br>
+
+            <br>
+            <!--Input del tipo email-->
+            <label for="correo">Correo electrónico</label><br>
+            <input type="email" id="correo" name="correo" placeholder="Introduzca su correo electrónico" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Introduzca un correo electrónico válido"
+                size="24"><br>
+
+            <br>
+            <!--Input del tipo search-->
+            <label for="busqueda">Buscar información sobre animales:</label><br>
+            <input type="search" id="busqueda" name="busqueda"
+                placeholder="Busca información sobre animales domésticos"><br>
+
+            <br>
+            <!--Input del tipo url-->
+
+            <label for="url_mascota">Página web sobre tu mascota favorita:</label><br>
+            <input type="url" id="url_mascota" name="url_mascota" placeholder="https://example.com"><br>
+
+            <br>
+            <!--Input del tipo password-->
+
+            <label for="password">Contraseña (opcional para usuarios registrados):</label><br>
+            <input type="password" id="password" name="password" minlength="8"
+                placeholder="Introduce tu contraseña"><br>
+
+            <br>
+        </div>
+
+        <!-- Segunda parte: datos de la mascota -->
+        <div>
+            <h2>Datos de la mascota</h2>
+
+            <!--Input del tipo text-->
+            <label for="mascota">Nombre de la mascota</label><br>
+            <input type="text" id="mascota" name="mascota" placeholder="Introduzca el nombre de su mascota" required
+                minlength="3" maxlength="50" size="24"><br>
+            <br>
+
+            <label>¿Qué tipo de animal es tu mascota?</label><br>
+
+            <!-- Contenedor flex para las imágenes -->
+            <div class="imagenes-flex">
+                <div>
+                    <input type="radio" id="perro" name="tipo_animal" value="perro" checked>
+                    <label for="perro">Perro</label><br>
+                    <img src="images/perro.jpeg" alt="Imagen de un grupo de perros" width="100" height="100"><br>
+                </div>
+                <hr> <!--Línea visual para dividir el formulario en secciones-->
+                <div>
+                    <input type="radio" id="gato" name="tipo_animal" value="gato">
+                    <label for="gato">Gato</label><br>
+                    <img src="images/gato.jpeg" alt="Imagen de un grupo de gatos" width="100" height="100"><br>
+                </div>
+                <hr>
+                <div>
+                    <input type="radio" id="otro" name="tipo_animal" value="otro">
+                    <label for="otro">Otro</label><br>
+                    <img src="images/otro.jpeg" alt="Imagen de un grupo de animales" width="100" height="100"><br>
+                </div>
+            </div>
+            <br>
+            <!--Input del tipo list con datalist-->
+            <label for="raza">Raza</label><br>
+            <input list="razas" id="raza" name="raza" placeholder="Escribe o selecciona una raza" required minlength="3"
+                maxlength="50"><br>
+            <datalist id="razas">
+                <option value="Labrador">Labrador</option>
+                <option value="Bulldog">Bulldog</option>
+                <option value="Siamés">Siamés</option>
+                <option value="Común">Común</option>
+                <option value="Persa">Persa</option>
+            </datalist><br>
+
+            <!--Input del tipo number-->
+            <label for="peso_mascota">Peso de tu mascota (kg):</label><br>
+            <input type="number" id="peso_mascota" name="peso_mascota" min="0" max="100" placeholder="Ej. 15"><br>
+            <br>
+
+            <!--Input del tipo select-->
+            <label for="sexo">Sexo</label><br>
+            <select id="sexo" name="sexo" required>
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select><br>
+            <br>
+
+            <!--Input del tipo date-->
+            <label for="fecha_nacimiento">Fecha de nacimiento de tu mascota:</label><br>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" min="2010-01-01" max="2024-01-31"><br>
+            <br>
+
+            <!--Input del tipo file-->
+            <label for="foto_mascota">Sube una foto de tu mascota</label><br>
+            <input type="file" id="foto_mascota" name="foto_mascota" accept="image/*"><br>
+            <br>
+
+            <!--Input del tipo time-->
+            <label for="hora_comida">Hora de alimentación diaria:</label><br>
+            <input type="time" id="hora_comida" name="hora_comida" min="00:00" max="23:59"><br>
+            <br>
+
+            <!--Input del tipo color-->
+            <label for="color_collar">Color del collar de tu mascota:</label><br>
+            <input type="color" id="color_collar" name="color_collar" value="#ff0000"><br>
+            <br>
+
+            <!--Input del tipo checkbox-->
+            <label>Comida favorita de tu mascota:</label><br>
+            <div class="comida-flex">
+                <input type="checkbox" id="pienso" name="comida_favorita" value="pienso" checked>
+                <label for="pienso">Pienso</label><br>
+                <input type="checkbox" id="galletas" name="comida_favorita" value="galletas">
+                <label for="galletas">Galletas</label><br>
+                <input type="checkbox" id="latas" name="comida_favorita" value="latas">
+                <label for="latas">Latas</label><br>
+                <input type="checkbox" id="otra_comida_checkbox" name="comida_favorita" value="otra_comida">
+                <label for="otra_comida_checkbox">Otra comida</label><br>
+                <textarea id="otra_comida_textarea" name="otra_comida" rows="4" cols="50"
+                    placeholder="Escribe cuál es en caso de no corresponderse con los mencionados anteriormente..."
+                    required></textarea>
+                <br>
+            </div>
+
+            <br>
+
+            <!--Input del tipo week-->
+            <label for="semana">Semana de revisión médica anual:</label><br>
+            <input type="week" id="semana" name="semana_revision"><br>
+            <br>
+
+            <!--Input del tipo range-->
+            <label for="nivel_actividad">Nivel de actividad de tu mascota (1-10):</label><br>
+            <input type="range" id="nivel_actividad" name="nivel_actividad" min="1" max="10" value="5"><br>
+            <br>
+
+            <!--Input del tipo month-->
+            <label for="mes_revisión">Mes de la revisión médica:</label><br>
+            <input type="month" id="mes_revisión" name="mes_revisión"><br>
+            <br>
+
+            <!--Input del tipo textarea-->
+            <label for="comportamiento">Describe el comportamiento de tu mascota:</label><br>
+            <textarea id="comportamiento" name="comportamiento" rows="4" cols="50"
+                placeholder="Escribe detalles sobre cómo se comporta tu mascota..."></textarea><br>
+            <br>
+
+            <!-- Input del tipo hidden-->
+            <input type="hidden" name="formulario" value="registro_mascotas">
+            <br>
+
+        </div>
+        <!-- Botón de enviar y reiniciar -->
+        <div class="botones-flex">
+            <input type="image" src="images/enviar.png" alt="Imagen botón enviar" width="100" height="100">
+            <input type="image" src="images/reiniciar.png" alt="Imagen boton reiniciar" width="100" height="100">
+        </div>
+    </form>
+    <br>
+
+    <hr>
+    <footer>
+        <p>2024-25 IES LOS SAUCES. &#169; Todos los derechos reservados. <a
+                href="/116LMSGIProyectoLMSGI/index.html">Irene Rodríguez Rodríguez </a></p>
+        <p>Fecha de actualización: <time datetime="2024-10-18">18 de octubre de 2024</time></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<curso id="4">
+		<nombre>Programación Java</nombre>
+		<precio cuota="mensual" moneda="euro">30</precio>
+		<plazas>15</plazas>
+		<comienzo>1/1/2024</comienzo>
+		<fin>1/12/2024</fin>
+		<dias>Lunes a Viernes</dias> 
+		<horainicio>16</horainicio>
+		<horafin>20</horafin>
+		<profesor idref="2"/>
+		<aula idref="2"/>
+	</curso>

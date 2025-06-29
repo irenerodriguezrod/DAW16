@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libreria>
+    <nombre id="L001">
+        Librería Pastor
+    </nombre>
+    <libro categoria="COOKING" codigo='1'>
+        <titulo leng="en">Everyday Italian</titulo>
+        <autor>Giada De Laurentiis</autor>
+        <anyo>2005</anyo>
+        <precio>30.00</precio>
+    </libro>
+    <libro categoria="CHILDREN" codigo='2'>
+        <titulo leng="en">Harry Potter</titulo>
+        <autor>J K. Rowling</autor>
+        <anyo>2005</anyo>
+        <precio>29.99</precio>
+    </libro>
+    <libro categoria="WEB" codigo='3'>
+        <titulo leng="en">XQuery Kick Start</titulo>
+        <autor>James McGovern</autor>
+        <autor>Per Bothner</autor>
+        <autor>Kurt Cagle</autor>
+        <autor>James Linn</autor>
+        <autor>Vaidyanathan Nagarajan</autor>
+        <anyo>2003</anyo>
+        <precio>49.99</precio>
+    </libro>
+    <libro categoria="WEB" codigo='4'>
+        <titulo leng="en">Learning XML</titulo>
+        <autor>Erik T. Ray</autor>
+        <anyo>2003</anyo>
+        <precio>39.95</precio>
+    </libro>
+    <almacen>
+        <comprados>
+            <codigo>1</codigo>
+            <codigo>2</codigo>
+        </comprados>
+        <pendientes>
+            <codigo>3</codigo>
+            <codigo>4</codigo>
+        </pendientes>
+    </almacen>
+</libreria>

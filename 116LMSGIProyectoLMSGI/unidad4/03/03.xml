@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+    Autor: Irene Rodríguez
+    Descripción: Creación de un documento .XML en el que se muestra un ejemplo de los diferentes lenguajes de programación que existen y ejemplos de cada uno.
+    Fecha de creación: 14/01/2025
+    Fecha de modificación: 14/01/2025 
+-->
+
+<!DOCTYPE programmingLanguages SYSTEM "03.dtd">
+<?xml-stylesheet type="text/css" href="css/estilos.css"?>
+<programmingLanguages>
+    <language name="Python">
+        <description>
+            Python es un lenguaje de programación interpretado, de alto nivel y de propósito general.
+        </description>
+        <example>
+            <![CDATA[  
+def saludo():
+    print("¡Hola, Mundo!")
+
+saludo()
+            ]]>
+        </example>
+    </language>
+    <language name="JavaScript">
+        <description>
+            JavaScript es un lenguaje de programación que se utiliza para crear contenido dinámico en la web.
+        </description>
+        <example>
+            <![CDATA[  
+function saludo() {
+    alert("¡Hola, Mundo!");
+}
+
+saludo();
+            ]]>
+        </example>
+    </language>
+    <language name="Java">
+        <description>
+            Java es un lenguaje de programación de propósito general que es ampliamente utilizado en aplicaciones empresariales y móviles.
+        </description>
+        <example>
+            <![CDATA[  
+            public class Saludo {
+    public static void main(String[] args) {
+        System.out.println("¡Hola, Mundo!");
+    }
+}            
+            ]]>
+        </example>
+    </language>
+    <language name="C++">
+        <description>
+            C++ es un lenguaje de programación de propósito general, conocido por su eficiencia y uso en aplicaciones de alto rendimiento.
+        </description>
+        <example>
+            <![CDATA[  
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "¡Hola, Mundo!" << endl;
+    return 0;
+}            
+            ]]>
+        </example>
+    </language>
+    <language name="Ruby">
+        <description>
+            Ruby es un lenguaje de programación dinámico y de alto nivel, conocido por su sintaxis simple y elegante.
+        </description>
+        <example>
+            <![CDATA[  
+def saludo
+    puts "¡Hola, Mundo!"
+end
+
+saludo            
+            ]]>
+        </example>
+    </language>
+</programmingLanguages>

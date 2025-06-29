@@ -1,0 +1,23 @@
+programmingLanguages {
+    display: flex;
+}
+
+lenguage {
+    display: inline;
+}
+
+description {
+    display: block;
+    color: red;
+    border: solid #b6f4b6 1px;
+    margin: 3px;
+    margin-bottom: 5px;
+}
+
+example {
+    display: block;
+    background-color: #D3D3D3;
+    font-family: monospace;
+    white-space: pre-wrap;
+    margin: 3px;
+}

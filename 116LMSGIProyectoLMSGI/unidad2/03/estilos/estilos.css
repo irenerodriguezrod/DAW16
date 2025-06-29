@@ -1,0 +1,110 @@
+:root {
+    --color1: #F47CAC;
+    --color2: #007AAE;
+    --color3: #00B6FF;
+    --color4: #FF99C2;
+    --color5: #FDF4E3;
+    --color6: #b04d98;
+}
+
+body {
+    background-color: var(--color4);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color2);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--color6);
+    border-bottom: 2px solid var(--color6);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+label {
+    color: var(--color1);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: calc(100% - 10px);
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid var(--color2);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="color"] {
+    height: 40px;
+    cursor: pointer;
+}
+
+.imagenes-flex, .imagenes-flex {
+    display: flex;
+    /* Utiliza flexbox */
+    gap: 20px;
+    /* Espacio entre las imágenes */
+}
+
+.botones-flex {
+    display: flex;
+    width: 175px;
+    justify-content: center;
+    align-items: center;
+    margin-left: +39vh;
+}
+
+.imagenes-flex, .imagenes-flex div {
+    text-align: center;
+    /* Centra las imágenes y etiquetas dentro de cada div */
+}
+
+footer {
+    text-align: center;
+    background-color: var(--color2);
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: var(--color4);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

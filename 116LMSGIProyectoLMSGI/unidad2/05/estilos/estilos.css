@@ -1,0 +1,101 @@
+/* Paleta de colores */
+:root {
+    --color1: #00686c;
+    --color2: #32c2b9;
+    --color3: #edecb3;
+    /* Color del texto */
+    --color4: #fad928;
+    --color5: #ff9915;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color3);
+    /*var se emplea para poder utilizar los colores declarados en root, ya que estos estan definidos como variables*/
+    color: var(--color1);
+    text-align: center;
+    margin: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color1);
+    /* Fondo verde oscuro */
+    color: var(--color4);
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--color4);
+}
+
+/* Pirámide */
+.piramide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; /* Distancia con el footer y el header*/
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    margin: 1.5 px 0; /* Distancia entre la fila superior e inferior */
+    
+}
+
+.dado {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 1.5px;
+    /* Distancia de los dados de cada fila*/
+    background-color: var(--color2);
+    /*Color del dado*/
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.dado:hover {
+    background-color: var(--color4);
+}
+
+/* Configuración de los puntos */
+.p1 {
+    background-image: url('../images/puntonegro.png');
+    background-position: center;
+}
+
+.p2 {
+    background-image: url('../images/puntonegro.png'), url('../images/puntonegro.png');
+    background-position: 15% 15%, bottom 15% right 15% ;
+}
+
+.p3 {
+    background-image: url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png');
+    background-position: 15% 15%, center, bottom 15% right 15%;
+}
+
+.p4 {
+    background-image: url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png');
+    background-position: 15% 15%, top 15% right 15%, bottom 15% left 15%, bottom 15% right 15%;
+}
+
+.p5 {
+    background-image: url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png');
+    background-position: 15% 15%, top 15% right 15%, center, bottom 15% left 15%, bottom 15% right 15%;
+}
+
+.p6 {
+    background-image: url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png'), url('../images/puntonegro.png');
+    background-position: 15% 15%, top 15% right 15%, center left 15%, center right 15%, bottom 15% left 15%, bottom 15% right 15%;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color1);
+    color: var(--color5);
+    padding: 10px;
+}

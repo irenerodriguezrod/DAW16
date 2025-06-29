@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Document   : meses.xml
+ Created on : 6 de mayo de 2021
+ Author     : amor
+ Description:
+        Meses
+-->
+<meses>
+	<mes id="1">enero</mes>
+	<mes id="2">febrero</mes>
+	<mes id="3">marzo</mes>
+	<mes id="4">abril</mes>
+	<mes id="5">mayo</mes>
+	<mes id="6">junio</mes>
+	<mes id="7">julio</mes>
+	<mes id="8">agosto</mes>
+	<mes id="9">septiembre</mes>
+	<mes id="10">octubre</mes>
+	<mes id="11">noviembre</mes>
+	<mes id="12">diciembre</mes>
+</meses>

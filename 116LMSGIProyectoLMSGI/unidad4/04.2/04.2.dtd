@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!ELEMENT universidad (nombre, fechaconstruccion, pais, carreras, asignaturas, alumnos)> 
+<!ELEMENT nombre (#PCDATA)> 
+<!ATTLIST nombre year CDATA #REQUIRED> 
+<!ELEMENT fechaconstruccion (#PCDATA)> 
+<!ELEMENT pais (#PCDATA)> 
+
+<!-- Definición de las carreras --> 
+
+<!ELEMENT carreras (carrera+)> 
+<!ELEMENT carrera (nombre_carrera, plan, creditos, centro, subdirector?)> 
+<!ATTLIST carrera id ID #REQUIRED> 
+<!ELEMENT nombre_carrera (#PCDATA)> 
+<!ELEMENT plan (#PCDATA)> 
+<!ELEMENT creditos (#PCDATA)> 
+<!ELEMENT centro (#PCDATA)> 
+<!ELEMENT subdirector (#PCDATA)> 
+
+<!-- Definición de las asignaturas --> 
+
+<!ELEMENT asignaturas (asignatura+)> 
+<!ELEMENT asignatura (nombre_asignatura, creditos_teoricos, creditos_practicos, trimestre)> 
+<!ATTLIST asignatura id ID #REQUIRED titulacion IDREF #REQUIRED> 
+<!ELEMENT nombre_asignatura (#PCDATA)> 
+<!ELEMENT creditos_teoricos (#PCDATA)> 
+<!ELEMENT creditos_practicos (#PCDATA)> 
+<!ELEMENT trimestre (#PCDATA)> 
+
+<!-- Definición de los alumnos --> 
+
+<!ELEMENT alumnos (alumno+)> 
+<!ELEMENT alumno (apellido1, apellido2, nombre_alumno, sexo, estudios)> 
+<!ATTLIST alumno id ID #REQUIRED beca (si|no) "no"> 
+<!ELEMENT apellido1 (#PCDATA)> 
+<!ELEMENT apellido2 (#PCDATA)> 
+<!ELEMENT nombre_alumno (#PCDATA)> 
+<!ELEMENT sexo (#PCDATA)> 
+
+<!-- Definición de los estudios de los alumnos --> 
+
+<!ELEMENT estudios (carrera_estudios, asignaturas_alumno, proyecto?)> 
+<!ELEMENT carrera_estudios EMPTY> 
+<!ATTLIST carrera_estudios codigo IDREF #REQUIRED> 
+<!ELEMENT asignaturas_alumno (asignatura_alumno+)> 
+<!ELEMENT asignatura_alumno EMPTY> 
+<!ATTLIST asignatura_alumno codigo IDREF #REQUIRED> 
+<!ELEMENT proyecto (#PCDATA)> 

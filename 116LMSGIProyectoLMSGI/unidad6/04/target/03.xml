@@ -1,0 +1,5 @@
+<clientes>
+  <cliente id="F001">juan@example.com</cliente>
+  <cliente id="F002">maria@example.com</cliente>
+  <cliente id="F003">santiago@example.com</cliente>
+</clientes>

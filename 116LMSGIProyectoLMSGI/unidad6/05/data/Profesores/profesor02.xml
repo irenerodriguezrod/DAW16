@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+	<profesor id="2">
+		<nombre>Jesús Lozano</nombre>
+		<dni>27654123</dni>
+		<email>jesus.lozano@dominiox.es</email>
+	</profesor>

@@ -1,0 +1,20 @@
+<!ELEMENT inventario (objeto+)>
+<!ELEMENT objeto (mesa |ordenador)>
+<!-- Puede aparecer un elemento mesa o un elemento ordenador-->
+<!ATTLIST objeto codigo ID #REQUIRED>
+<!-- DTD no permite hacer patron. solo se podría 
+poner un comentario para indicar que el codigo debe 
+de ser XX1111 (2 letras mayusculas y cuatro digitos) -->
+<!ELEMENT mesa (tipo?, localizacion)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT localizacion (#PCDATA) >
+<!ELEMENT ordenador (procesador?, memoria?, discoduro)>
+<!ELEMENT procesador (#PCDATA)>
+<!ATTLIST procesador fabricante CDATA "Intel">
+<!-- IMPLIED: no requerido - REQUIRED : REQUERIDO - FIXED:el valor no puede cambiar. 
+Si solo se pone un dato entre comillas será el dato por defecto y el atributo será opcional-->
+<!ATTLIST element-name attribute-name ID #REQUIRED>
+<!ELEMENT memoria (#PCDATA)>
+<!ATTLIST memoria unidad CDATA #FIXED "Gb">
+<!ELEMENT discoduro (#PCDATA)>
+<!ATTLIST discoduro tamano CDATA #REQUIRED>
