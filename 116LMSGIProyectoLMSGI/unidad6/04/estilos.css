@@ -1,0 +1,106 @@
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #004080;
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #004080;
+}
+
+
+/* Estilos generales de la tabla */
+#tablaEjercicios {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de las celdas y bordes */
+#tablaEjercicios th, #tablaEjercicios td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+/* Encabezado de la tabla */
+#tablaEjercicios th {
+    background-color: #004080;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px;
+}
+
+/* Ajuste de ancho en la primera columna */
+#tablaEjercicios td:first-child {
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos de imágenes en la segunda columna */
+#tablaEjercicios td:nth-child(2) img {
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos de imágenes en la tercera columna */
+#tablaEjercicios td:nth-child(3) img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Filas alternas para mejor lectura */
+#tablaEjercicios tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efecto hover en filas */
+#tablaEjercicios tr:hover {
+    background-color: #d0e4f5;
+}
+
+/* Zoom en imágenes al hacer clic */
+#tablaEjercicios img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Celdas vacías con estilo visual */
+#tablaEjercicios td:empty {
+    background-color: #ffeded;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste del contenido para que no quede tapado por el footer */
+body {
+    padding-bottom: 10px; /* Ajusta según la altura del footer */
+}

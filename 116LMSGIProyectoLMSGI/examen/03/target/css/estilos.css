@@ -1,0 +1,36 @@
+/* 
+    Nombre: Irene Rodríguez Rodríguez
+    Fecha de realización: 17/03/2025
+    Fecha de modificación: 17/03/2025
+    Descripción:
+                PREGUNTA 4. CSS 
+                • Diseño de la página web generada automáticamente con el siguiente diseño. 
+                Colores: #c79999 
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px;
+}
+
+.cajaPrincipal{
+    align-items: center;
+    border: 10px;
+    border-color: black;
+}
+
+table thead{
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+header{
+    text-align: left;
+}
+
+p {
+    text-align: left;
+}
+

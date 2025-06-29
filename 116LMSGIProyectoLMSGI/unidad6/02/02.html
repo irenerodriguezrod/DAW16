@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Irene Rodríguez Rodríguez
+    Fecha de creación: 05 mayo 2025
+    Fecha de modificación: 05 de mayo de 2025
+    Descripción: Desarrollo una página web que carge y muestre información desde un archivo JSON utilizando JavaScript: API fetch(). 
+                 El objetivo es aprender hacer solicitudes HTTP asincronas con fetch(), procesar datos en formato JSON y mostrar dinámicante la página
+-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UD6.1 JSON: Irene Rodríguez Rodríguez</title>
+
+    <style>
+        /* Estilo del boton */
+        * {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #00a7e4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Listado de personas</h1>
+    <button id="cargarLista">Cargar Lista(JSON)</button>
+    <div id="parrafo"></div> <!--El resultado queda dentro del div, sólo se muestra en caso de que se pulse el botón-->
+
+    <script>
+        // fetch() es una función incorporada en los navegadores para hacer solicitudes HTTP (como GET, POST). 
+        // Te permite obtener datos desde o hacia un servidor de forma asincrona, 
+        // sin recargar la página.
+        // fetch(url, opciones) 
+        // .then (respuesta => { 
+        //  manejar respuesta }) 
+        // .catch(error => { 
+        //  manejar errores 
+        // });
+
+        // evento que va a pasar al hacer click al boton
+        document.getElementById("cargarLista").addEventListener("click", cargarLista);
+
+        let parrafo = document.getElementById("parrafo");
+
+        // cargar la lista
+        function cargarLista() {
+            fetch("./02.json") // Aquí se llama al archivo JSON
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Error al cargar el archivo JSON"); // Si la respuesta no es correcta, lanza un error
+                    }
+                    return response.json();  // Convierte la respuesta en un objeto JSON
+                })
+                .then(data => {
+                    // Procesar y mostrar los datos del JSON
+                    parrafo.innerHTML = ""; // Limpiar contenido previo
+                    if (data && data.personas && Array.isArray(data.personas)) {
+                        let listaHTML = "<ul>"; // Iniciar una lista HTML
+                        data.personas.forEach(persona => {
+                            listaHTML += `<li>${persona.nombre} - ${persona.edad} años</li>`;
+                        });
+                        listaHTML += "</ul>";
+                        parrafo.innerHTML = listaHTML; // Mostrar la lista en el div
+                    } else {
+                        parrafo.innerHTML = "El archivo no contiene una lista válida.";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error); // Mostrar error en consola
+                    parrafo.innerHTML = "Ocurrió un error al cargar los datos.";
+                });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<listatickets>
+<!-- 
+    Autor.- Irene Rodríguez Rodríguez
+    Fecha de creación.- 20 de febrero de 2025
+    Fecha de modificación.- 20 de febrero de 2025
+    Descripcion .- Listado de tickets 
+-->
+
+    <ticket>
+        <numero>7483</numero>
+        <fecha>2012-01-20</fecha>
+        <hora>22:00:00</hora>
+        <producto>
+            <nombre>Agua</nombre>
+            <precio>0.60</precio>
+        </producto>
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>	
+        <total>1.60</total>
+    </ticket>
+    <ticket>
+        <numero>7484</numero>
+        <fecha>2012-01-21</fecha>
+        <hora>22:05:00</hora>
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>
+        <producto>
+            <nombre>Refresco</nombre>
+            <precio>1.00</precio>
+        </producto>	
+        <total>2.00</total>
+    </ticket>
+</listatickets>	

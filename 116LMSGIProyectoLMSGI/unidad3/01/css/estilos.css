@@ -1,0 +1,43 @@
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #333;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Estilos de los botones */
+button {
+    background-color: #32bdef;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* anclar el footer abajo*/
+}
+
+footer p {
+    color: #ffffff;
+}
+
+/* Estilos del enlace */
+footer a {
+    color: #6b911f;
+    text-decoration: none;
+}

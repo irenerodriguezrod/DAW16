@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE inventario SYSTEM "02.dtd">
+<inventario>
+    <objeto codigo="MM2809">
+        <mesa>
+            <tipo>Oficina</tipo>
+            <localizacion>B09</localizacion>
+        </mesa>
+    </objeto>
+    <objeto codigo="PC2807">
+        <ordenador>
+            <procesador fabricante="Intel">
+                i3
+            </procesador>
+            <memoria unidad="Gb">2</memoria>
+            <discoduro tamano="Gb ">520</discoduro>
+        </ordenador>
+    </objeto>
+</inventario>

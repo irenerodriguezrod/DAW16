@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+     Nombre: Irene Rodríguez Rodríguez
+     Descripción: 
+     Fecha de creación: 02/12/2024
+     Fecha de modificación: 02/12/2024
+-->
+<!DOCTYPE biblioteca SYSTEM "02.dtd">
+<biblioteca>
+     <libro idlibro="libro1" genero="novela" idioma="Español" formato="impreso" ref="libro2" >
+          <titulo>Punto para los locos</titulo>
+          <autores>
+               <autor>
+                    <nombre>Angel</nombre>
+                    <apellido>Martín</apellido>
+                    <nacionalidad>Español</nacionalidad>
+               </autor>
+          </autores>
+          <anyo>2024</anyo>
+     </libro>
+          <libro idlibro="libro2" genero="novela" idioma="Español" formato="impreso" >
+          <titulo>Punto para los locos</titulo>
+          <autores>
+               <autor>
+                    <nombre>Angel</nombre>
+                    <apellido>Martín</apellido>
+                    <nacionalidad>Español</nacionalidad>
+               </autor>
+          </autores>
+          <anyo>2020</anyo>
+     </libro>
+</biblioteca>

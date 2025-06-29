@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universidad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.example.com/universidad"
+    xmlns:alu="http://www.example.com/alumnos"
+    xmlns:asi="http://www.example.com/asignaturas"
+    xmlns:car="http://www.example.com/carreras"
+     xsi:schemaLocation="
+            http://www.example.com/universidad universidad.xsd
+            http://www.example.com/alumnos alumnos.xsd 
+            http://www.example.com/asignaturas asignaturas.xsd
+            http://www.example.com/carreras carreras.xsd">
+    <nombre year="1964">Universidad de Victoria</nombre>
+
+    <!-- La fecha va en formato americano, es decir, año mes y dia-->
+    <fechaconstruccion>1964-03-14</fechaconstruccion>
+    <pais>España</pais>
+    <!--  CARRERAS  -->
+    <car:carreras>
+        <car:carrera id="c01">
+            <car:nombre>I.T. Informática</car:nombre>
+            <car:plan>2003</car:plan>
+            <car:creditos>250</car:creditos>
+            <car:centro>Escuela de Informática</car:centro>
+        </car:carrera>
+        <car:carrera id="c02">
+            <car:nombre>Dipl. Empresariales</car:nombre>
+            <car:plan>2001</car:plan>
+            <car:creditos>275</car:creditos>
+            <car:centro>Facultad de Ciencias Sociales</car:centro>
+        </car:carrera>
+        <car:carrera id="c03">
+            <car:nombre>Lic. Pedagogía</car:nombre>
+            <car:plan>2001</car:plan>
+            <car:creditos>280</car:creditos>
+            <car:centro>Facultad de Ciencias Sociales</car:centro>
+        </car:carrera>
+        <car:carrera id="c04">
+            <car:nombre>Lic. Quimica</car:nombre>
+            <car:plan>2003</car:plan>
+            <car:creditos>175</car:creditos>
+            <car:centro>Facultad de Ciencias Experimentales</car:centro>
+        </car:carrera>
+        <car:carrera id="c05">
+            <car:nombre>Lic. Biologíac</car:nombre>
+            <car:plan>2001</car:plan>
+            <car:creditos>175</car:creditos>
+            <car:centro>Facultad de Ciencias Experimentales</car:centro>
+        </car:carrera>
+        <car:carrera id="c06">
+            <car:nombre>Lic. Humanidades</car:nombre>
+            <car:plan>1980</car:plan>
+            <car:creditos>475</car:creditos>
+            <car:centro>Facultad de Humanidades</car:centro>
+        </car:carrera>
+    </car:carreras>
+    <!--  ASIGNATURAS  -->
+    <asi:asignaturas>
+        <asi:asignatura id="a01" titulacion="c01">
+            <asi:nombre>Ofimática</asi:nombre>
+            <asi:creditos_teoricos>3</asi:creditos_teoricos>
+            <asi:creditos_practicos>1.5</asi:creditos_practicos>
+            <asi:trimestre>1</asi:trimestre>
+        </asi:asignatura>
+        <asi:asignatura id="a02" titulacion="c01">
+            <asi:nombre>Ingeniería del Software</asi:nombre>
+            <asi:creditos_teoricos>6</asi:creditos_teoricos>
+            <asi:creditos_practicos>1.5</asi:creditos_practicos>
+            <asi:trimestre>2</asi:trimestre>
+        </asi:asignatura>
+        <asi:asignatura id="a03" titulacion="c02">
+            <asi:nombre>Administración de Empresas</asi:nombre>
+            <asi:creditos_teoricos>4</asi:creditos_teoricos>
+            <asi:creditos_practicos>1.5</asi:creditos_practicos>
+            <asi:trimestre>1</asi:trimestre>
+        </asi:asignatura>
+        <asi:asignatura id="a04" titulacion="c02">
+            <asi:nombre>Derecho Internacional</asi:nombre>
+            <asi:creditos_teoricos>4</asi:creditos_teoricos>
+            <asi:creditos_practicos>5</asi:creditos_practicos>
+            <asi:trimestre>1</asi:trimestre>
+        </asi:asignatura>
+        <asi:asignatura id="a05" titulacion="c04">
+            <asi:nombre>Pedagogía</asi:nombre>
+            <asi:creditos_teoricos>4</asi:creditos_teoricos>
+            <asi:creditos_practicos>1.5</asi:creditos_practicos>
+            <asi:trimestre>2</asi:trimestre>
+        </asi:asignatura>
+        <asi:asignatura id="a06" titulacion="c03">
+            <asi:nombre>Didáctica</asi:nombre>
+            <asi:creditos_teoricos>4</asi:creditos_teoricos>
+            <asi:creditos_practicos>3</asi:creditos_practicos>
+            <asi:trimestre>2</asi:trimestre>
+        </asi:asignatura>
+        <asi:asignatura id="a07" titulacion="c04">
+            <asi:nombre>Tecnología de los Alimentos</asi:nombre>
+            <asi:creditos_teoricos>1.5</asi:creditos_teoricos>
+            <asi:creditos_practicos>7.5</asi:creditos_practicos>
+            <asi:trimestre>2</asi:trimestre>
+        </asi:asignatura>
+        <asi:asignatura id="a08" titulacion="c01">
+            <asi:nombre>Bases de Datos</asi:nombre>
+            <asi:creditos_teoricos>4.5</asi:creditos_teoricos>
+            <asi:creditos_practicos>5.5</asi:creditos_practicos>
+            <asi:trimestre>1</asi:trimestre>
+        </asi:asignatura>
+        <asi:asignatura id="a09" titulacion="c06">
+            <asi:nombre>Historia del Pensamiento</asi:nombre>
+            <asi:creditos_teoricos>6</asi:creditos_teoricos>
+            <asi:creditos_practicos>0</asi:creditos_practicos>
+            <asi:trimestre>2</asi:trimestre>
+        </asi:asignatura>
+        </asi:asignaturas>
+    <!--  ALUMNOS  -->
+    <alu:alumnos>
+        <alu:alumno id="e01">
+            <alu:apellido1>Rivas</alu:apellido1>
+            <alu:apellido2>Santos</alu:apellido2>
+            <alu:nombre_alumno>Víctor Manuel</alu:nombre_alumno>
+            <alu:sexo>Hombre</alu:sexo>
+            <alu:estudios>
+                <alu:carrera codigo="c01"/>
+                <alu:asignaturas>
+                    <alu:asignatura codigo="a01"/>
+                    <alu:asignatura codigo="a03"/>
+                    <alu:asignatura codigo="a05"/>
+                    <alu:asignatura codigo="a09"/>
+                </alu:asignaturas>
+            </alu:estudios>
+        </alu:alumno>
+        <alu:alumno id="e02">
+            <alu:apellido1>Pérez</alu:apellido1>
+            <alu:apellido2>García</alu:apellido2>
+            <alu:nombre_alumno>Luisa</alu:nombre_alumno>
+            <alu:sexo>Mujer</alu:sexo>
+            <alu:estudios>
+                <alu:carrera codigo="c02"/>
+                <alu:asignaturas>
+                    <alu:asignatura codigo="a02"/>
+                    <alu:asignatura codigo="a01"/>
+                </alu:asignaturas>
+                <alu:proyecto>Web de IBM.com</alu:proyecto>
+            </alu:estudios>
+        </alu:alumno>
+        <alu:alumno id="e03" beca="si">
+            <alu:apellido1>Pérez</alu:apellido1>
+            <alu:apellido2>Romero</alu:apellido2>
+            <alu:nombre_alumno>Fernando</alu:nombre_alumno>
+            <alu:sexo>Hombre</alu:sexo>
+            <alu:estudios>
+                <alu:carrera codigo="c02"/>
+                <alu:asignaturas>
+                    <alu:asignatura codigo="a02"/>
+                    <alu:asignatura codigo="a01"/>
+                    <alu:asignatura codigo="a04"/>
+                    <alu:asignatura codigo="a09"/>
+                </alu:asignaturas>
+            </alu:estudios>
+        </alu:alumno>
+        <alu:alumno id="e04">
+            <alu:apellido1>Avalón</alu:apellido1>
+            <alu:apellido2>Jiménez</alu:apellido2>
+            <alu:nombre_alumno>María</alu:nombre_alumno>
+            <alu:sexo>Mujer</alu:sexo>
+            <alu:estudios>
+                <alu:carrera codigo="c01"/>
+                <alu:asignaturas>
+                    <alu:asignatura codigo="a02"/>
+                    <alu:asignatura codigo="a01"/>
+                    <alu:asignatura codigo="a07"/>
+                </alu:asignaturas>
+                <alu:proyecto>Estudio de Salinidad del Pantano Iris</alu:proyecto>
+            </alu:estudios>
+        </alu:alumno>
+    </alu:alumnos>
+</universidad>

@@ -1,0 +1,47 @@
+<xml version="1.0" encoding="utf-8"?>
+    <!-- 
+         Nombre: Irene Rodríguez Rodríguez
+         Descripción: Información de un mail
+         Fecha de creación: 25/11/2024
+         Fecha de modificación: 27/11/2024
+    -->
+<!DOCTYPE mail [
+    <!ELEMENT remitente (#PCDATA)>
+    <!ELEMENT destinatario (#PCDATA)>
+    <!ELEMENT dia (#PCDATA)>
+]>
+    
+    <mail>
+        <remitente>pepe@gmail.com</remitente>
+        <destinatario>maria@gmail.com</destinatario>
+        <destinatario>sofia@gmail.com</destinatario>
+        <fecha>
+            <dia>25</dia>
+            <mes>11</mes>
+            <anio>2024</anio>
+        </fecha>
+        <asunto>Cena Navidad 2024</asunto>
+            <mensaje>
+                <p>Querido/a compañero/a:</p>
+                <p>Nos complace invitarte a compartir una noche especial en nuestra <strong>Cena de Navidad</strong>, que se celebrará en el encantador <strong>Parador de Benavente</strong>.<p>
+                        <h2><strong>Detalles del evento</strong></h2>
+                        <ul>
+                            <li><strong>Fecha:</strong> Jueves, 21 de diciembre de 2023</li>
+                            <li><strong>Hora:</strong> 21:00</li>
+                            <li><strong>Lugar:</strong> Parador de Benavente</li>
+                        </ul>
+                        <p>Ven a disfrutar de una velada inolvidable llena de buena compañía, deliciosa gastronomía y el espíritu navideño que tanto nos une. Habremos preparado un menú especial pensado para celebrar esta mágica ocasión.</p>
+                        <p><strong>Por favor, confirma tu asistencia antes del 15 de diciembre de 2023</strong> respondiendo a este correo o contactando al <strong>[telefono/email de contacto]</strong></p>
+                        <p>Esperamos contar contigo para hacer de esta cena un momento aún más especial. ¡No faltes!</p>
+                        <p>Con cariño, </p>
+                        <p><strong>Director</strong><p>
+                            </mensaje>
+                            <ficheros_adjuntos>
+                                <nombre>documento.pdf</nombre>
+                                <nombre>imagen.png</nombre>
+                                <tipo_mime>application/pdf</tipo_mime>
+                                <tipo_mime>image/png</tipo_mime>
+                            </ficheros_adjuntos>
+            </mensaje>
+        </mail>
+</xml>

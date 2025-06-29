@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido idPedido="P002" fecha="2025-04-01"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pedidos.xsd" >
+    <tractor codigoFabricante="F001">
+        <componente referencia="CMP0000001">
+            <fechaEntrega mes="04" anio="2025"/>
+            <peso unidad="g">300</peso>
+            <numeroSerie>SN111111111</numeroSerie>
+            <kmMaximos>200000</kmMaximos>
+            <cantidad>1</cantidad>
+        </componente>
+        <componente referencia="CMP0000002">
+            <peso unidad="g">300</peso>
+            <numeroSerie>SN111111112</numeroSerie>
+            <cantidad>2</cantidad>
+        </componente>
+        <componente referencia="CMP0000003">
+            <peso unidad="g">150</peso>
+            <numeroSerie>SN111111113</numeroSerie>
+            <kmMaximos>250000</kmMaximos>
+            <cantidad>1</cantidad>
+        </componente>
+        <componente referencia="CMP0000004">
+            <peso unidad="g">300</peso>
+            <numeroSerie>SN111111114</numeroSerie>
+            <kmMaximos>100000</kmMaximos>
+            <cantidad>4</cantidad>
+        </componente>
+        <componente referencia="CMP0000005">
+            <peso unidad="g">150</peso>
+            <numeroSerie>SN111111115</numeroSerie>
+            <kmMaximos>100000</kmMaximos>
+            <cantidad>1</cantidad>
+        </componente>
+    </tractor>
+    <tractor codigoFabricante="F012">
+        <componente referencia="CMP0000006">
+            <fechaEntrega mes="05" anio="2025" dia="10"/>
+            <peso unidad="kg">1</peso>
+            <numeroSerie>SN222222221</numeroSerie>
+            <cantidad>1</cantidad>
+        </componente>
+        <componente referencia="CMP0000007">
+            <fragil/>
+            <peso unidad="kg">20</peso>
+            <numeroSerie>SN222222222</numeroSerie>
+            <kmMaximos>100000</kmMaximos>
+            <cantidad>1</cantidad>
+        </componente>
+        <componente referencia="CMP0000008">
+            <fragil/>
+            <peso unidad="kg">25</peso>
+            <numeroSerie>SN222222223</numeroSerie>
+            <cantidad>1</cantidad>
+        </componente>
+        <componente referencia="CMP0000009">
+            <fragil/>
+            <peso unidad="kg">30</peso>
+            <numeroSerie>SN222222224</numeroSerie>
+            <cantidad>4</cantidad>
+        </componente>
+        <componente referencia="CMP0000010">
+            <peso unidad="g">105</peso>
+            <numeroSerie>SN222222225</numeroSerie>
+            <cantidad>1</cantidad>
+        </componente>
+    </tractor>
+</pedido>

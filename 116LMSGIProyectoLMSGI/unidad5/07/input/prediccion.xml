@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-15" ?>
+<prediccion>
+	<municipio id="49021">
+		<nombre>Benavente</nombre>
+		<provincia>Zamora</provincia>
+	</municipio>
+	<dia fecha="2013-06-11">
+		<prob_precipitacion>5</prob_precipitacion>
+		<estado_cielo descripcion="Poco nuboso">14</estado_cielo>
+		<viento>
+			<direccion>Calma</direccion>
+			<velocidad>0</velocidad>
+		</viento>
+		<temperatura>
+			<maxima>26</maxima>
+			<minima>12</minima>
+		</temperatura>
+	</dia>
+	<dia fecha="2013-06-12">
+		<prob_precipitacion>0</prob_precipitacion>
+		<estado_cielo descripcion="Cielo despejado">11</estado_cielo>
+		<viento>
+			<direccion>Oeste</direccion>
+			<velocidad>5</velocidad>
+		</viento>
+		<temperatura>
+			<maxima>29</maxima>
+			<minima>13</minima>
+		</temperatura>
+	</dia>
+	<dia fecha="2013-06-13">
+		<prob_precipitacion>5</prob_precipitacion>
+		<estado_cielo descripcion="Poco nuboso">12</estado_cielo>
+		<viento>
+			<direccion>Sudoeste</direccion>
+			<velocidad>10</velocidad>
+		</viento>
+		<temperatura>
+			<maxima>28</maxima>
+			<minima>14</minima>
+		</temperatura>
+	</dia>
+	<dia fecha="2013-06-14">
+		<prob_precipitacion>0</prob_precipitacion>
+		<estado_cielo descripcion="Cielo despejado">11</estado_cielo>
+		<viento>
+			<direccion>Este</direccion>
+			<velocidad>20</velocidad>
+		</viento>
+		<temperatura>
+			<maxima>28</maxima>
+			<minima>12</minima>
+		</temperatura>
+	</dia>
+	<dia fecha="2013-06-15">
+		<prob_precipitacion>0</prob_precipitacion>
+		<estado_cielo descripcion="Cielo despejado">11</estado_cielo>
+		<viento>
+			<direccion>Calma</direccion>
+			<velocidad>0</velocidad>
+		</viento>
+		<temperatura>
+			<maxima>29</maxima>
+			<minima>13</minima>
+		</temperatura>
+	</dia>
+	<dia fecha="2013-06-16">
+		<prob_precipitacion>10</prob_precipitacion>
+		<estado_cielo descripcion="Intervalos nubosos">13</estado_cielo>
+		<viento>
+			<direccion>Sudoeste</direccion>
+			<velocidad>15</velocidad>
+		</viento>
+		<temperatura>
+			<maxima>30</maxima>
+			<minima>14</minima>
+		</temperatura>
+	</dia>
+	<dia fecha="2013-06-17">
+		<prob_precipitacion>25</prob_precipitacion>
+		<estado_cielo descripcion="Nuboso">14</estado_cielo>
+		<viento>
+			<direccion>Sudoeste</direccion>
+			<velocidad>25</velocidad>
+		</viento>
+		<temperatura>
+			<maxima>24</maxima>
+			<minima>12</minima>
+		</temperatura>
+	</dia>
+</prediccion>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE componentes SYSTEM "componentes.dtd"> <!-- se vincula con el DTD-->
+<componentes>
+    <componente codigo="CMP0000001" nombre="Alternador 14V 33A"/>
+    <componente codigo="CMP0000002" nombre="Filtro de aire"/>
+    <componente codigo="CMP0000003" nombre="Filtro aceite motor SDT"/> 
+    <componente codigo="CMP0000004" nombre="Filtro de combustible"/>
+    <componente codigo="CMP0000005" nombre="Sistema hidráulico"/>
+    <componente codigo="CMP0000006" nombre="Alternador 14V 55A"/>
+    <componente codigo="CMP0000007" nombre="Batería 12V 100 Ah"/>
+    <componente codigo="CMP0000008" nombre="Batería 12V 120 Ah"/>
+    <componente codigo="CMP0000009" nombre="Batería 12V 140 Ah"/>
+    <componente codigo="CMP0000010" nombre="Bomba de agua"/>
+    <componente codigo="CMP0000011" nombre="Asiento de PVC con suspensión neumática"/>
+    <componente codigo="CMP0000012" nombre="Bombim de embrage SDF"/>
+    <componente codigo="CMP0000013" nombre="Disco de embrague UKF"/>
+    </componentes>
+    

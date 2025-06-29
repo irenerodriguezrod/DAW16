@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<curso id="5">
+		<nombre>Programación en PHP</nombre>
+		<precio cuota="mensual" moneda="euro">50</precio>
+		<plazas>20</plazas>
+		<comienzo>1/1/2024</comienzo>
+		<fin>31/12/2024</fin>
+		<dias>Lunes a Viernes</dias> 
+		<horainicio>16</horainicio>
+		<horafin>20</horafin>
+		<profesor idref="3"/>
+		<aula idref="1"/>
+	</curso>

@@ -1,0 +1,5 @@
+<!ELEMENT programmingLanguages (language+)>
+<!ELEMENT language (description, example)>
+<!ATTLIST language name CDATA #REQUIRED>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT example (#PCDATA)>

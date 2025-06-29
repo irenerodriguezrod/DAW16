@@ -1,0 +1,65 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que afecten al tamaño de los elementos */
+}
+
+body {
+    font-family: serif; 
+    width: 1024px; /* ancho de la página */
+    margin: 0 auto; /* Centra la página en la ventana */
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Títulos */
+h1 {
+    text-transform: lowercase;
+    font-weight: 100;
+}
+
+h2, h3 {
+    padding: 10px;
+}
+
+/* Contenedor principal */
+#cajaPrincipal {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cajas se ajusten a nuevas líneas si no caben en la misma fila */
+    justify-content: center; /* Centra las cajas dentro del contenedor */
+    padding: 20px 0; /* Espacio arriba y abajo */
+    gap: 20px; /* Espacio entre las cajas */
+}
+
+/* Caja de cada álbum */
+.cajaAlbum {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Centra los elementos verticalmente */
+    border: 2px solid #ccc; /* Borde gris claro */
+    padding: 10px;
+    width: 45%; /* Cada caja ocupa el 45% del contenedor, dos por fila */
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centra el texto en cada caja */
+}
+
+/* Imagen dentro de la caja del álbum */
+.cajaAlbum img {
+    width: 120px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para los párrafos dentro de la caja */
+.cajaAlbum p {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 5px 0;
+}

@@ -1,0 +1,74 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="inventario">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="objeto" maxOccurs="unbounded"> <!-- <!ELEMENT inventario (objeto+)>-->
+                    <xs:complexType>
+                        <xs:choice> <!-- <!ELEMENT objeto (mesa |ordenador)>-->
+                            <xs:element name="mesa"> <!-- <!ELEMENT mesa (tipo?, localizacion)>-->
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tipo" minOccurs="0" type="xs:string"/> <!-- <!ELEMENT tipo (#PCDATA)>-->
+                                        <xs:element name="localizacion"/> <!-- <!ELEMENT localizacion (#PCDATA) >-->
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ordenador"> <!-- <!ELEMENT ordenador (procesador?, memoria?, discoduro)>-->
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="procesador" minOccurs="0"> <!-- <!ELEMENT procesador (#PCDATA)>-->
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="fabricante"> <!-- <!ATTLIST procesador fabricante CDATA "Intel">-->
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                    <xs:pattern value="Intel"/> <!-- CDATA "Intel"-->
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="memoria" minOccurs="0"> <!-- <!ELEMENT memoria (#PCDATA)>-->
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="unidad" type="xs:string" fixed="Gb"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="discoduro"> <!-- <!ELEMENT discoduro (#PCDATA)>-->
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="tamano">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                    <xs:pattern value="Tb|Gb|Mb"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>                                        
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                        <xs:attribute name="codigo">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:ID"><!-- El tipo se declara en la restricción ya que sino da error-->
+                                    <xs:pattern value="[a-zA-Z]{2}[0-9]{4}"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

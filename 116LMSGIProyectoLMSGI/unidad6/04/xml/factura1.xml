@@ -1,0 +1,7 @@
+<factura id="F001">
+  <cliente>
+    <nombre>Juan Pérez</nombre>
+    <email>juan@example.com</email>
+  </cliente>
+  <total>100.50</total>
+</factura>

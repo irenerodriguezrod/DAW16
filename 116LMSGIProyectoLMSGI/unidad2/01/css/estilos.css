@@ -1,0 +1,188 @@
+/*DEFINICION FUENTES */
+/*Roboto Slab - H1*/
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(/unidad2/01/fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
+
+/*Montserrat - H2*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/unidad2/01/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+/*Merriweather - H3*/
+@font-face {
+    font-family: 'Merriweather';
+    src: url(/unidad2/01/fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+/*Arial para el resto*/
+@font-face {
+    font-family: 'Arial';
+    src: url(/unidad2/01/fonts/arial-font/arial.ttf);
+}
+
+
+/*Estilos generales para toda la pagina*/
+body {
+    width: 640px;
+    /*Ancho fijo*/
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #343434;
+    /*Gris claro*/
+    background-image: url(../media/images/banner.jpeg);
+    background-position: right top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* General reset para borrar espacio */
+header,
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #343a40;
+    padding-top: 3px;
+}
+
+/* Nav */
+nav {
+    padding: 0;
+    text-align: center;
+    background-color: #343a40;
+}
+
+nav ul {
+    background-color: #343a40;
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    background-color: #343a40;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+/* Animación al pasar el ratón encima */
+nav a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/*Encabezado*/
+h1 {
+    font-size: 2em;
+    font-family: 'Roboto Slab', serif;
+    background-color: #343a40;
+    color: #f8f9fa;
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: overline;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-family: 'Merriweather', serif;
+
+}
+
+/*Parrafos*/
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+/*Imagenes y figures*/
+figure {
+    max-width: 90%;
+    margin: auto;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*Listas*/
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/*Enlaces generales*/
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/*Pie de pagina*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Enlaces en la sección de contacto del pie de página */
+.footer-contact a {
+    color: #007bff;
+}
+
+.footer-contact a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+    /* Subrayado al pasar el ratón */
+}
+
+footer img {
+    width: 88px;
+    height: 31px;
+    vertical-align: middle;  /* Centra el logo en la línea */
+}
+
+/*Box shadow en las secciones*/
+section,
+article {
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

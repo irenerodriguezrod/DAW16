@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<!--
+    Autor: Irene Rodríguez Rodríguez
+    Fecha de creación: 23/10/2024
+    Fecha de modificación: 24/10/2024
+    Descripción: Unidad 2, actividad 4. Creación de multimedia sobre animales domésticos
+-->
+<html lang="es">
+
+<head>
+    <!-- Especifica la codificación de la página -->
+    <meta charset="UTF-8">
+    <!-- Especifica una breve descripción de la web para que aparezca en los motores de búsqueda -->
+    <meta name="description" content="Formulario para rellenar datos personales de animales domésticos">
+    <!-- Especifica el autor de la web -->
+    <meta name="author" content="Irene Rodríguez Rodríguez">
+    <!-- Especifica a los robots cómo se puede indexar y seguir la web -->
+    <meta name="robots" content="index, follow">
+    <!-- Especifica el idioma de la web -->
+    <meta name="language" content="es">
+    <!-- Especifica el editor de código utilizado para crear la web -->
+    <meta name="generator" content="Visual Studio Code">
+    <!-- Especifica las palabras clave que contiene la web para que aparezca en los motores de búsqueda -->
+    <meta name="keywords" content="HTML, formulario, animales domésticos, mascotas">
+    <!-- Configuración para que la web sea compatible en todos los dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la web -->
+    <title>UD2. 04 Irene Rodríguez Rodríguez</title>
+    <!-- Favicon de la web -->
+    <link rel="shortcut icon" type="image/png" href="../../webroot/media/favicon/favicon.ico">
+    <!-- Link a los css comunes para el header y el footer -->
+    <link href="../../css/estilos.css" rel="stylesheet" type="text/css">
+    <!-- Link a los css específicos que se usan solo en este fichero -->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div>
+        <!-- HEADER DE LA PÁGINA WEB -->
+        <header>
+            <h1>Multimedia: mascotas</h1>
+            <p>A continuación podrás ver diferentes tipos de multimedia sobre mascotas.</p>
+        </header>
+    </div>
+
+    <div id="imagenes">
+        <!-- Sección de imágenes -->
+        <h2>Imágenes</h2>
+        <!-- Agrupar imágenes en fila. GAP sirve para que haya espacio entre las imágenes -->
+        <div style="display: flex; gap: 10px;">
+            <!-- Imagen 1: tipo PNG -->
+            <h3>Grupo de animales con fondo transparente. Imágen PNG</h3>
+            <img src="media/images/animalsgroup.png" alt="Grupo de animales adorables con fondo blanco"
+                title="Grupo de animales con fondo transparente. Imágen PNG" width="300" height="200">
+            <!-- Imagen 2: tipo GIF -->
+            <h3>GIF de varios perros</h3>
+            <img src="media/images/dog.gif" alt="Animación de animales" title="GIF de varios perros" width="300"
+                height="200">
+            <!-- Imagen 3: tipo JPG -->
+            <h3>Imagen de un grupo de mascotas</h3>
+            <img src="media/images/grupomascotas.jpg" alt="Grupo de mascotas" title="Imagen de un grupo de mascotas"
+                width="300" height="200">
+        </div>
+    </div>
+
+    <!-- Línea divisoria visual para separar secciones -->
+    <hr>
+
+    <div id="video">
+
+        <!-- Sección de videos -->
+        <h2>Videos</h2>
+        <!-- Agrupar videos en una fila -->
+        <div style="display: flex; gap: 10px;">
+            <!-- Video 1: tipo WEBM -->
+            <h3>Video de unos pájaros. Formato WEBM</h3>
+            <video controls width="300">
+                <source src="media/video/birds_video.webm" type="video/webm">
+                Tu navegador no soporta el formato de video WebM.
+            </video>
+            <!-- Video 2: tipo OGV -->
+            <h3>Video de un gato. Formato OGV</h3>
+            <video controls width="300">
+                <source src="media/video/cats_video.ogv" type="video/ogv">
+                Tu navegador no soporta el formato de video Ogg.
+            </video>
+            <!-- Video 3: tipo MP4 -->
+            <h3>Video de unos perros. Formato MP4</h3>
+            <video controls width="300">
+                <source src="media/video/puppies_video.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video MP4.
+            </video>
+        </div>
+        <br>
+        <hr>
+    </div>
+
+    <div id="youtube">
+        <!-- Video de YouTube embebido -->
+        <h3>Video de YouTube</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rXy3Gn4H1qQ?si=PZjAT8iTQb17TZni"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+        <hr>
+    </div>
+
+    <div id="audio">
+        <!-- Sección de audio -->
+        <h2>Audio</h2>
+        <!-- Audio 1: tipo MPEG -->
+        <h3>Audio de un canario cantando</h3>
+        <audio controls>
+            <source src="media/audio/canary-singing.mp3" type="audio/mpeg" title="Audio de un canario cantando">
+            Tu navegador no soporta el formato de audio MP3.
+        </audio>
+        <!-- Audio 2: tipo WAV -->
+        <h3>Audio de un gato maullando</h3>
+        <audio controls>
+            <source src="media/audio/gato.wav" type="audio/wav" title="Audio de un gato maullando">
+            Tu navegador no soporta el formato de audio WAV.
+        </audio>
+        <!-- Audio 3: tipo OGG -->
+        <h3>Audio de un perro ladrando</h3>
+        <audio controls>
+            <source src="media/audio/perro.ogg" type="audio/ogg" title="Audio de un perro ladrando">
+            Tu navegador no soporta el formato de audio Ogg.
+        </audio>
+        <hr>
+    </div>
+
+    <div id="footer">
+        <!-- PIE DE PÁGINA con derechos de autor y fecha de actualización -->
+        <footer>
+            <p>2024-25 IES LOS SAUCES. &#169; Todos los derechos reservados. <a
+                    href="/116LMSGIProyectoLMSGI/index.html">Irene Rodríguez Rodríguez </a></p>
+            <p>Fecha de actualización: <time datetime="2024-10-24">24 de octubre de 2024</time></p>
+            <a href="https://validator.w3.org/check?uri=https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad2/04/"> <!--Validacion W3C-->
+                <img src="/webroot/media/W3C_Icon.svg" alt="Validado por W3C" width="88" height="31">
+            </a>
+        </footer>
+    </div>
+</body>
+
+</html>

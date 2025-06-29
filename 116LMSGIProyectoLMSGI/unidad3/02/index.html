@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ud3.2 - Irene Rodríguez Rodríguez</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+  <h1>Ud3.2 DOM: Crear tabla</h1>
+  <label for="filas">Número de filas:</label>
+  <input type="number" id="filas" min="1" max="10" value="2">
+  <!--Minimo 1, maximo 10. Si no se pone nada por defecto es 2-->
+  <label for="numerocolumnas">Número de columnas:</label>
+  <input type="number" id="numerocolumnas" min="1" max="10" value="2">
+  <input type="button" value="Genera una tabla" onclick="genera_tabla()" />
+</body>
+
+<footer>
+  <p>
+    Todos los derechos reservados. Creado por: <a href="../../index.html">Irene Rodríguez Rodríguez
+    </a>
+  </p>
+</footer>
+
+<script>
+  function genera_tabla() {
+    var cuerpo = document.getElementsByTagName("body")[0]; // Obtiene el primer elemento de <body>
+    var filas = document.getElementById("filas").value; // Obtiene el número de filas
+    var columnas = document.getElementById("numerocolumnas").value; // Obtiene el número de columnas
+
+    // mantener el contenido del body y verificar si ya existe una tabla
+    var tablaExistente = document.querySelector("table"); // Busca una tabla existente en el documento
+    if (tablaExistente) {
+      tablaExistente.remove(); // Elimina la tabla existente si la encuentra
+    }
+
+    // Crear nueva tabla
+    var tabla = document.createElement("table");
+    var tbody = document.createElement("tbody");
+
+    //crear filas con <tr>.
+    for (let f = 1; f <= filas; f++) {
+      var tr = document.createElement("tr"); // Crear una fila (<tr>)
+
+      // Bucle para crear las columnas
+      for (let c = 1; c <= columnas; c++) {
+        var td = document.createElement("td"); // Crear una celda (<td>)
+        var textoCelda = document.createTextNode("Fila " + f + " , Columna " + c); // Texto de la celda
+
+        td.appendChild(textoCelda); // Agregar el texto a la celda
+        tr.appendChild(td); // Agregar la celda a la fila
+      }
+
+      tbody.appendChild(tr); // Agregar la fila al cuerpo de la tabla
+    }
+
+    tabla.appendChild(tbody); // Agregar el cuerpo a la tabla
+    cuerpo.appendChild(tabla); // Agregar la tabla al cuerpo del documento
+    tabla.setAttribute("border", "2"); // borde 
+  }
+</script>
+
+
+</html>

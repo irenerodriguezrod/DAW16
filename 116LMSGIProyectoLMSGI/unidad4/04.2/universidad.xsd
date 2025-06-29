@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/universidad"
+    xmlns="http://www.example.com/universidad"
+    xmlns:alu="http://www.example.com/alumnos"
+    xmlns:asi="http://www.example.com/asignaturas"
+    xmlns:car="http://www.example.com/carreras" elementFormDefault="qualified">
+
+    <xs:import namespace="http://www.example.com/alumnos" schemaLocation="alumnos.xsd"/>
+    <xs:import namespace="http://www.example.com/asignaturas" schemaLocation="asignaturas.xsd"/>
+    <xs:import namespace="http://www.example.com/carreras" schemaLocation="carreras.xsd"/>
+
+    <!-- Definir universidad -->
+    <xs:element name="universidad">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Significa el elemento nombre, es un elemento complejo que contiene uno simple a su vez del tipo string y equivale a un año-->
+                <xs:element name="nombre">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <!-- Atributo simple que sólo puede contener valores entre esos valores inclusivos, es decir, solo puede contener valores entre 1900 y 2500-->
+                                <xs:attribute name="year">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:gYear">
+                                            <xs:minInclusive value="1900"/>
+                                            <xs:maxInclusive value="2500"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:extension>
+                        </xs:simpleContent> 
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="fechaconstruccion" type="xs:date"/>
+                <xs:element name="pais" type="xs:string"/>
+
+                <!-- Otros elementos a los que hace referencia-->
+                <xs:element ref="car:carreras"/>
+                <xs:element ref="asi:asignaturas"/>
+                <xs:element ref="alu:alumnos"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

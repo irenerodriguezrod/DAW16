@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?> <!--Declaración del tipo de documento: versión XML y codificación de los caracteres usados-->
+<rss version="2.0">  <!--Especificacion RSS-->
+
+<channel> <!--Contenido del RSS-->
+
+    <title>DAW116 - Irene Rodríguez Rodríguez</title> <!--Nombre del canal-->
+    <link>http://daw116.ieslossauces.es/</link> <!--URL del sitio web-->
+    <description>Canal RRS de la página web DAW116 - Irene Rodríguez. Aquí se publicarán las modificaciones de las prácticas realizadas durante el curso</description> <!--Descripción del sitio web-->
+    <category>Educacion</category>
+    <language>es-ES</language>
+    <pubDate>Mon, 02 Dec 2024 18:00:00 +0100</pubDate>
+    <!-- Fecha en la que se publicó originalmente -->
+    <lastBuildDate>Mon, 02 Dec 2024 18:00:00 +0100</lastBuildDate>
+    <!-- Fecha de la ultima modificacion -->
+    <skipDays>
+    <!-- Dias en los que el canal no se actualiza, los fines de semana -->
+    <day>Sábado</day>
+    <day>Domingo</day>
+    </skipDays>
+    <skipHours>
+    <!-- Horas en las que no se actualiza, de 00:00 a 08:00 -->
+    <hour>0</hour>
+    <hour>1</hour>
+    <hour>2</hour>
+    <hour>3</hour>
+    <hour>4</hour>
+    <hour>5</hour>
+    <hour>6</hour>
+    <hour>7</hour>
+    <hour>8</hour>
+    </skipHours>
+    <copyrigth>2024 - DAW116 Irene Rodríguez. Todos los derechos reservados.</copyrigth>
+
+
+    <!-- Primer item o publicación (unidad 2, práctica 1) -->
+    <item>
+        <title>Unidad 2. Práctica 1. Información de los volcanes más importantes del mundo</title>
+        <link>http://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad2/01/</link> <!--Es el link de la práctica que se ha subido-->
+        <description>Primera práctica de la unidad 2 en la que hay información e imágenes sobre los volcanes más importantes del mundo y curiosidades sobre ellos</description>
+    </item>
+
+    <item>
+        <title>Examen 02</title>
+        <description>Creacion de una pagina fan de los juegos del hambre</description>
+        <link></link>
+    </item>
+
+</channel>
+
+</rss>

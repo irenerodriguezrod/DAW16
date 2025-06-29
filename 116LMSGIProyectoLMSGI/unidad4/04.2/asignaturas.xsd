@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.example.com/asignaturas" 
+           targetNamespace="http://www.example.com/asignaturas" 
+           elementFormDefault="qualified">
+
+<!-- Declaración del esquema-->
+<xs:element name="asignaturas">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="asignatura" type="tipoAsignatura" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- Declaración del elemento de tipo complejo-->
+<xs:complexType name="tipoAsignatura">
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="creditos_teoricos" type="xs:float"/>
+        <xs:element name="creditos_practicos" type="xs:float"/>
+        <xs:element name="trimestre" type="xs:positiveInteger"/>
+    </xs:sequence>
+    <!-- Declaracion atributos del elemento de tipo complejo-->
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="titulacion" type="xs:string"/>
+</xs:complexType>
+</xs:schema>

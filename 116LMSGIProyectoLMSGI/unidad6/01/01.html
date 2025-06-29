@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+    Nombre: Irene Rodríguez Rodríguez
+    Fecha de creación: 05 mayo 2025
+    Fecha de modificación: 05 de mayo de 2025
+    Descripción: Creación de un HTML que carga un documento JSON para cargar datos de una persona
+-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UD6.1 JSON: Irene Rodríguez Rodríguez</title>
+    <style>
+        #parrafo {
+            white-space: pre-line;
+            background-color: beige;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #parrafo span {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cargar JSON en el navegador</h1>
+    <div id="parrafo"></div> <!--El resultado queda dentro del div-->
+    <script>
+        // fetch() es una función incorporada en los navegadores hacer solicitud HTTP (como GET, POST). 
+        // te permite obtener datos desde o hacia un servidor de forma asincrona, 
+        // sin recargar la página 
+        // fetch(url, opciones) 
+        // .then (respuesta => { 
+        //  manejar respuesta }) 
+        // .catch(error => { 
+        //  manejar errores 
+        //  }); 
+        fetch('./01.json') // se cargan los datos desde el .json
+            .then(response => {
+                if (!response.ok) throw new Error("Error en tiempo de ejecución al cargar") //si se produce un error, salta esta secuencia y ya no ejecuta lo demás
+                return response.json();  //convierte la respuesta en json 
+            })
+
+            .then(jsonData => {
+                console.log(jsonData); // jsonData es un objeto JavaScript 
+                p = document.getElementById('parrafo');
+                p.innerHTML = `<span>Nombre: </span>${jsonData.nombre} <span>Edad:</span> ${jsonData.edad}` //primero aparece el nombre en negrita (span) y después el valor(se toma del .json)
+            })
+            .catch(error => console.log(error)); //captura los errores que haya
+    </script>
+</body>
+</html>

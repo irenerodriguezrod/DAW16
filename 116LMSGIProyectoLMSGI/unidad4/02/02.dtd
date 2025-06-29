@@ -1,0 +1,14 @@
+<!ELEMENT biblioteca (libro)+>
+<!ELEMENT libro (titulo, autores, anyo)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autores (autor+)>
+<!ELEMENT autor (nombre, apellido, nacionalidad)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+<!ELEMENT anyo (#PCDATA)>
+<!ATTLIST libro idlibro ID #REQUIRED>
+<!ATTLIST libro genero CDATA #IMPLIED>
+<!ATTLIST libro idioma CDATA "Español">
+<!ATTLIST libro formato (impreso|digital) "impreso">
+<!ATTLIST libro ref IDREFS #IMPLIED>

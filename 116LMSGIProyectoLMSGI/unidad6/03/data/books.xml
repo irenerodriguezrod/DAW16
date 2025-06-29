@@ -1,0 +1,94 @@
+<bookstore>
+  <book category="cooking">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+  <book category="children">
+    <title lang="en">Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
+  <book category="web">
+    <title lang="en">XQuery Kick Start</title>
+    <author>James McGovern</author>
+    <author>Per Bothner</author>
+    <author>Kurt Cagle</author>
+    <author>James Linn</author>
+    <author>Vaidyanathan Nagarajan</author>
+    <year>2003</year>
+    <price>49.99</price>
+  </book>
+  <book category="web" cover="paperback">
+    <title lang="en">Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+
+  <!-- Registros adicionales -->
+  <book category="programming">
+    <title lang="en">Clean Code</title>
+    <author>Robert C. Martin</author>
+    <year>2008</year>
+    <price>42.00</price>
+  </book>
+  <book category="science">
+    <title lang="en">A Brief History of Time</title>
+    <author>Stephen Hawking</author>
+    <year>1988</year>
+    <price>15.99</price>
+  </book>
+  <book category="fiction">
+    <title lang="en">1984</title>
+    <author>George Orwell</author>
+    <year>1949</year>
+    <price>12.99</price>
+  </book>
+  <book category="self-help">
+    <title lang="en">The Power of Habit</title>
+    <author>Charles Duhigg</author>
+    <year>2012</year>
+    <price>21.50</price>
+  </book>
+  <book category="history">
+    <title lang="en">Sapiens: A Brief History of Humankind</title>
+    <author>Yuval Noah Harari</author>
+    <year>2011</year>
+    <price>23.75</price>
+  </book>
+  <book category="programming">
+    <title lang="en">The Pragmatic Programmer</title>
+    <author>Andrew Hunt</author>
+    <author>David Thomas</author>
+    <year>1999</year>
+    <price>39.99</price>
+  </book>
+  <book category="biography">
+    <title lang="en">Steve Jobs</title>
+    <author>Walter Isaacson</author>
+    <year>2011</year>
+    <price>19.99</price>
+  </book>
+  <book category="children">
+    <title lang="en">The Gruffalo</title>
+    <author>Julia Donaldson</author>
+    <author>Axel Scheffler</author>
+    <year>1999</year>
+    <price>8.99</price>
+  </book>
+  <book category="finance">
+    <title lang="en">Rich Dad Poor Dad</title>
+    <author>Robert T. Kiyosaki</author>
+    <year>1997</year>
+    <price>17.50</price>
+  </book>
+  <book category="fantasy" cover="hardcover">
+    <title lang="en">The Name of the Wind</title>
+    <author>Patrick Rothfuss</author>
+    <year>2007</year>
+    <price>24.95</price>
+  </book>
+</bookstore>

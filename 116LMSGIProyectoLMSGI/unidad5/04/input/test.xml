@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../src/06.xsl"?>
+<examen>
+	<datos>
+		<nombreCiclo>Despliegue de Aplicaciones Web</nombreCiclo>
+		<curso>1</curso>
+		<nombreModulo>SINF</nombreModulo>
+		<evaluacion>3</evaluacion>
+		<fecha>
+			<dia>2</dia>
+			<mes>5</mes>
+			<anyo>2024</anyo>
+		</fecha>
+	</datos>
+	<preguntas>
+		<pregunta id="1">
+			<enunciado>¿Qué capa OSI administra los segmentos de datos?</enunciado>
+			<respuestas>
+				<respuesta>Capa de aplicación</respuesta>
+				<respuesta>Capa de presentación</respuesta>
+				<respuesta>Capa de sesión</respuesta>
+				<respuesta correcta="correcta">Capa de transporte</respuesta>
+			</respuestas>
+		</pregunta>
+		<pregunta id="2">
+			<enunciado>¿Qué tipo de información contiene el encabezado de la Capa 4 para ayudar en el envío de datos?</enunciado>
+			<respuestas>
+				<respuesta correcta="correcta">Número de puerto del servicio</respuesta>
+				<respuesta>Dirección lógica del host</respuesta>
+				<respuesta>Dirección física del dispositivo</respuesta>
+				<respuesta>Identificador de conexión virtual</respuesta>
+			</respuestas>
+		</pregunta>
+		<pregunta id="3">
+			<enunciado>Durante el proceso de encapsulación, ¿qué identificadores se agregan en la capa de transporte?</enunciado>
+			<respuestas>
+				<respuesta>Direcciones IP de origen y de destino</respuesta>
+				<respuesta>Direcciones MAC de origen y de destino</respuesta>
+				<respuesta correcta="correcta">Números de puertos de origen y destino</respuesta>
+				<respuesta>Identificadores de canal de origen y destino</respuesta>
+			</respuestas>
+		</pregunta>
+		<pregunta id="4">
+			<enunciado>¿Qué rango de números de puerto se asigna de forma dinámica a las aplicaciones cliente al iniciar una conexión con el servidor?</enunciado>
+			<respuestas>
+				<respuesta>De 0 a 255</respuesta>
+				<respuesta>De 0 a 1023</respuesta>
+				<respuesta correcta="correcta">De 1024 a 49151</respuesta>
+				<respuesta>Mayor de 65535</respuesta>
+			</respuestas>
+		</pregunta>
+		<pregunta id="5">
+			<enunciado>¿Qué información contiene el encabezado de la Capa 3 para ayudar en el envío de datos?</enunciado>
+			<respuestas>
+				<respuesta correcta="correcta">Dirección lógica del host de destino</respuesta>
+				<respuesta>Número de puerto</respuesta>
+				<respuesta>Dirección física del dispositivo</respuesta>
+				<respuesta>Identificador de conexión virtual</respuesta>
+			</respuestas>
+		</pregunta>
+	</preguntas>
+</examen>

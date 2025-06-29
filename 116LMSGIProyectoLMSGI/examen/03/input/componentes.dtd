@@ -1,0 +1,14 @@
+<!-- 
+    Nombre: Irene Rodríguez Rodríguez
+    Fecha de realización: 17/03/2025
+    Fecha de modificación: 17/03/2025
+    Descripción:
+                PREGUNTA 1. DTD 
+                • Se pide escribir el DTD de las componentes, input/ componentes.dtd y vincularlo al XML, 
+                teniendo en cuenta las especificaciones dadas. 
+-->
+
+<!ELEMENT componentes (componente+)>
+<!ELEMENT componente EMPTY>
+<!ATTLIST componente codigo ID #REQUIRED>
+<!ATTLIST componente nombre CDATA #REQUIRED>

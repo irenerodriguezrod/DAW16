@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE fabricantes SYSTEM "fabricantes.dtd"> -->
+<fabricantes>
+    <fabricante codigo="F001" nombre="John Deere"/>
+    <fabricante codigo="F002" nombre="New Holland"/>
+    <fabricante codigo="F003" nombre="Massey Ferguson"/>
+    <fabricante codigo="F004" nombre="Case"/>
+    <fabricante codigo="F005" nombre="Kubota"/>
+    <fabricante codigo="F006" nombre="Claas"/>
+    <fabricante codigo="F007" nombre="Fend"/>
+    <fabricante codigo="F008" nombre="Valtra"/>
+    <fabricante codigo="F009" nombre="Deutz Fahr"/>
+    <fabricante codigo="F010" nombre="Same"/>
+    <fabricante codigo="F011" nombre="Landini"/>
+    <fabricante codigo="F012" nombre="Lamborghini"/>
+</fabricantes>

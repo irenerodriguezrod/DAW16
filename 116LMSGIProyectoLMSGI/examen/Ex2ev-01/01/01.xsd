@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Crear el tipo y añadir la restricción a beneficio. (Se hace con fraction-digits para limitar los decimales)-->
+<xs:element name="tipoBeneficio">
+  <xs:simpleType>
+    <xs:restriction>
+        <xs:fraction-digits>
+            <xs:minLength value="2"/>
+            <xs:maxLength value="2"/>
+        </xs:fraction-digits>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+    <xs:element name="productosfinancieros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="producto" maxOccurs="unbounded">
+                    <xs:complexType>
+                    <!-- no se puede poner sequence si se emplea choice-->
+                        <!-- <xs:sequence> -->
+                            <xs:choice>
+                                <!-- Se utiliza el choice para decir que tiene que ser uno de estos 3 -->
+                                <xs:element name="bono">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="valoractual">
+                                                <xs:complexType>
+                                                    <xs:simpleContent>
+                                                        <xs:extension base="xs:float">
+                                                            <xs:attribute name="moneda" use="required">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                        <!-- Se podría escribir con pattern, pero no hay que dejar espacios entre ellos porque sino da error 
+                                                                        <xs:pattern value="dolares|euros|yenes"/>
+                                                                         -->
+                                                                        <xs:enumeration value="dolares"/>
+                                                                        <!-- Las enumeraciones van por separado-->
+                                                                        <xs:enumeration value="euros"/>
+                                                                        <xs:enumeration value="yenes"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:extension>
+                                                    </xs:simpleContent>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <!-- Habria que poner la restricción fraction-digits para que sea correcto. Se podría definir por separado al comienzo del documento y llamarlo aquí en lugar de poner xs:decimal-->
+                                            <!-- <xs:element name="beneficio" type="xs:decimal"/> -->
+                                            <xs:element name="beneficio" type="tipoBeneficio"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                               <xs:element name="futuro">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="elemento">
+                                                <xs:complexType>
+                                                    <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                            <xs:attribute name="idioma" type="xs:string" use="required">
+                                                                
+                                                            </xs:attribute>
+                                                        </xs:extension>
+                                                    </xs:simpleContent>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="beneficio" type="tipoBeneficio"/>
+                                            <!--<xs:element name="beneficio" type="xs:decimal"/>-->
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                                <xs:element name="acciones">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name="empresa">
+                                                <xs:complexType>
+                                                    <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                            <xs:attribute name="pais" use="required">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:string">
+                                                                    <xs:pattern value="usa|alemania|japon|espana"/>
+                                                                        <!-- <xs:enumeration value="usa"/>
+                                                                        <xs:enumeration value="alemania"/>
+                                                                        <xs:enumeration value="japon"/>
+                                                                        <xs:enumeration value="espana"/> -->
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:extension>
+                                                    </xs:simpleContent>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="beneficio" type="tipoBeneficio"/>
+                                            <!-- <xs:element name="beneficio" type="xs:decimal"/>-->
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:choice>
+                        <!-- </xs:sequence>  -->
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

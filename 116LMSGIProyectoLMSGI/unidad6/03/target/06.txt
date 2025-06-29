@@ -1,0 +1,4 @@
+XQuery Kick Start: 49.99$
+Learning XML: 39.95$
+The Pragmatic Programmer: 39.99$
+Clean Code: 42.00$

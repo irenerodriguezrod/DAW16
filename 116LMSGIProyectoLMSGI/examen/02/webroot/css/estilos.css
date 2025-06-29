@@ -1,0 +1,129 @@
+:root{
+    --color1:#2C3E50; /*color de fondo header y footer*/
+    --color2:yellow;/* titulo nivel 1, menú activo,*/
+    --color3:white;
+    --color4:orange; /* titulo nivel 4*/
+    --colorboton: #3498db; /* color boton*/
+    --colorbotonhover: #2980b9;
+    --colorrequired:lightyellow; /*input con atributo required*/
+}
+
+header,footer {
+    background-color: var(--color1);
+    text-align: center;
+    color: var(--color3);
+}
+
+p{
+    margin-top: 0em;
+}
+
+/*Nav */
+nav {
+    padding: 1em;
+    text-align: left;
+    background-color: black;
+    padding: 8px;
+}
+
+nav ul {
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Animacion al pasar el raton encima*/
+nav a :hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color3) ;
+    color: var(--color2);
+
+}
+
+main{
+    background-color: black;
+}
+
+main h2 {
+    color: var(--color2);
+    text-align: center;
+}
+
+h3{
+    color: var(--color4);
+}
+
+/*pagina saga*/
+section>article h3{
+    text-align: center;
+    color: var(--color4);
+}
+
+section>article img{
+    text-align: left;
+}
+
+section article p{
+    justify-content: baseline;
+    text-align: left;
+}
+
+article{
+    background-color: white;
+    align-items: center;
+    width: 70%;
+    align-items: center; 
+    margin: 15px auto;
+}
+
+
+/*tabla del index*/
+table {
+    width: 30%;
+    margin: 10px auto; /* Separacion al rededor de  la tabla */
+    border-color: var(--color3);
+    border-style: solid;
+}
+
+th {
+    background-color: var(--color1);
+    color: white;
+    border-color: var(--color3);
+}
+
+td {
+    color: white;
+    text-align: center;
+    border-color: var(--color3);
+}
+
+div#contacto, label {
+    background-color: var(--color1);
+    justify-content: center;
+    align-items: center;
+}
+
+/*footer*/
+footer {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--color1);
+    padding: 5px;
+    color: var(--color3);
+    font-size: 1rem;
+}

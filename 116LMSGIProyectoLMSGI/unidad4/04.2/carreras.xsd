@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+            xmlns="http://www.example.com/carreras"  
+            targetNamespace="http://www.example.com/carreras"  
+            elementFormDefault="qualified"> 
+
+<!-- Declaración del esquema-->
+<xs:element name="carreras">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="carrera" type="tipoCarrera" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- Declaración elementos complejos -->
+<xs:complexType name="tipoCarrera">
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="plan" type="xs:gYear"/>
+        <xs:element name="creditos" type="xs:positiveInteger"/>
+        <xs:element name="centro" type="xs:string"/>
+        <xs:element name="subdirector" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+</xs:complexType>
+</xs:schema>

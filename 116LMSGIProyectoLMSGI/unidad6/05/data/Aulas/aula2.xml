@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+	<aula id="2">
+		<nombre>Aula 2</nombre>
+		<edificio>Edificio Principal</edificio>
+		<puestos>40</puestos>
+	</aula>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?> 
+ <!ELEMENT biblioteca (libro+)> 
+ <!ELEMENT libro (titulo, autores, anio)> 
+ <!ELEMENT titulo (#PCDATA)> 
+ <!ELEMENT autores (autor+)> 
+ <!ELEMENT autor (nombre, apellido, nacionalidad?)> 
+ <!ELEMENT nombre (#PCDATA)> 
+ <!ELEMENT apellido (#PCDATA)> 
+ <!ELEMENT nacionalidad (#PCDATA)> 
+ <!ELEMENT anio (#PCDATA)> 
+ 
+ <!ATTLIST libro 
+     id ID #REQUIRED 
+     genero CDATA #IMPLIED 
+     idioma CDATA "Español" 
+     formato (impreso | digital) "impreso" 
+     referencia IDREF #IMPLIED 
+> 
