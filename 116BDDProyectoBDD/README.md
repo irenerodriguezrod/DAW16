@@ -32,7 +32,7 @@
 	<h2>
 		<img src="https://media.tenor.com/uj-429a6v-YAAAAi/pixel-art-gmail.gif"
 		alt="Signo exclamación e interrogación" width="20">
-		Contenidos de LMSGI.
+		Contenidos.
 	</h2>
 	<p>
 		En él están las prácticas y tareas correspondientes a cada unidad didáctica
