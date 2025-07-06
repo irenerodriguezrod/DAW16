@@ -2,7 +2,7 @@
 	<h1>
 		<img src="https://media.tenor.com/sj3IHPPDOxEAAAAi/eevee-eevee-evolution.gif"
 		alt="Eevee Gif Pixel Art" width="50">
-		DAW116 | Bases de Datos
+		DAW116 | Programación
 	</h1>
 </div>
 
@@ -15,7 +15,7 @@
 		Información del repositorio.
 	</h2>
 	<p>Repositorio de DAW116 | Irene Rodríguez, en el que encontrarás información
-		sobre las diferentes prácticas y temario de la asignatura Bases de Datos(BDD) del curso 2024-2025.
+		sobre las diferentes prácticas y temario de la asignatura Programación (PROG) del curso 2024-2025.
 	</p>
 </div>
 
