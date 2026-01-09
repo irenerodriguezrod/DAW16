@@ -72,13 +72,13 @@
 		<tbody>
 			<tr>
 				<td rowspan="4">
-					UT 1. Fundamentos de las bases de datos.
+					Tema 1. Fundamentos de las bases de datos.
 				</td>
 				<td rowspan="4">
 					Introducción a los sistemas de almacenamiento y tipos de bases de datos.
 				</td>
 				<td>
-					Infografía comparativa de modelos de bases de datos
+					Actividad 1: Infografía comparativa de modelos de bases de datos
 				</td>
 				<td>
 					Comparativa de los diferentes modelos de BD
@@ -88,7 +88,7 @@
 			</tr>
 			<tr>
 				<td>
-					Cuadro comparativo de Sistemas Gestories de Bases de Datos.
+					Actividad 2: Cuadro comparativo de Sistemas Gestores de Bases de Datos.
 				</td>
 				<td>
 					Comparativa entre los diferentes sistemas gestores de BD
@@ -98,7 +98,7 @@
 			</tr>
 			<tr>
 				<td>
-					Aplicación práctica de tipos de ficheros
+					Actividad 3: Aplicación práctica de tipos de ficheros
 				</td>
 				<td>
 					Planteamiento de varios escenarios y búsqueda del SGBD óptimo
@@ -108,7 +108,7 @@
 			</tr>
 			<tr>
 				<td>
-					Big Data y bases de datos distribuidas
+					Actividad 4: Big Data y bases de datos distribuidas
 				</td>
 				<td>
 					Enfoque de Big Data y beneficios del uso de las BD distribuídas.
@@ -118,7 +118,7 @@
 			</tr>
             <tr>
 				<td rowspan="4">
-					UT 2. Diseño lógico de bases de datos.
+					Tema 2. Diseño lógico de bases de datos.
 				</td>
 				<td rowspan="4">
 					Introducción al modelo Entidad-Relación y su transformación al modelo relacional.
@@ -164,7 +164,7 @@
 			</tr>
             <tr>
 				<td rowspan="4">
-					UT 3. Bases de datos relacionales.
+					Tema 3. Bases de datos relacionales.
 				</td>
 				<td rowspan="4">
 					Introducción al uso práctico de MySQL y gestión básica de bases de datos.
@@ -210,7 +210,7 @@
 			</tr>
             <tr>
 				<td rowspan="4">
-					UT4. Realización de consultas
+					Tema 4. Realización de consultas
 				</td>
 				<td rowspan="4">
 					Elaboración de consultas SQL para la recuperación y análisis de información en bases de datos.
@@ -256,7 +256,7 @@
 			</tr>
             <tr>
 				<td rowspan="4">
-					UT 5. Manipulación y transacciones en bases de datos
+					Tema 5. Manipulación y transacciones en bases de datos
 				</td>
 				<td rowspan="4">
 					Manipulación de datos y control de transacciones para garantizar la consistencia e integridad de la información.
@@ -302,7 +302,7 @@
 			</tr>
 			<tr>
 				<td rowspan="4">
-					UT 6. Programación de bases de datos
+					Tema 6. Programación de bases de datos
 				</td>
 				<td rowspan="4">
 					Programación en el SGBD mediante procedimientos, funciones y otros elementos avanzados.
@@ -348,7 +348,7 @@
 			</tr>
 			<tr>
 				<td rowspan="4">
-					UT 7. Bases de datos no relacionales
+					Tema 7. Bases de datos no relacionales
 				</td>
 				<td rowspan="4">
 					Introducción a las bases de datos NoSQL y uso práctico de MongoDB.
@@ -506,7 +506,7 @@
 	<p>
 		Última modificación:
 		<i>
-			09 de enero de 2026
+			10 de enero de 2026
 		</i>
 	</p>
 </div>
