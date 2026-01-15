@@ -1,0 +1,205 @@
+{
+    "unidad": [
+        {
+            "id": 1,
+            "titulo": "Fundamentos de la programación web en entorno servidor",
+            "preguntas": [
+                {
+                    "id": 1,
+                    "enunciado": "¿Cuál es la principal diferencia entre una página web estática y una dinámica?",
+                    "opciones": [
+                        "La estática depende de una base de datos y la dinámica no.",
+                        "No existe diferencia entre ellas.",
+                        "La estática se genera en tiempo real y la dinámica no.",
+                        "La dinámica adapta el contenido según la petición del usuario."
+                    ],
+                    "respuesta_correcta": 3
+                },
+                {
+                    "id": 2,
+                    "enunciado": "¿Qué lenguaje de programación en servidor es desarrollado por Microsoft y forma parte de .NET?",
+                    "opciones": [
+                        "C#",
+                        "PHP",
+                        "Ruby",
+                        "Python"
+                    ],
+                    "respuesta_correcta": 2
+                },
+                {
+                    "id": 3,
+                    "enunciado": "¿Qué extensión de archivo suele tener una página HTML?",
+                    "opciones": [
+                        ".js",
+                        ".html",
+                        ".exe",
+                        ".php"
+                    ],
+                    "respuesta_correcta": 1
+                },
+                {
+                    "id": 4,
+                    "enunciado": "¿Qué tipo de servidor gestiona transacciones, sesiones y seguridad en aplicaciones web?",
+                    "opciones": [
+                        "Servidor web",
+                        "Servidor de aplicaciones",
+                        "Cliente",
+                        "Navegador"
+                    ],
+                    "respuesta_correcta": 1
+                },
+                {
+                    "id": 5,
+                    "enunciado": "¿Qué lenguaje de programación en servidor es especialmente popular por su integración con bases de datos?",
+                    "opciones": [
+                        "JavaScript.",
+                        "HTML.",
+                        "PHP.",
+                        "CSS."
+                    ],
+                    "respuesta_correcta": 2
+                },
+                {
+                    "id": 6,
+                    "enunciado": "¿Qué framework está orientado a Node.js?",
+                    "opciones": [
+                        "Spring",
+                        "Django",
+                        "Express",
+                        "ASP.NET"
+                    ],
+                    "respuesta_correcta": 2
+                },
+                {
+                    "id": 7,
+                    "enunciado": "¿Cuál de los siguientes es un framework de Java?",
+                    "opciones": [
+                        "Laravel",
+                        "Node.js",
+                        "Django",
+                        "Spring"
+                    ],
+                    "respuesta_correcta": 3
+                },
+                {
+                    "id": 8,
+                    "enunciado": "¿Qué componente devuelve al cliente el resultado procesado en el servidor?",
+                    "opciones": [
+                        "Sistema operativo.",
+                        "Navegador",
+                        "Servidor web.",
+                        "Bases de datos."
+                    ],
+                    "respuesta_correcta": 2
+                },
+                {
+                    "id": 9,
+                    "enunciado": "¿Qué directiva permite insertar código en un documento HTML para ser interpretado en el servidor?",
+                    "opciones": [
+                        "<script>",
+                        "<link>",
+                        "<style>",
+                        "<?php ... ?>"
+                    ],
+                    "respuesta_correcta": 3
+                },
+                {
+                    "id": 10,
+                    "enunciado": "¿Qué conjunto de tecnologías se conocen como 'pila LAMP'?",
+                    "opciones": [
+                        "Linux, Apache, MySQL, PHP.",
+                        "Linux, Apache MariaDB, Perl",
+                        "Laravel, Apache, MySQL, Perl",
+                        "Linux, Angular, MongoDB, Python"
+                    ],
+                    "respuesta_correcta": 0
+                },
+                {
+                    "id": 11,
+                    "enunciado": "¿Qué ventaja aporta el uso de frameworks en el desarrollo web en servidor?",
+                    "opciones": [
+                        "Elimina la necesidad de servidores web.",
+                        "Reduce la productividdad del programador.",
+                        "Facilita el desarrollo y mantenimiento del código.",
+                        "Aumenta la complejidad del proyecto."
+                    ],
+                    "respuesta_correcta": 2
+                },
+                {
+                    "id": 12,
+                    "enunciado": "¿Qué componente procesa la lógica de negocio de una aplicación web?",
+                    "opciones": [
+                        "Servidor",
+                        "Cliente",
+                        "Framework",
+                        "Navegador"
+                    ],
+                    "respuesta_correcta": 0
+                },
+                {
+                    "id": 13,
+                    "enunciado": "¿Qué protocolo se utiliza para la comunicación entre cliente y servidor web?",
+                    "opciones": [
+                        "FTP",
+                        "SMTP",
+                        "SSH",
+                        "HTTP"
+                    ],
+                    "respuesta_correcta": 3
+                },
+                {
+                    "id": 14,
+                    "enunciado": "¿Qué software se utiliza habitualmente como servidor web?",
+                    "opciones": [
+                        "MySQL",
+                        "Python",
+                        "Apache",
+                        "Git"
+                    ],
+                    "respuesta_correcta": 2
+                },
+                {
+                    "id": 15,
+                    "enunciado": "¿Cuál de los siguientes lenguajes se ejcuta en el cliente por defecto?",
+                    "opciones": [
+                        "Java",
+                        "Python",
+                        "PHP",
+                        "JavaScript"
+                    ],
+                    "respuesta_correcta": 3
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "titulo": "Lenguajes de servidor",
+            "preguntas": []
+        },
+        {
+            "id": 3,
+            "titulo": "Frameworks y bibliotecas",
+            "preguntas": []
+        },
+        {
+            "id": 4,
+            "titulo": "Servidores web y aplicaciones",
+            "preguntas": []
+        },
+        {
+            "id": 5,
+            "titulo": "Protocolos y comunicación",
+            "preguntas": []
+        },
+        {
+            "id": 6,
+            "titulo": "Bases de datos en servidor",
+            "preguntas": []
+        },
+        {
+            "id": 7,
+            "titulo": "Seguridad y buenas prácticas",
+            "preguntas": []
+        }
+    ]
+}

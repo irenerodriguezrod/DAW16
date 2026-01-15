@@ -1,0 +1,249 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: #f2f4f8;
+    color: #2c2c2c;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+h2, h3 {
+    font-weight: 500;
+}
+
+/* =========================
+   MENÚ DE TEMAS
+========================= */
+#theme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+#theme-grid button {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    background-color: #f8fafc;
+    border: 1px solid #dfe3ea;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 500;
+}
+
+#theme-grid button:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.25);
+}
+
+/* =========================
+   CONTENEDOR EXAMEN
+========================= */
+#question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   TIMER
+========================= */
+#timer-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+#timer {
+    min-width: 80px;
+    text-align: right;
+}
+
+/* =========================
+   PREGUNTA
+========================= */
+#question-display {
+    width: 100%;
+    max-width: 720px;
+    background-color: #f9fafb;
+    border: 1px solid #e1e6ee;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.question h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   OPCIONES
+========================= */
+.options {
+    margin-left: 0;
+}
+
+.option,
+#question-display label {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#question-display label:hover {
+    background-color: #eef4ff;
+}
+
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+button {
+    padding: 0.7rem 1.6rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #000000;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+#results {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.correct {
+    border-left: 6px solid #28a745;
+    background-color: #e9f7ef;
+}
+
+.incorrect {
+    border-left: 6px solid #dc3545;
+    background-color: #fdecea;
+}
+
+.correct-answer {
+    color: #1e7e34;
+    font-weight: 600;
+}
+
+.wrong-answer {
+    color: #c82333;
+    font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #7a7a7a;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* OPCIONES VISIBLES Y PROFESIONALES */
+#question-display label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #2c2c2c;
+    background-color: #ffffff;
+    border: 1px solid #e1e6ee;
+    margin-bottom: 0.6rem;
+}
+
+#question-display label:hover {
+    background-color: #eef4ff;
+    border-color: #007bff;
+}
+
+/* RADIO BUTTON VISIBLE */
+input[type="radio"] {
+    accent-color: #08ba49;
+    width: 16px;
+    height: 16px;
+}
