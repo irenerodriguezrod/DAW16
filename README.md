@@ -1,7 +1,7 @@
 <div align="center">
     <h1>
         <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2tncGVxZms3Zm9ocGxqc3dnOXZrMHNtcDRmcXhtcXQweDlpdW5qbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oV1KNfhBbogI8/giphy.gif" alt="Glaceon Gif Pixel Art" width="50">
-        DAW116 | Irene Rodríguez Rodríguez.
+        DAW16 | Irene Rodríguez Rodríguez.
     </h1>
 </div>
 
@@ -12,9 +12,10 @@
         <img src="https://media.tenor.com/uj-429a6v-YAAAAi/pixel-art-gmail.gif" alt="Signo exclamación e interrogación" width="20">
         Información del repositorio.
     </h2>
-    <p>Repositorio de DAW116 | Irene Rodríguez, en el que encontrarás información sobre las diferentes prácticas del curso 2024-2025.</p>
-    <p>El nombre de este repositorio (116DAW) se debe a que es 1º de DAW y 16 al número que ocupaba en la lista de matriculados en el ciclo durante ese curso. El número fue asignado por la propia profesora que impartía el módulo de Lenguaje de Marcas y Sistemas de Gestión de Información (LMSGI).</p>
+    <p>Repositorio de DAW16 | Irene Rodríguez, en el que encontrarás información sobre las diferentes prácticas del curso 2024-2025.</p>
+    <p>El anterior nombre de este repositorio (116DAW) se debe a que es 1º de DAW y 16 al número que ocupaba en la lista de matriculados en el ciclo durante ese curso. El número fue asignado por la propia profesora que impartía el módulo de Lenguaje de Marcas y Sistemas de Gestión de Información (LMSGI).</p>
     <p>En la actualidad, este repositorio se utiliza para el almacenamiento de dicho proyecto además de para seguir avanzando con ello a pesar de haberme mudado a otra ciudad y no completar el grado en el mismo instituto en el que comencé</p>
+    <p>Este proyecto me ha ayudado a mejorar mi código, mi manera de codificar y también es una manera para mostrar los diferentes proyectos y tecnologías en las que he estado trabajando.</p>
 </div>
 
 <br>
@@ -70,14 +71,20 @@
         <img src="https://media.tenor.com/uj-429a6v-YAAAAi/pixel-art-gmail.gif" alt="Signo exclamación e interrogación" width="20">
         Asignaturas.
     </h2>
-    <p>A continuación se muestra una tabla con las diferentes asignaturas que se dan </p>
+    <p>A continuación se muestra una tabla con las diferentes asignaturas que se dan, junto con el estado en que estas se encuentran.</p>
+    <ul>
+        <li>Completada ✅</li>
+        <li>Pendiente de subida❌</li>
+        <li>Pendiente de finalización❓ </li>
+        <li>Pendiente de mejoras ⚠️</li>
+    </ul>
     <table>
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Abreviatura</th>
                 <th>Curso</th>
-                <th>Link</th>
+                <th>Estado (✅, ❌,❓, ⚠️)</th>
             </tr>
         </thead>
         <tbody>
@@ -85,85 +92,85 @@
                 <td>Lenguajes de Marcas y Sistemas de Gestión de Información</td>
                 <td>LMSGI</td>
                 <td>1º</td>
-                <td></td>
+                <td>⚠️</td>
             </tr>
             <tr>
                 <td>Entornos de Desarrollo</td>
                 <td>ED</td>
                 <td>1º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
             <tr>
                 <td>Bases de Datos</td>
                 <td>BDD</td>
                 <td>1º</td>
-                <td></td>
+                <td>❓</td>
             </tr>
             <tr>
                 <td>Sistemas Informáticos</td>
                 <td>SI</td>
                 <td>1º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
             <tr>
                 <td>Programación</td>
                 <td>PROG</td>
                 <td>1º</td>
-                <td></td>
+                <td>❓</td>
             </tr>
             <tr>
                 <td>Optativa</td>
                 <td>OPT</td>
                 <td>1º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
             <tr>
                 <td>Fundamentos de contenerización</td>
                 <td>FC</td>
                 <td>1º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
             <tr>
                 <td>Inglés orientado al ámbito de la informática</td>
                 <td>ING</td>
                 <td>1º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
             <tr>
                 <td>Itinerario Personal para la Empleabilidad</td>
                 <td>IPE</td>
                 <td>1º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
             <tr>
                 <td>Desarrollo web en entorno cliente</td>
                 <td>DWEC</td>
                 <td>2º</td>
-                <td></td>
+                <td>❓</td>
             </tr>
             <tr>
                 <td>Desarrollo web en entorno servidor</td>
                 <td>DWES</td>
                 <td>2º</td>
-                <td></td>
+                <td>❓</td>
             </tr>
             <tr>
                 <td>Despliegue de aplicaciones web</td>
                 <td>DAW</td>
                 <td>2º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
             <tr>
                 <td>Diseño de interfaces web</td>
                 <td>DIW</td>
                 <td>2º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
             <tr>
                 <td>Empresa e iniciativa emprendedora</td>
                 <td>EIE</td>
                 <td>2º</td>
-                <td></td>
+                <td>❌</td>
             </tr>
         </tbody>
     </table>
@@ -173,6 +180,35 @@
 
 <div align="center">
     <img src="https://media.tenor.com/bI731p02SawAAAAj/pokemon-divider.gif" alt="Divider de flores y hojas azules" width="350">
+</div>
+
+<br>
+
+<div>
+    <h2>
+        <img src="https://media.tenor.com/uj-429a6v-YAAAAi/pixel-art-gmail.gif" alt="Signo exclamación e interrogación" width="20">
+        Extras.
+    </h2>
+    <p>En este apartado descubrirás nuevos añadidos que se han ido incorporando al proyecto junto con la fecha aproximada de la incorporación del cambio o mejora.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha de incorporación</th>
+                <th>Asignatura</th>
+                <th>Abreviatura/s</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>13 de enero de 2026</td>
+                <td>Desarrollo Web Entorno Servidor</td>
+                <td>DWES (Próximamente en el resto de asignaturas)</td>
+                <td>Se ha incorporado una sección de examen de tipo test para repasar conceptos de las diferentes unidades.</td>
+            </tr>
+        </tbody>
+    <table>
+    
 </div>
 
 <br>
@@ -187,5 +223,5 @@
 <br>
 
 <div align="right">
-    <p>Última modificación:<i> 28 de junio de 2025</i></p>
+    <p>Última modificación:<i> 15 de enero de 2026</i></p>
 </div>
