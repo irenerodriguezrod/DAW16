@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Autor: Irene Rodríguez Rodríguez
+    Asignatura: Bases de Datos
+    Fecha de creación: 16/01/2026
+    Fecha de modificación: 17/01/2026
+    Descripción: Unidad 2. Actividad 2. Diseño E/R ampliado con jerarquías y relaciones especiales.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Web que muestra de forma visual las actividades de diseño del modelo Entidad-Relación para un sistema de gestión de mensajería.">
+    <meta name="author" content="Irene Rodríguez Rodríguez">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="bases de datos, modelo ER, diseño lógico, SQL, MySQL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UD2 · Diseño lógico de bases de datos</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" type="image/x-icon" href="webroot/media/favicon/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tema 2 · Diseño lógico de bases de datos</h1>
+    </header>
+
+    <nav class="navegacion-secundaria">
+        <a href="/116BDDProyectoBDD/index.html" class="btn-inicio">← Volver a inicio</a>
+    </nav>
+
+    <main>
+        <section class="pdf-container">
+            <header>
+                <h2>Ejercicio 02 · Diseño E/R ampliado con jerarquías y relaciones especiales.</h2>
+                <p><strong>Tipo:</strong> Proyecto individual</p>
+            </header>
+
+            <article>
+                <h3>Descripción del sistema</h3>
+                <p>
+                    Estás diseñando una base de datos para una universidad. El sistema debe contemplar a las personas
+                    que interactúan en la institución, clasificadas en profesores, estudiantes y personal
+                    administrativo.
+                </p>
+            </article>
+
+            <article>
+                <h3>Datos gestionados por el sistema</h3>
+                <ul>
+                    <li>
+                        Los <strong>profesores</strong> imparten asignaturas y pueden ser responsables de departamentos.
+                    </li>
+                    <li>
+                        Los estudiantes se inscriben en asignaturas, tienen un expediente académico con notas y pueden
+                        contar con tutores asignados (profesores).
+                    </li>
+                    <li>
+                        El personal administrativo se encarga de la gestión académica, como la matriculación y la
+                        organización de horarios.
+                    </li>
+                    <li>
+                        Algunos empleados pueden supervisar a otros empleados.
+                    </li>
+
+                </ul>
+                <p>Cada persona tiene un identificador, nombre, dirección y contacto. Los estudiantes pueden tener
+                    varias titulaciones, y su promedio académico puede calcularse a partir de sus calificaciones.</p>
+            </article>
+
+            <article>
+                <h3>Tareas a realizar</h3>
+                <ol>
+                    <li>Define la jerarquía de personas, utilizando generalización y especialización (por ejemplo,
+                        PERSONA como supertipo).</li>
+                    <li>Establece relaciones como: impartición de asignaturas, tutoría, inscripción en asignaturas,
+                        supervisión entre empleados.</li>
+                    <li>Identifica atributos multivaluados o derivados si aparecen en el contexto (por ejemplo,
+                        titulaciones de un estudiante, promedio académico).</li>
+                    <li>Representa adecuadamente las restricciones de especialización: total/parcial y
+                        exclusiva/solapada.</li>
+                    <li>Incluye al menos una relación reflexiva (como supervisión) o una relación exclusiva (por
+                        ejemplo, un empleado no puede ser profesor y administrativo al mismo tiempo).</li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>Contenidos que ha de incluir</h3>
+                <p>Diseña un diagrama E/R ampliado para el sistema universitario que incluya:</p>
+                <ul>
+                    <li>Entidades: PERSONA, PROFESOR, ESTUDIANTE, ADMINISTRATIVO, ASIGNATURA, EXPEDIENTE</li>
+                    <li>Relaciones: imparte, se inscribe, tutoría, supervisa, contiene (asignatura en expediente)</li>
+                    <li>Modela jerarquías: PERSONA → PROFESOR, ESTUDIANTE, ADMINISTRATIVO</li>
+                    <li>Incluye al menos una relación reflexiva o restricción exclusiva</li>
+                    <li>Usa atributos derivados (como promedio) o multivaluados (como titulaciones) si corresponde</li>
+                </ul>
+            </article>
+
+            <figure class="diagrama-er">
+                <img src="EJ02UD02.jpeg" alt="Diagrama Entidad-Relación del sistema Linkia Express">
+                <figcaption>
+                    Diagrama Entidad-Relación correspondiente al ejercicio 02.
+                </figcaption>
+            </figure>
+
+            <p class="alternativa">
+                Si no se visualiza correctamente el contenido, puedes
+                <a href="EJ02UD02.jpeg" target="_blank" rel="noopener noreferrer">
+                    descargar la imagen del diagrama en formato JPG
+                </a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <a id="validador-w3c"
+            href="https://validator.w3.org/check?uri=https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad1/">
+            <img src="/webroot/media/W3C_Icon.svg" alt="Documento validado por W3C" width="88" height="31">
+        </a>
+
+        <div>
+            <p>2024-26 DAW16 · &#169; Todos los derechos reservados ·
+                <a href="/index.html">Irene Rodríguez Rodríguez</a>
+            </p>
+            <p>
+                Fecha de actualización:
+                <time datetime="2026-01-19">19 de enero de 2026</time>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
