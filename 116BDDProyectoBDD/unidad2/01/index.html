@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Autor: Irene Rodríguez Rodríguez
+    Asignatura: Bases de Datos
+    Fecha de creación: 16/01/2026
+    Fecha de modificación: 17/01/2026
+    Descripción: Unidad 2. Actividad 1. Diseño del modelo Entidad-Relación a partir de un enunciado.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Web que muestra de forma visual las actividades de diseño del modelo Entidad-Relación para un sistema de gestión de mensajería.">
+    <meta name="author" content="Irene Rodríguez Rodríguez">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="bases de datos, modelo ER, diseño lógico, SQL, MySQL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UD2 · Diseño lógico de bases de datos</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" type="image/x-icon" href="webroot/media/favicon/favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tema 2 · Diseño lógico de bases de datos</h1>
+    </header>
+
+    <nav class="navegacion-secundaria">
+        <a href="/116BDDProyectoBDD/index.html" class="btn-inicio">← Volver a inicio</a>
+    </nav>
+
+    <main>
+        <section class="pdf-container">
+            <header>
+                <h2>Ejercicio 01 · Modelo Entidad-Relación</h2>
+                <p><strong>Tipo:</strong> Proyecto individual</p>
+                <p><strong>Empresa:</strong> Linkia Express (mensajería y logística)</p>
+            </header>
+
+            <article>
+                <h3>Descripción del sistema</h3>
+                <p>
+                    La empresa de mensajería y logística <strong>Linkia Express</strong> desea desarrollar un sistema
+                    informático para gestionar el envío y la entrega de paquetes. El sistema debe permitir controlar
+                    la información relacionada con los paquetes enviados, los clientes involucrados, los conductores
+                    responsables de las entregas y las furgonetas utilizadas en el transporte.
+                </p>
+            </article>
+
+            <article>
+                <h3>Datos gestionados por el sistema</h3>
+                <ul>
+                    <li>
+                        <strong>Clientes:</strong> pueden actuar como remitentes o destinatarios de los paquetes.
+                    </li>
+                    <li>
+                        <strong>Paquetes:</strong> identificados mediante un número de seguimiento e incluyen datos como
+                        peso, dimensiones, estado (en tránsito, entregado, etc.), fecha de envío y destino.
+                    </li>
+                    <li>
+                        <strong>Conductores:</strong> responsables del transporte y entrega de los paquetes.
+                    </li>
+                    <li>
+                        <strong>Furgonetas:</strong> asignadas a los conductores para realizar las rutas de entrega.
+                        Cada furgoneta tiene una matrícula única y una capacidad máxima.
+                    </li>
+                    <li>
+                        <strong>Entregas:</strong> representan la asignación de un paquete a un conductor y una
+                        furgoneta, incluyendo la fecha y hora programada de entrega.
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Funcionalidades del sistema</h3>
+                <ul>
+                    <li>Registrar clientes, tanto remitentes como destinatarios.</li>
+                    <li>Registrar paquetes enviados, indicando remitente, destinatario y características del paquete.
+                    </li>
+                    <li>Asignar paquetes a conductores y furgonetas para su entrega.</li>
+                    <li>Mantener un historial de entregas realizadas, incluyendo horarios, estados y vehículos
+                        utilizados.</li>
+                    <li>Consultar el estado y la ubicación de un paquete en tránsito.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Tareas a realizar</h3>
+                <ol>
+                    <li>Identificar las entidades principales del sistema.</li>
+                    <li>Definir los atributos clave y no clave de cada entidad.</li>
+                    <li>Establecer las relaciones entre las entidades y sus cardinalidades.</li>
+                    <li>Diseñar el diagrama Entidad-Relación utilizando una herramienta gráfica online.</li>
+                </ol>
+            </article>
+
+            <figure class="diagrama-er">
+                <img src="EJ01UD02.jpeg" alt="Diagrama Entidad-Relación del sistema Linkia Express">
+                <figcaption>
+                    Diagrama Entidad-Relación correspondiente al ejercicio 01.
+                </figcaption>
+            </figure>
+
+            <p class="alternativa">
+                Si no se visualiza correctamente el contenido, puedes
+                <a href="EJ01UD02.jpeg" target="_blank" rel="noopener noreferrer">
+                    descargar la imagen del diagrama en formato JPG
+                </a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <a id="validador-w3c"
+            href="https://validator.w3.org/check?uri=https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad1/">
+            <img src="/webroot/media/W3C_Icon.svg" alt="Documento validado por W3C" width="88" height="31">
+        </a>
+
+        <div>
+            <p>2024-26 DAW16 · &#169; Todos los derechos reservados ·
+                <a href="/index.html">Irene Rodríguez Rodríguez</a>
+            </p>
+            <p>
+                Fecha de actualización:
+                <time datetime="2026-01-19">19 de enero de 2026</time>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
