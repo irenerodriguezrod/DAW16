@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DWES - Examen</title>
+    <link rel="stylesheet" href="examen.css">
+</head>
+
+<body>
+
+    <main id="exam-container">
+        <h1>DWES - Examen</h1>
+
+        <!-- MENÚ DE TEMAS -->
+        <div id="theme-grid" class="asignaturas"></div>
+
+        <!-- EXAMEN -->
+        <div id="question-container" style="display:none;">
+            <div id="timer-container">
+                <span id="timer-text">Tiempo restante:</span>
+                <span id="timer">25:00</span>
+            </div>
+
+            <div id="question-display"></div>
+
+            <div class="buttons">
+                <button id="inicio-btn">Inicio</button>
+                <button id="next-question">Siguiente</button>
+                <button id="finish-exam" style="display:none;">Finalizar</button>
+            </div>
+        </div>
+
+        <!-- RESULTADOS -->
+        <div id="results" style="display:none;"></div>
+    </main>
+
+    <script>
+        /* ===========================
+           VARIABLES GLOBALES
+        =========================== */
+        let examData;
+        let currentUnit = null;
+        let shuffledQuestions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let timeRemaining = 1500;
+        let timerInterval = null;
+        let examInProgress = false;
+
+        /* ===========================
+           CARGAR TEMAS
+        =========================== */
+        async function loadThemes() {
+            const res = await fetch('examenTest/examen.json');
+            examData = await res.json();
+
+            const grid = document.getElementById('theme-grid');
+            grid.innerHTML = "";
+
+            const usedIds = new Set();
+
+            examData.unidad.forEach(unit => {
+                if (usedIds.has(unit.id)) return;
+                usedIds.add(unit.id);
+
+                const div = document.createElement('div');
+                div.innerHTML = `
+            <button onclick="startExam(${unit.id})">
+                Tema ${unit.id}<br>${unit.titulo}
+            </button>
+        `;
+                grid.appendChild(div);
+            });
+        }
+
+        /* ===========================
+           INICIAR EXAMEN
+        =========================== */
+        function startExam(id) {
+            currentUnit = examData.unidad.find(u => u.id == id);
+
+            if (!currentUnit || currentUnit.preguntas.length === 0) {
+                alert("Este tema no tiene preguntas disponibles.");
+                return;
+            }
+
+            examInProgress = true;
+
+            shuffledQuestions = [...currentUnit.preguntas].sort(() => Math.random() - 0.5);
+            userAnswers = new Array(shuffledQuestions.length).fill(null);
+            currentQuestionIndex = 0;
+
+            document.getElementById('theme-grid').style.display = "none";
+            document.getElementById('question-container').style.display = "block";
+            document.getElementById('results').style.display = "none";
+
+            timeRemaining = 1500;
+            startTimer();
+            showQuestion();
+        }
+
+        /* ===========================
+           MOSTRAR PREGUNTA
+        =========================== */
+        function showQuestion() {
+            const q = shuffledQuestions[currentQuestionIndex];
+            const container = document.getElementById('question-display');
+
+            container.innerHTML = `
+        <h3>${currentQuestionIndex + 1}. ${q.enunciado}</h3>
+        ${q.opciones.map((op, i) => `
+            <label>
+                <input type="radio" name="q" value="${i}"
+                ${userAnswers[currentQuestionIndex] === i ? 'checked' : ''}>
+                ${op}
+            </label>
+        `).join("")}
+    `;
+
+            document.getElementById('next-question').style.display =
+                currentQuestionIndex < shuffledQuestions.length - 1 ? "inline-block" : "none";
+
+            document.getElementById('finish-exam').style.display =
+                currentQuestionIndex === shuffledQuestions.length - 1 ? "inline-block" : "none";
+        }
+
+        /* ===========================
+           SIGUIENTE
+        =========================== */
+        function nextQuestion() {
+            saveAnswer();
+            currentQuestionIndex++;
+            showQuestion();
+        }
+
+        function saveAnswer() {
+            const selected = document.querySelector('input[name="q"]:checked');
+            userAnswers[currentQuestionIndex] = selected ? parseInt(selected.value) : null;
+        }
+
+        /* ===========================
+           FINALIZAR EXAMEN
+        =========================== */
+        function finishExam() {
+            saveAnswer();
+            clearInterval(timerInterval);
+            examInProgress = false;
+
+            let correct = 0;
+            let html = `<h2>Resultados - ${currentUnit.titulo}</h2>`;
+
+            shuffledQuestions.forEach((q, i) => {
+                const ok = userAnswers[i] === q.respuesta_correcta;
+                if (ok) correct++;
+
+                html += `
+            <p>
+                <b>${i + 1}.</b> ${q.enunciado}<br>
+                ✔ Correcta: ${q.opciones[q.respuesta_correcta]}
+            </p>
+        `;
+            });
+
+            html += `
+        <h3>${correct}/${shuffledQuestions.length} correctas</h3>
+        <button onclick="volverInicio()">Volver al inicio</button>
+    `;
+
+            document.getElementById('question-container').style.display = "none";
+            document.getElementById('results').style.display = "block";
+            document.getElementById('results').innerHTML = html;
+        }
+
+        /* ===========================
+           TIMER
+        =========================== */
+        function startTimer() {
+            updateTimer();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimer();
+                if (timeRemaining <= 0) finishExam();
+            }, 1000);
+        }
+
+        function updateTimer() {
+            const m = Math.floor(timeRemaining / 60);
+            const s = timeRemaining % 60;
+            const timer = document.getElementById('timer');
+
+            timer.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            timer.style.color = timeRemaining <= 300 ? "red" : "black";
+        }
+
+        /* ===========================
+           VOLVER A INICIO (CON VERIFICACIÓN)
+        =========================== */
+        function volverInicio() {
+
+            if (examInProgress) {
+                const confirmar = confirm(
+                    "Hay un examen en curso. ¿Seguro que deseas volver al inicio y perder el progreso?"
+                );
+                if (!confirmar) return;
+            }
+
+            clearInterval(timerInterval);
+
+            examInProgress = false;
+            currentUnit = null;
+            shuffledQuestions = [];
+            currentQuestionIndex = 0;
+            userAnswers = [];
+            timeRemaining = 1500;
+
+            document.getElementById('theme-grid').style.display = "grid";
+            document.getElementById('question-container').style.display = "none";
+            document.getElementById('results').style.display = "none";
+            document.getElementById('question-display').innerHTML = "";
+        }
+
+        /* ===========================
+           EVENTOS
+        =========================== */
+        document.getElementById('inicio-btn').onclick = volverInicio;
+        document.getElementById('next-question').onclick = nextQuestion;
+        document.getElementById('finish-exam').onclick = finishExam;
+
+        loadThemes();
+    </script>
+
+    <footer class="footer">
+        <a href="https://github.com/irenerodriguezrod/DAW16" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <p>
+            2024-26 Todos los derechos reservados. &#169;
+            <a href="/index.html">Irene Rodríguez Rodríguez</a>
+        </p>
+
+        <p>
+            Fecha de actualización:
+            <time datetime="2026-01-15">15 de enero de 2026</time>
+        </p>
+    </footer>
+
+</body>
+
+</html>

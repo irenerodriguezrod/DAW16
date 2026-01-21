@@ -1,0 +1,156 @@
+:root {
+    --color1: #F47CAC;
+    --color2: #007AAE;
+    --color3: #00B6FF;
+    --color4: #FF99C2;
+    --color5: #FDF4E3;
+    --color6: #b04d98;
+    --color7: #343A40;
+    --color8: #d8d9d9;
+    --color9: #C39B87; 
+    --color10: #C2584C;
+    --color11: #926648;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para que el padding no afecte al tamaño de los elementos */
+}
+
+header {
+    background-color: var(--color7);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color5);
+    width: 100%; /* Para que ocupe todo el ancho */
+}
+
+header h2 {
+    margin: 0; /* Eliminar margen */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color7);
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1000;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none; /* Lista sin viñetas */
+    display: flex; /* Lista en línea */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: var(--color5);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Redondear esquinas */
+    transition: all 0.3s ease; /* Animación suave */
+    outline: none; /* Elimina el borde azul */
+}
+
+nav ul li a:hover {
+    color: var(--color4); /* Color cuando el cursor está encima */
+    text-decoration: none; /* Sin subrayado */
+    outline: none; /* Elimina el borde azul */
+}
+
+body {
+    background-color: var(--color8);
+    font-family: Arial, sans-serif;
+    color: var(--color5);
+    line-height: 1.6;
+    padding: 0;
+}
+
+h2 {
+    margin: 0; /* Eliminar margen */
+}
+
+section {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Clase específica */
+.fondoArticulo {
+    background-color: var(--color9);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombrado */
+    width: 90%; /* Ancho */
+}
+
+article {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: var(--color10);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 30em;
+    color: var(--color5);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+section div a {
+    text-decoration: none; /* Eliminar subrayado en el link */
+}
+
+article a {
+    color: var(--color5);
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;
+    outline: none; /* Elimina el borde azul */
+}
+
+article:hover {
+    background-color: var(--color11);
+    text-decoration: none; /* Sin subrayado */
+    color: #ffffff; /* Color blanco */
+    transform: scale(1.05); /* Zoom al pasar por encima */
+}
+
+footer {
+    background-color: var(--color7);
+    padding: 10px;
+    text-align: center;
+    color: var(--color5);
+    font-size: 1rem;
+    margin-top: 10px; /* Espaciado para separar el contenido */
+}
+
+footer a {
+    color: var(--color5);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--color4);
+}
+
+footer i {
+    font-size: 24px; /* Tamaño más grande del ícono */
+}
+

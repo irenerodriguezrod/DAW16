@@ -365,6 +365,23 @@
             <guid isPermaLink="true">https://daw116.ieslossauces.es/116LMSGIProyectoLMSGI/unidad6/04/index.html</guid>
         </item>
 
+        <!--. P19-->
+        <item>
+            <title>Modificación de diferentes elementos en varios de los apartados</title>
+            <link>https://daw16.vercel.app</link>
+            <description><![CDATA[
+                Se han agregado mejoras generales en la web, como por ejemplo nuevos estilos en algunas prácticas (Tema 1, actividad 1 de LMSGI). Se han añadido nuevas prácticas y ejercicios (Tema 2, actividad 1 de BD) ]]>
+            </description>
+
+            <category>Educación</category>
+            <category>Prácticas</category>
+            <category>Mejoras</category>
+
+            <pubDate>Sun, 18 Jan 2026 18:00:00 +0100</pubDate>
+
+            <author>cuentadeire@outlook.es (Irene Rodríguez)</author>
+        </item>
+
     </channel>
     
 </rss>
