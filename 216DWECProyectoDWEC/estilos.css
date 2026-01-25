@@ -1,15 +1,15 @@
 :root {
-    --primary: #1E3A8A;      /* Azul moderno */
-    --secondary: #2563EB;    /* Azul JS */
-    --accent: #06B6D4;       /* Cian */
-    --bg: #F8FAFC;           /* Fondo claro */
-    --surface: #FFFFFF;      /* Tarjetas */
-    --border: #E2E8F0;       /* Bordes suaves */
-    --text: #1E293B;         /* Texto principal */
-    --muted: #64748B;        /* Texto secundario */
+    --primary: #D97706;        /* Naranja fuego */
+    --secondary: #F59E0B;      /* Ámbar suave */
+    --accent: #1F2933;         /* Gris técnico */
+    --bg: #F7F7F8;             /* Fondo claro */
+    --surface: #FFFFFF;        /* Tarjetas */
+    --border: #E5E7EB;         /* Bordes suaves */
+    --text: #1C1E21;           /* Texto principal */
+    --muted: #6B7280;          /* Texto secundario */
 
     --radius: 10px;
-    --shadow: 0 6px 18px rgba(0,0,0,.08);
+    --shadow: 0 6px 20px rgba(0,0,0,.08);
 }
 
 * {
@@ -29,14 +29,14 @@ body {
 header {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
-    padding: 45px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
-header h1,
-header h2 {
-    font-size: 2.3rem;
+header h1 {
+    font-size: 2.4rem;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 /* NAV */
@@ -55,13 +55,13 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 14px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--accent);
     font-weight: 600;
     font-size: 0.95rem;
     padding: 8px 14px;
@@ -70,7 +70,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: #fff;
 }
 
@@ -81,7 +81,7 @@ main {
     padding: 0 20px;
 }
 
-/* SECCIONES */
+/* SECTIONS */
 .fondoArticulo {
     background-color: var(--surface);
     border-radius: var(--radius);
@@ -90,29 +90,34 @@ main {
     box-shadow: var(--shadow);
 }
 
-/* TÍTULOS */
 .fondoArticulo h2 {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     font-size: 1.5rem;
-    color: var(--primary);
-    border-left: 5px solid var(--accent);
+    color: var(--accent);
+    border-left: 6px solid var(--primary);
     padding-left: 14px;
 }
 
-/* GRID */
+/* GRID TARJETAS */
 section > div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
-/* TARJETAS */
+/* CARD */
 article {
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 20px;
     transition: transform .2s ease, box-shadow .2s ease, border .2s ease;
+    height: 100%;
+}
+
+article h3 {
+    margin-bottom: 8px;
+    color: var(--accent);
 }
 
 article p {
@@ -120,29 +125,29 @@ article p {
     color: var(--muted);
 }
 
-/* LINKS */
+/* LINK */
 section a {
     text-decoration: none;
 }
 
-/* HOVER */
+/* HOVER CARD */
 article:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(0,0,0,.12);
-    border-color: var(--secondary);
+    box-shadow: 0 10px 28px rgba(0,0,0,.12);
+    border-color: var(--primary);
 }
 
 /* FOOTER */
 footer {
-    background-color: var(--primary);
+    background-color: var(--accent);
     color: #fff;
     text-align: center;
-    padding: 28px 20px;
+    padding: 30px 20px;
     margin-top: 60px;
 }
 
 footer a {
-    color: #fff;
+    color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
 }
@@ -153,4 +158,5 @@ footer a:hover {
 
 footer i {
     font-size: 26px;
+    margin-bottom: 10px;
 }
