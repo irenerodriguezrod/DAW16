@@ -12,6 +12,12 @@
         <img src="https://media.tenor.com/uj-429a6v-YAAAAi/pixel-art-gmail.gif" alt="Signo exclamación e interrogación" width="20">
         Información del repositorio.
     </h2>
+    <div align="center">
+        <a href="https://wakatime.com/badge/user/0fc67f13-87c7-49ab-8823-e638006e86af/project/f26c17ec-b0e8-4167-a978-8d097cc56c8d"><img src="https://wakatime.com/badge/user/0fc67f13-87c7-49ab-8823-e638006e86af/project/f26c17ec-b0e8-4167-a978-8d097cc56c8d.svg" alt="wakatime"></a>
+        <a href="https://img.shields.io/badge/estado-en_desarrollo-blue
+        "><img src="https://img.shields.io/badge/estado-en_desarrollo-blue
+        "></a>
+    </div>
     <p>Repositorio de DAW16 | Irene Rodríguez, en el que encontrarás información sobre las diferentes prácticas del curso 2024-2025.</p>
     <p>El anterior nombre de este repositorio (116DAW) se debe a que es 1º de DAW y 16 al número que ocupaba en la lista de matriculados en el ciclo durante ese curso. El número fue asignado por la propia profesora que impartía el módulo de Lenguaje de Marcas y Sistemas de Gestión de Información (LMSGI).</p>
     <p>En la actualidad, este repositorio se utiliza para el almacenamiento de dicho proyecto además de para seguir avanzando con ello a pesar de haberme mudado a otra ciudad y no completar el grado en el mismo instituto en el que comencé</p>
@@ -223,5 +229,5 @@
 <br>
 
 <div align="right">
-    <p>Última modificación:<i> 15 de enero de 2026</i></p>
+    <p>Última modificación:<i> 25 de enero de 2026</i></p>
 </div>
