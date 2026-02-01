@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contactos - Cliente SOAP/API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .contenido {
+            padding: 30px;
+        }
+        
+        .seccion {
+            margin-bottom: 40px;
+        }
+        
+        .seccion h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .tabla {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .tabla thead {
+            background: #f8f9fa;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .tabla th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .tabla td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .tabla tbody tr:hover {
+            background: #f8f9fa;
+            transition: background 0.3s ease;
+        }
+        
+        .tabla tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .vacio {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            color: #856404;
+            text-align: center;
+        }
+        
+        .cargando {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            padding: 15px;
+            border-radius: 5px;
+            color: #1565c0;
+            text-align: center;
+        }
+        
+        .error {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            padding: 15px;
+            border-radius: 5px;
+            color: #c62828;
+            text-align: center;
+        }
+        
+        .estadisticas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .estadistica {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .estadistica-numero {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .estadistica-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .badge-personal {
+            background: #cfe2ff;
+            color: #084298;
+        }
+        
+        .badge-trabajo {
+            background: #d1e7dd;
+            color: #0a3622;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .tabla {
+                font-size: 0.9em;
+            }
+            
+            .tabla th, .tabla td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="header">
+            <h1>📋 Agenda de Contactos</h1>
+            <p>Cliente API - Consulta de contactos</p>
+        </div>
+        
+        <div class="contenido">
+            <!-- Estadísticas -->
+            <div class="estadisticas">
+                <div class="estadistica">
+                    <div class="estadistica-numero" id="total-count">0</div>
+                    <div class="estadistica-label">Total de Contactos</div>
+                </div>
+                <div class="estadistica">
+                    <div class="estadistica-numero" id="personal-count">0</div>
+                    <div class="estadistica-label">Contactos Personales</div>
+                </div>
+                <div class="estadistica">
+                    <div class="estadistica-numero" id="trabajo-count">0</div>
+                    <div class="estadistica-label">Contactos Trabajo</div>
+                </div>
+            </div>
+            
+            <!-- Todos los contactos -->
+            <div class="seccion">
+                <h2>📌 Todos los Contactos</h2>
+                <div id="todos-container">
+                    <div class="cargando">Cargando contactos...</div>
+                </div>
+            </div>
+            
+            <!-- Contactos personales -->
+            <div class="seccion">
+                <h2>👥 Contactos Personales</h2>
+                <div id="personal-container">
+                    <div class="cargando">Cargando contactos personales...</div>
+                </div>
+            </div>
+            
+            <!-- Contactos de trabajo -->
+            <div class="seccion">
+                <h2>💼 Contactos de Trabajo</h2>
+                <div id="trabajo-container">
+                    <div class="cargando">Cargando contactos de trabajo...</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Cliente API - Unidad 7 - Servicios Web</p>
+        </div>
+    </div>
+
+    <script>
+        const BASE_URL = '../api/contactos';
+
+        // Función para crear tabla HTML
+        function crearTabla(contactos, mostrarTipo = true) {
+            if (contactos.length === 0) {
+                return '<div class="vacio">No hay contactos registrados</div>';
+            }
+
+            let html = '<table class="tabla"><thead><tr>';
+            html += '<th>ID</th><th>Nombre</th><th>Teléfono</th><th>Email</th><th>Dirección</th>';
+            if (mostrarTipo) html += '<th>Tipo</th>';
+            html += '</tr></thead><tbody>';
+
+            contactos.forEach(contacto => {
+                html += '<tr>';
+                html += `<td>${contacto.id}</td>`;
+                html += `<td>${escapeHtml(contacto.nombre)}</td>`;
+                html += `<td>${escapeHtml(contacto.telefono)}</td>`;
+                html += `<td>${escapeHtml(contacto.email)}</td>`;
+                html += `<td>${escapeHtml(contacto.direccion)}</td>`;
+                if (mostrarTipo) {
+                    const badge = contacto.tipo === 'personal' ? 'badge-personal' : 'badge-trabajo';
+                    const tipo = contacto.tipo.charAt(0).toUpperCase() + contacto.tipo.slice(1);
+                    html += `<td><span class="badge ${badge}">${tipo}</span></td>`;
+                }
+                html += '</tr>';
+            });
+
+            html += '</tbody></table>';
+            return html;
+        }
+
+        // Función para escapar HTML
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Cargar todos los contactos
+        async function cargarTodos() {
+            try {
+                const response = await fetch(`${BASE_URL}`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('todos-container').innerHTML = crearTabla(result.data, true);
+                    document.getElementById('total-count').textContent = result.count;
+                } else {
+                    document.getElementById('todos-container').innerHTML = '<div class="error">Error al cargar datos</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('todos-container').innerHTML = '<div class="error">Error de conexión</div>';
+            }
+        }
+
+        // Cargar contactos personales
+        async function cargarPersonales() {
+            try {
+                const response = await fetch(`${BASE_URL}?tipo=personal`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('personal-container').innerHTML = crearTabla(result.data, false);
+                    document.getElementById('personal-count').textContent = result.count;
+                } else {
+                    document.getElementById('personal-container').innerHTML = '<div class="error">Error al cargar datos</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('personal-container').innerHTML = '<div class="error">Error de conexión</div>';
+            }
+        }
+
+        // Cargar contactos de trabajo
+        async function cargarTrabajo() {
+            try {
+                const response = await fetch(`${BASE_URL}?tipo=trabajo`);
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('trabajo-container').innerHTML = crearTabla(result.data, false);
+                    document.getElementById('trabajo-count').textContent = result.count;
+                } else {
+                    document.getElementById('trabajo-container').innerHTML = '<div class="error">Error al cargar datos</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('trabajo-container').innerHTML = '<div class="error">Error de conexión</div>';
+            }
+        }
+
+        // Cargar todo al iniciar
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarTodos();
+            cargarPersonales();
+            cargarTrabajo();
+        });
+    </script>
+</body>
+</html>
