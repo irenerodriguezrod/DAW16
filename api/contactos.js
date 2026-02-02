@@ -1,5 +1,5 @@
 /*
-    Archivo: unidad7/api/contactos.js
+    Archivo: api/contactos.js
     Descripción: API serverless de Vercel para servir contactos
     Autor: Irene RODRIGUEZ RODRIGUEZ
     Fecha de creación: 01/02/2026

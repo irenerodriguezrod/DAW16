@@ -241,7 +241,7 @@
     </div>
 
     <script>
-        const BASE_URL = '../api/contactos';
+        const BASE_URL = '../data/contactos.json';
 
         // Función para crear tabla HTML
         function crearTabla(contactos, mostrarTipo = true) {
@@ -284,14 +284,10 @@
         async function cargarTodos() {
             try {
                 const response = await fetch(`${BASE_URL}`);
-                const result = await response.json();
+                const contactos = await response.json();
                 
-                if (result.success) {
-                    document.getElementById('todos-container').innerHTML = crearTabla(result.data, true);
-                    document.getElementById('total-count').textContent = result.count;
-                } else {
-                    document.getElementById('todos-container').innerHTML = '<div class="error">Error al cargar datos</div>';
-                }
+                document.getElementById('todos-container').innerHTML = crearTabla(contactos, true);
+                document.getElementById('total-count').textContent = contactos.length;
             } catch (error) {
                 console.error('Error:', error);
                 document.getElementById('todos-container').innerHTML = '<div class="error">Error de conexión</div>';
@@ -301,15 +297,12 @@
         // Cargar contactos personales
         async function cargarPersonales() {
             try {
-                const response = await fetch(`${BASE_URL}?tipo=personal`);
-                const result = await response.json();
+                const response = await fetch(`${BASE_URL}`);
+                const todosLosContactos = await response.json();
+                const contactos = todosLosContactos.filter(c => c.tipo === 'personal');
                 
-                if (result.success) {
-                    document.getElementById('personal-container').innerHTML = crearTabla(result.data, false);
-                    document.getElementById('personal-count').textContent = result.count;
-                } else {
-                    document.getElementById('personal-container').innerHTML = '<div class="error">Error al cargar datos</div>';
-                }
+                document.getElementById('personal-container').innerHTML = crearTabla(contactos, false);
+                document.getElementById('personal-count').textContent = contactos.length;
             } catch (error) {
                 console.error('Error:', error);
                 document.getElementById('personal-container').innerHTML = '<div class="error">Error de conexión</div>';
@@ -319,15 +312,12 @@
         // Cargar contactos de trabajo
         async function cargarTrabajo() {
             try {
-                const response = await fetch(`${BASE_URL}?tipo=trabajo`);
-                const result = await response.json();
+                const response = await fetch(`${BASE_URL}`);
+                const todosLosContactos = await response.json();
+                const contactos = todosLosContactos.filter(c => c.tipo === 'trabajo');
                 
-                if (result.success) {
-                    document.getElementById('trabajo-container').innerHTML = crearTabla(result.data, false);
-                    document.getElementById('trabajo-count').textContent = result.count;
-                } else {
-                    document.getElementById('trabajo-container').innerHTML = '<div class="error">Error al cargar datos</div>';
-                }
+                document.getElementById('trabajo-container').innerHTML = crearTabla(contactos, false);
+                document.getElementById('trabajo-count').textContent = contactos.length;
             } catch (error) {
                 console.error('Error:', error);
                 document.getElementById('trabajo-container').innerHTML = '<div class="error">Error de conexión</div>';
