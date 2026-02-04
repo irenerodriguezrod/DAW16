@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Autor: Irene Rodríguez Rodríguez
+    Asignatura: Programación
+    Unidad: UD01
+    Actividad: ShellScriptsI
+    Fecha de creación: 30/01/2026
+    Descripción: Visualización de los ejercicios de Bash.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShellScriptsI · Sistemas Informáticos · Bash</title>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- Prism -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>UD01 · Shell Scripts I</h1>
+    <p>Actividad 01 · Primeras pruebas con Bash</p>
+</header>
+
+<nav class="navegacion-secundaria">
+    <a href="../../index.html" class="btn-inicio">← Volver a inicio</a>
+</nav>
+
+<main>
+    <section id="contenedor-ejercicios"></section>
+</main>
+
+<footer>
+    <p>© 2024-2026 Irene Rodríguez Rodríguez</p>
+    <p>Fecha de actualización: <time datetime="2026-01-30">30 de enero de 2026</time></p>
+</footer>
+
+<!-- Prism -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+
+<script>
+const ejercicios = [
+    { archivo: "ejercicio01.sh", titulo: "Ejercicio 1 · Copiar varios ficheros" },
+    { archivo: "ejercicio02.sh", titulo: "Ejercicio 2 · Mostrar nombre y contenido de ficheros" },
+    { archivo: "ejercicio03.sh", titulo: "Ejercicio 3 · Crear un fichero Copia.tar.gz" },
+    { archivo: "ejercicio04.sh", titulo: "Ejercicio 4 · Mostrar nombre y tipo de fichero" },
+    { archivo: "ejercicio05.sh", titulo: "Ejercicio 5 · Calculadora" }
+];
+
+// 🔥 MUY IMPORTANTE: escapar código Bash
+function escaparHTML(texto) {
+    return texto
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
+async function cargarEjercicios() {
+    const contenedor = document.getElementById("contenedor-ejercicios");
+
+    for (const ej of ejercicios) {
+        try {
+            const res = await fetch(`./${ej.archivo}`);
+            if (!res.ok) throw new Error();
+
+            let codigo = await res.text();
+            codigo = escaparHTML(codigo);
+
+            const bloque = document.createElement("section");
+            bloque.classList.add("ejercicio");
+
+            bloque.innerHTML = `
+                <header>
+                    <h2>${ej.titulo}</h2>
+                </header>
+                <pre><code class="language-bash">${codigo}</code></pre>
+            `;
+
+            contenedor.appendChild(bloque);
+        }
+        catch (e) {
+            console.error("Error cargando", ej.archivo);
+        }
+    }
+
+    Prism.highlightAll();
+}
+
+cargarEjercicios();
+</script>
+
+</body>
+</html>
