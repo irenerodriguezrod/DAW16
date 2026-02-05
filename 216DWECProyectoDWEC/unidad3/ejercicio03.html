@@ -1,0 +1,32 @@
+<!--
+
+ Número de actividad: 03
+ Enunciado: Escribe un código que cambie el texto de un elemento con id mensaje al hacer clic en un botón.
+
+ Fecha de realización: 30 de octubre de 2025
+ Última revisión:  30 de octubre de 2025
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irene Rodríguez - Ejercicio 3</title>
+</head>
+
+<body>
+    <h1>Ejercicio 3. Modificar contenido con el DOM</h1>
+    <p id="texto">Este es el texto que vamos a cambiar</p>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+
+    <script>
+        function cambiarTexto() {
+            document.getElementById("texto").textContent = "¡El texto ha sido modificado!";
+        }
+    </script>
+</body>
+
+</html>

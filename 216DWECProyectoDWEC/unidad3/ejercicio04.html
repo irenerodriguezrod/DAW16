@@ -1,0 +1,34 @@
+<!--
+
+ Número de actividad: 04
+ Enunciado: Escribe un código que pida el nombre al usuario con prompt() y muestre una alerta con el mensaje “Hola, [nombre]”. 
+ 
+ Fecha de realización: 30 de octubre de 2025
+ Última revisión:  30 de octubre de 2025
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irene Rodríguez - Ejercicio 4</title>
+</head>
+
+<body>
+    <h1>Ejercicio 4. Saludar al usuario</h1>
+    <p>Por favor, haga <i>click</i> en el botón situado debajo del mensaje.</p>
+    <button onclick="saludarUsuario()">Saludar</button>
+
+    <script>
+        function saludarUsuario() {
+            var nombre = prompt("Introduzca su nombre:");
+
+            alert("Hola, " + nombre);
+        }
+    </script>
+</body>
+
+</html>
