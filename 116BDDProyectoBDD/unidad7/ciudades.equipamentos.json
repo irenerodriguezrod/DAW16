@@ -1,0 +1,154 @@
+[{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26ee"
+  },
+  "nombre": "Biblioteca Central",
+  "tipo": "biblioteca",
+  "ciudad": "Madrid",
+  "direccion": "Calle Alcalá, 45",
+  "capacidad": 300,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26ef"
+  },
+  "nombre": "Hospital San Miguel",
+  "tipo": "hospital",
+  "ciudad": "Valencia",
+  "direccion": "Avenida Salud, 12",
+  "capacidad": 450,
+  "accesible": false
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f0"
+  },
+  "nombre": "Centro Deportivo Vallecas",
+  "tipo": "centro deportivo",
+  "ciudad": "Madrid",
+  "direccion": "Calle del Deporte, 101",
+  "capacidad": 500,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f1"
+  },
+  "nombre": "Auditorio Antiguo Reina Sofía",
+  "tipo": "auditorio",
+  "ciudad": "Sevilla",
+  "direccion": "Calle Antiguo Palacio, 9",
+  "capacidad": 200,
+  "accesible": false
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f2"
+  },
+  "nombre": "Biblioteca Norte",
+  "tipo": "biblioteca",
+  "ciudad": "Barcelona",
+  "direccion": "Avenida del Saber, 33",
+  "capacidad": 280,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f3"
+  },
+  "nombre": "Centro Cultural Litoral",
+  "tipo": "auditorio",
+  "ciudad": "Valencia",
+  "direccion": "Avenida Sanidad, 10",
+  "capacidad": 350,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f4"
+  },
+  "nombre": "Polideportivo Ciudad Jardín",
+  "tipo": "centro deportivo",
+  "ciudad": "Málaga",
+  "direccion": "Calle Jardines, 22",
+  "capacidad": 150,
+  "accesible": false
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f5"
+  },
+  "nombre": "Hospital General Barcelona",
+  "tipo": "hospital",
+  "ciudad": "Barcelona",
+  "direccion": "Calle Salud Pública, 5",
+  "capacidad": 600,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f7"
+  },
+  "nombre": "Auditorio Atlántico",
+  "tipo": "auditorio",
+  "ciudad": "Vigo",
+  "direccion": "Avenida del Puerto, 3",
+  "capacidad": 420,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f8"
+  },
+  "nombre": "Centro Deportivo Norte",
+  "tipo": "centro deportivo",
+  "ciudad": "Valladolid",
+  "direccion": "Calle Olímpica, 77",
+  "capacidad": 480,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26f9"
+  },
+  "nombre": "Hospital Comarcal",
+  "tipo": "hospital",
+  "ciudad": "Ourense",
+  "direccion": "Avenida Sanitaria, 14",
+  "capacidad": 350,
+  "accesible": false
+},
+{
+  "_id": {
+    "$oid": "693d4d1e734e7754b5cf26fa"
+  },
+  "nombre": "Biblioteca Universitaria",
+  "tipo": "biblioteca",
+  "ciudad": "Valencia",
+  "direccion": "Calle del Conocimiento, 1",
+  "capacidad": 520,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693d4e1589bdabd5c388e88e"
+  },
+  "nombre": "Biblioteca Sur",
+  "tipo": "biblioteca",
+  "ciudad": "Córdoba",
+  "direccion": "Avenida del Libro, 8",
+  "capacidad": 220,
+  "accesible": true
+},
+{
+  "_id": {
+    "$oid": "693e989489bdabd5c388e89d"
+  },
+  "nombre": "Auditorio Municipal de Ourense",
+  "tipo": "auditorio",
+  "ciudad": "Ourense",
+  "direccion": "Avenida de Portugal, 18",
+  "capacidad": 400,
+  "accesible": true
+}]
