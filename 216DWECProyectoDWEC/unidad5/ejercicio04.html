@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<!--
+
+ Número de actividad: 04 - Control de errores y documentación
+ Enunciado: Modifica el formulario anterior para:
+            • Usar try...catch al validar email.
+            • Mostrar un mensaje de error si ocurre una excepción.
+            • Añadir comentarios explicando cada bloque de código.
+
+ Fecha de realización: 01 de noviembre de 2025
+ Última revisión:  01 de noviembre de 2025
+
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4 - Control de errores y documentación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+        }
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario con Control de Errores</h1>
+
+    <form id="miFormulario" novalidate>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <span class="error" id="errorNombre"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="errorEmail"></span>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensaje" class="success"></p>
+
+    <script>
+        // Obtener referencias a elementos del formulario
+        const formulario = document.getElementById('miFormulario');
+        const nombre = document.getElementById('nombre');
+        const email = document.getElementById('email');
+        const errorNombre = document.getElementById('errorNombre');
+        const errorEmail = document.getElementById('errorEmail');
+        const mensaje = document.getElementById('mensaje');
+
+        // el evento submit del formulario
+        formulario.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue al enviar
+
+            // Limpiar mensajes anteriores
+            errorNombre.textContent = '';
+            errorEmail.textContent = '';
+            mensaje.textContent = '';
+
+            let valido = true; // para controlar si el formulario es válido
+
+            // Validar campo Nombre (obligatorio)
+            if(nombre.value.trim() === '') {
+                errorNombre.textContent = 'El nombre es obligatorio.';
+                valido = false;
+            }
+
+            // Validar campo email con try...catch para capturar errores
+            try {
+                const valorEmail = email.value.trim();
+
+                if(valorEmail === '') {
+                    throw new Error('El email es obligatorio.');
+                }
+
+                // Expresión regular para validar formato de email
+                const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(!regexEmail.test(valorEmail)) {
+                    throw new Error('El email no tiene un formato válido.');
+                }
+
+            } catch (error) {
+                // mensaje de error si ocurre una excepción
+                errorEmail.textContent = error.message;
+                valido = false;
+            }
+
+            // Si todo es correcto, mostrar mensaje de éxito
+            if(valido) {
+                mensaje.textContent = '¡Formulario enviado correctamente!';
+                formulario.reset(); // Limpiar los campos del formulario
+            }
+        });
+    </script>
+</body>
+</html>

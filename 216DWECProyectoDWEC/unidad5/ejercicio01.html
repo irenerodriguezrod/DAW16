@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!--
+
+ Número de actividad: 01
+ Enunciado: Un botón que al hacer click cambie el color de fondo.
+            Un campo de texto que al escribir muestre el texto en un <p> en tiempo real.
+            Un evento que se dispare al cargar la página mostrando un mensaje en consola.
+
+ Fecha de realización: 01 de noviembre de 2025
+ Última revisión:  01 de noviembre de 2025
+
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1 - Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: background-color 0.5s;
+        }
+        input {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1 - Gestión de Eventos</h1>
+
+    <!-- 1. Botón que cambia el color de fondo -->
+    <button id="cambiarColor">Cambiar color de fondo</button>
+
+    <br><br>
+
+    <!-- 2. Campo de texto -->
+    <input type="text" id="textoInput" placeholder="Escribe algo...">
+    <p id="mostrarTexto"></p>
+
+    <script>
+        // 3. Evento que se dispara al cargar la página
+        window.addEventListener('load', () => {
+            console.log('La página se ha cargado');
+        });
+
+        // Evento click para cambiar el color de fondo
+        const boton = document.getElementById('cambiarColor');
+        boton.addEventListener('click', () => {
+            // Cambia el fondo a un color aleatorio
+            const colores = ['#FFCDD2','#C8E6C9','#BBDEFB','#FFF9C4','#D1C4E9'];
+            const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            document.body.style.backgroundColor = colorAleatorio;
+        });
+
+        // Evento input para mostrar el texto en tiempo real
+        const input = document.getElementById('textoInput');
+        const parrafo = document.getElementById('mostrarTexto');
+
+        input.addEventListener('input', () => {
+            parrafo.textContent = input.value;
+        });
+    </script>
+</body>
+</html>

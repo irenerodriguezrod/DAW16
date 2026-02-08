@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!--
+
+ Número de actividad: 02 - Manejadores de eventos
+ Enunciado: Crea una lista de 3 botones:
+            - Cada botón muestra un mensaje distinto en consola al hacer click.
+            - Usa funciones manejadoras separadas para cada botón.
+
+ Fecha de realización: 01 de noviembre de 2025
+ Última revisión:  01 de noviembre de 2025
+
+-->
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2 - Manejadores de eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 2 - Manejadores de Eventos</h1>
+
+    <button id="boton1">Botón 1</button>
+    <button id="boton2">Botón 2</button>
+    <button id="boton3">Botón 3</button>
+
+    <script>
+        // Funciones manejadoras
+        function manejarBoton1() {
+            console.log('¡Has pulsado el Botón 1!');
+        }
+
+        function manejarBoton2() {
+            console.log('¡Hola, soy el botón 2!');
+        }
+
+        function manejarBoton3() {
+            console.log('¡Yo soy el botón 3!');
+        }
+
+        // Asociar los manejadores a cada botón
+        document.getElementById('boton1').addEventListener('click', manejarBoton1);
+        document.getElementById('boton2').addEventListener('click', manejarBoton2);
+        document.getElementById('boton3').addEventListener('click', manejarBoton3);
+    </script>
+</body>
+</html>
