@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<!--
+    TEMA: 04
+    ACTIVIDAD: 03
+    TITULO: Formularios dinámicos y manejo de eventos
+    DESCRIPCIÓN: Diseñar formularios adaptativos y gestionar eventos de usuario con lógica server-driven. Tareas:
+                - Implementar generación dinámica de inputs en formularios. 
+                - Desarrollar manejo de eventos server-driven con AJAX. 
+                - Comparar ventajas y desventajas de ambas técnicas.
+    FECHA DE CREACIÓN: 25 - 11 - 2025
+    ÚLTIMA REVISIÓN: 01 - 12 - 2025
+-->
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda de Contactos (AJAX)</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        #respuesta {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Añadir contacto a la agenda</h2>
+
+    <form id="formulario" method="POST">
+        <label for="nombre">Nombre del contacto:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+
+        <label for="tipo">Tipo de contacto:</label>
+        <select id="tipo" name="tipo">
+            <option value="personal">Personal</option>
+            <option value="trabajo">Trabajo</option>
+            <option value="emergencia">Emergencia</option>
+        </select>
+
+        <div id="extraCampos"></div>
+
+        <button type="submit">Guardar contacto</button>
+    </form>
+
+    <div id="respuesta"></div>
+
+    <script>
+        // Generación de campos dinámicos
+        const tipoSelect = document.getElementById('tipo');
+        const zona = document.getElementById('extraCampos');
+
+        const campos = {
+            personal: [
+                { name: "direccion", label: "Dirección:" }
+            ],
+            trabajo: [
+                { name: "empresa", label: "Empresa:" },
+                { name: "emailTrabajo", label: "Email del trabajo:" }
+            ],
+            emergencia: [
+                { name: "relacion", label: "Relación (ej: madre, amigo...):" },
+                { name: "prioridad", label: "Nivel de prioridad (1-5):", type: "number", min: 1, max: 5 }
+            ]
+        };
+
+        function generarCampos(tipo) {
+            zona.innerHTML = "";
+            campos[tipo].forEach(c => {
+                zona.innerHTML += `
+            <label>${c.label}</label>
+            <input type="${c.type || 'text'}" 
+                   id="${c.name}" 
+                   name="${c.name}"
+                   ${c.min ? 'min="' + c.min + '"' : ''}
+                   ${c.max ? 'max="' + c.max + '"' : ''}>
+        `;
+            });
+        }
+
+        generarCampos(tipoSelect.value);
+
+        tipoSelect.addEventListener("change", e => {
+            generarCampos(e.target.value);
+        });
+
+
+        // ---------------------------
+        // Manejo de eventos server-driven (como en los apuntes)
+        // ---------------------------
+        document.getElementById('formulario').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita recargar la página
+
+            const formData = new FormData(this); // Recoge todos los datos del formulario
+
+            fetch('procesar.php', {   // Enviar datos al servidor
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())   // Recibir una respuesta 
+                .then(data => {
+                    document.getElementById('respuesta').innerHTML = data; // Mostramos la respuesta del servidor
+                })
+                .catch(error => {
+                    document.getElementById('respuesta').innerHTML = 'Error en la comunicación.';
+                });
+        });
+    </script>
+
+</body>
+
+</html>
