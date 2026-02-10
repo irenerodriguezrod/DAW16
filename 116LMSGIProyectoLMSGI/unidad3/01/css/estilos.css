@@ -41,3 +41,10 @@ footer a {
     color: #6b911f;
     text-decoration: none;
 }
+
+.estilo-modificado {
+    font-weight: bold;
+    font-size: 20px !important;
+    letter-spacing: 2px;
+    transform: rotate(1deg);
+}
