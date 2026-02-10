@@ -1,4 +1,4 @@
-fetch("info.json")
+/** fetch("info.json")
     .then(response => response.json())
     .then(datos => {
         const tablaEjercicios = document.querySelector("#tablaEjercicios tbody");
@@ -52,3 +52,46 @@ fetch("info.json")
             });
         });
     });
+    **/
+   
+    const ejercicios = [
+    { id: "01", resultado: "txt" },
+    { id: "02", resultado: "xml" },
+    { id: "03", resultado: "xml" },
+    { id: "04", resultado: "txt" },
+    { id: "05", resultado: "xml" },
+    { id: "06", resultado: "xml" },
+    { id: "07", resultado: "xml" },
+    { id: "08", resultado: "xml" }
+];
+
+const tbody = document.querySelector("#tablaEjercicios tbody");
+
+ejercicios.forEach(ej => {
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `
+        <td>${ej.id}</td>
+        <td><pre id="xq-${ej.id}">Cargando XQuery...</pre></td>
+        <td><pre id="res-${ej.id}">Cargando resultado...</pre></td>
+    `;
+
+    tbody.appendChild(tr);
+
+    cargarArchivo(`src/${ej.id}.xq`, `xq-${ej.id}`);
+    cargarArchivo(`target/${ej.id}.${ej.resultado}`, `res-${ej.id}`);
+});
+
+/* ---------- función reutilizable ---------- */
+function cargarArchivo(ruta, contenedorId) {
+    fetch(ruta)
+        .then(res => res.text())
+        .then(texto => {
+            document.getElementById(contenedorId).textContent = texto;
+        })
+        .catch(() => {
+            document.getElementById(contenedorId).textContent =
+                "No se pudo cargar el archivo.";
+        });
+}
+

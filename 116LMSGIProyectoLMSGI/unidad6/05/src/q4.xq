@@ -8,7 +8,15 @@ where $x/profesor/dni = "33856315"
 return data($x/profesor/asignatura/text())
 :)
 
-let $x := collection("academia")/profesor/[dni="33856315"]
 
-let $curso in collection("academia")/curso
-where $x/profesor/@idref = 
+let $idCurso :=
+  for $prof in collection('academia')/profesor
+where $prof/dni = "33856315"
+return data($prof/@id)
+
+
+(:
+for $curso in collection('academia')/curso
+  where $curso/profesor/@idref = $idCurso
+  return data($curso/nombre)
+:)

@@ -13,8 +13,11 @@ return
 (:
 Consulta
 :)
-for $x in collection("academia")/curso
 
-where current-date()=
-
-return
+for $curso in collection('academia')//curso
+let $fechaTokens := tokenize($curso/fin, "/")
+let $fecha := xs:date(concat($fechaTokens[3], "-", 
+                                format-number(xs:integer($fechaTokens[2]), "00"), "-", 
+                                format-number(xs:integer($fechaTokens[1]), "00")))
+where $fecha > current-date()
+return data($curso/nombre)

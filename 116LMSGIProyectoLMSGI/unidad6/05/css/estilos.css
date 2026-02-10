@@ -1,0 +1,153 @@
+/* ---------- Base ---------- */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #fff8e1;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* ---------- Título ---------- */
+h1 {
+    text-align: center;
+    color: #ffcc00;
+    text-shadow: 2px 2px 0 #2b2b2b;
+    margin-bottom: 2rem;
+}
+
+/* ---------- Contenedor-------- */
+.tabla-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* ---------- Tabla ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    table-layout: fixed;
+    min-width: 300px;
+}
+
+/* Cabecera */
+thead {
+    background-color: #ffcc00;
+}
+
+thead th {
+    padding: 14px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid #2b2b2b;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Filas */
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff7d6;
+}
+
+tbody tr:hover {
+    background-color: inherit;
+}
+
+/* Celdas */
+td {
+    padding: 5px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Número ejercicio */
+td:first-child {
+    font-weight: bold;
+    text-align: center;
+    color: #e53935;
+    width: 5%;
+}
+
+/* ---------- Código ---------- */
+pre {
+    background-color: #2b2b2b;
+    color: #ffeb3b;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+    max-height: 300px;
+    font-size: 0.85rem;
+}
+
+/* Scroll bonito */
+pre::-webkit-scrollbar {
+    height: 8px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background-color: #ffcc00;
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-track {
+    background-color: #444;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    body {
+        padding: 1rem;
+    }
+
+    .tabla-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 1.5rem;
+        border: 2px solid #ffcc00;
+        border-radius: 12px;
+        padding: 1rem;
+        background-color: #fff;
+        display: block;
+    }
+
+    td {
+        border: none;
+        padding: 8px 0;
+        display: block;
+    }
+
+    td:first-child {
+        font-size: 1.2rem;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #ffcc00;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
