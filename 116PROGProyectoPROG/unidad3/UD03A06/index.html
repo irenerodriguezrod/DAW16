@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Autor: Irene Rodríguez Rodríguez
+    Asignatura: Programación
+    Unidad: UD03
+    Actividad: A06
+    Fecha de creación: 18/02/2026
+    Última edición: 18/02/2026
+    Descripción: Visualización de los ejercicios de iniciación a Java.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03A05 · Programación · Java</title>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- Prism.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>UD03 · Programación en Java</h1>
+        <p>Actividad A06 · Bucle <i>do-while</i>, <i>for</i> e <i>if</i> en Java</p>
+    </header>
+
+    <nav class="navegacion-secundaria">
+        <a href="../../index.html" class="btn-inicio">← Volver a inicio</a>
+    </nav>
+
+    <main>
+
+        <section id="contenedor-ejercicios">
+            <!-- Carga automática de ejercicios -->
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="https://github.com/irenerodriguezrod/DAW16" target="_blank" rel="noopener" title="GitHub">
+            <!--GitHub-->
+            <i class="fa-brands fa-github github-icon"></i>
+        </a>
+        <p>2024-2026 Todos los derechos reservados. &#169; <a href="/index.html">Irene Rodríguez
+                Rodríguez</a></p>
+        <p>Fecha de actualización: <time datetime="2026-02-18">18 de febrero de 2026</time></p>
+    </footer>
+
+    <!-- Prism.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+
+    <script>
+        const ejercicios = [
+            { archivo: "Ejercicio01.java", titulo: "Ejercicio 1 · Tablas de multiplicar de 1 a 5" },
+            { archivo: "Ejercicio02.java", titulo: "Ejercicio 2 · Contador 0-0-0 a 9-9-9" },
+            { archivo: "Ejercicio03.java", titulo: "Ejercicio 3 · Numeros binarios y decimales" },
+            { archivo: "Ejercicio04.java", titulo: "Ejercicio 4 · Números primos" },
+            { archivo: "Ejercicio05.java", titulo: "Ejercicio 5 · Figura de filas y columnas I" },
+            { archivo: "Ejercicio06.java", titulo: "Ejercicio 6 · Figura de filas y columnas II" },
+            { archivo: "Ejercicio07.java", titulo: "Ejercicio 7 · Figura de filas y columnas III" }
+
+        ];
+
+        async function cargarEjercicios() {
+            const contenedor = document.getElementById("contenedor-ejercicios");
+
+            for (const ej of ejercicios) {
+                try {
+                    const res = await fetch(`./${ej.archivo}`);
+                    if (!res.ok) throw new Error();
+
+                    const codigo = await res.text();
+
+                    const bloque = document.createElement("section");
+                    bloque.classList.add("ejercicio");
+
+                    bloque.innerHTML = `
+                <header>
+                    <h2>${ej.titulo}</h2>
+                </header>
+                <pre><code class="language-java">${codigo}</code></pre>
+            `;
+
+                    contenedor.appendChild(bloque);
+                    Prism.highlightElement(bloque.querySelector("code"));
+
+                } catch (e) {
+                    console.error("Error cargando", ej.archivo);
+                }
+            }
+        }
+
+        cargarEjercicios();
+    </script>
+
+</body>
+
+</html>
