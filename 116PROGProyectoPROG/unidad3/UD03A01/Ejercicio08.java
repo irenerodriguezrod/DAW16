@@ -11,20 +11,21 @@
 import java.util.Scanner;
 
 public class Ejercicio08 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int dividendo, divisor;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int dividendo, divisor;
 
-		System.out.print("Introduzca dividendo: ");
-		dividendo = teclado.nextInt();
-		System.out.print("Introduzca divisor: ");
-		divisor = teclado.nextInt();
+        System.out.print("Introduzca dividendo: ");
+        dividendo = teclado.nextInt();
+        System.out.print("Introduzca divisor: ");
+        divisor = teclado.nextInt();
 
-		if (divisor != 0) {
-			System.out.print((float) dividendo / divisor); // dividendo se convierte en float para que en el resultado
-															// de con decimales
-		}
+        if (divisor != 0) {
+            System.out.printf("Resultado: %.2f\n", (float) dividendo / divisor);
+        } else {
+            System.out.println("Error: No se puede dividir entre cero.");
+        }
 
-		teclado.close();
-	}
+        teclado.close();
+    }
 }

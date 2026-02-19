@@ -11,21 +11,25 @@
 import java.util.Scanner;
 
 public class Ejercicio09 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int angulo1, angulo2, angulo3;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int angulo1, angulo2, angulo3;
 
-		System.out.print("IIntroduzca primer angulo del triangulo: ");
-		angulo1 = teclado.nextInt();
-		System.out.print("Introduzca segundo angulo del triangulo: ");
-		angulo2 = teclado.nextInt();
-		System.out.print("Introduzca tercer angulo del triangulo: ");
-		angulo3 = teclado.nextInt();
+        System.out.print("Introduzca el primer ángulo del triángulo: ");
+        angulo1 = teclado.nextInt();
+        System.out.print("Introduzca el segundo ángulo del triángulo: ");
+        angulo2 = teclado.nextInt();
+        System.out.print("Introduzca el tercer ángulo del triángulo: ");
+        angulo3 = teclado.nextInt();
 
-		if ((angulo1 + angulo2 + angulo3) != 180) {
-			System.out.print("Error en la entrada");
-		}
+        int suma = angulo1 + angulo2 + angulo3;
 
-		teclado.close();
-	}
+        if (suma != 180) {
+            System.out.println("Error en la entrada");
+        } else {
+            System.out.println("La entrada es correcta. Forma un triángulo válido.");
+        }
+
+        teclado.close();
+    }
 }

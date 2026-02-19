@@ -18,13 +18,21 @@ public class Ejercicio03 {
 
         System.out.print("Introduce el primer número: ");
         int num1 = scanner.nextInt();
+
         System.out.print("Introduce el segundo número: ");
         int num2 = scanner.nextInt();
 
-        int cociente = num1 / num2;
-        int resto = num1 % num2;
+        if (num2 != 0) {
+            int cociente = num1 / num2;
+            int resto = num1 % num2;
 
-        System.out.printf("El cociente de %d entre %d es %d y el resto es %d", num1, num2, cociente, resto);
+            System.out.printf(
+                "El cociente de %d entre %d es %d y el resto es %d%n",
+                num1, num2, cociente, resto
+            );
+        } else {
+            System.out.println("Error: no se puede dividir entre cero.");
+        }
 
         scanner.close();
     }

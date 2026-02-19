@@ -17,8 +17,8 @@ public class Ejercicio01 {
 
         System.out.print("Introduce tu nombre: ");
         String nombre = scanner.nextLine();
-        
-        System.out.printf("Hola %s", nombre);
+
+        System.out.printf("Hola %s%n", nombre);
         scanner.close();
     }
 }

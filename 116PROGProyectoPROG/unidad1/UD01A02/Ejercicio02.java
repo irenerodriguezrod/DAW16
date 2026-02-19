@@ -1,11 +1,12 @@
 /**
- * @file Ejercicio03.java
- * @description Realiza el pseudocódigo y la codificación en lenguaje de programación Java de un
- *              algoritmo que solicite por teclado dos números enteros y muestre por pantalla el
- *              cociente y el resto de ambos números.
+ * @file Ejercicio02.java
+ * @description Realiza el pseudocódigo y la codificación en lenguaje de programación Java 
+ *              de un algoritmo que solicite por teclado un número entero n y muestre 
+ *              por pantalla la suma de todos los números enteros comprendidos entre 1 y n.
  * @author Irene RODRIGUEZ RODRIGUEZ
  * @date 28/01/2026
  */
+
 import java.util.Scanner;
 
 public class Ejercicio02 {
