@@ -18,28 +18,25 @@ import java.util.Scanner;
 public class Ejercicio03 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-		int a, b, x;
-		String salida;
-		
-		System.out.print("Introduzca un coeficiente A: ");
-		a=teclado.nextInt();
-		System.out.print("Introduzca otro coeficiente B: ");
-		b=teclado.nextInt();
-		
-		if (a==0 && b==0) {
-			salida=("La ecuación tiene infinitas soluciones");
-			else {
-				if (a==0) {
-				salida=("La ecuación no tiene solución");
-				}
-				else {
-					salida=String.format("La ecuación tiene una solución y es %f\n",(float)-b/a); //se pone (float) para hacer un casting y que no falle la operación, el casting solo se puede hacer a uno de los numeros para que sea real y no de errores
-				}
-				
-			}
-		}
-		teclado.close();
-	}
+        int a, b;
+
+        System.out.print("Introduzca un coeficiente A: ");
+        a = teclado.nextInt();
+        System.out.print("Introduzca otro coeficiente B: ");
+        b = teclado.nextInt();
+
+        String salida;
+
+        if (a == 0 && b == 0) {
+            salida = "La ecuación tiene infinitas soluciones.";
+        } else if (a == 0) {
+            salida = "La ecuación no tiene solución.";
+        } else {
+            double x = - (double)b / a;
+            salida = String.format("La ecuación tiene una solución y es x = %.2f", x);
+        }
+
+        System.out.println(salida);
+        teclado.close();
+    }
 }
-			
-			

@@ -14,36 +14,33 @@
 import java.util.Scanner;
 
 public class Ejercicio04 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int numero1, numero2, numero3, diferencia1, diferencia2;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero1, numero2, numero3;
 
-		System.out.print("Introduzca el primer número entero positivo: ");
-		numero1 = teclado.nextInt();
-		System.out.print("Introduzca el segundo número entero positivo: ");
-		numero2 = teclado.nextInt();
-		System.out.print("Introduzca el tercer número entero positivo: ");
-		numero3 = teclado.nextInt();
+        // Solicitar tres números positivos
+        do {
+            System.out.print("Introduzca el primer número entero positivo: ");
+            numero1 = teclado.nextInt();
+        } while (numero1 <= 0);
 
-		diferencia1 = numero2 - numero1;
-		diferencia2 = numero3 - numero2;
+        do {
+            System.out.print("Introduzca el segundo número entero positivo: ");
+            numero2 = teclado.nextInt();
+        } while (numero2 <= 0);
 
-		// if ((numero2-numero1)==(numero3-numero2)) {
-		// salida="Progresión aritmética";
-		// }
-		// else {
-		// salida="NO es una progresión artimetica";
-		// }
-		// System.out.println(salida)
+        do {
+            System.out.print("Introduzca el tercer número entero positivo: ");
+            numero3 = teclado.nextInt();
+        } while (numero3 <= 0);
 
-		if (diferencia1 == diferencia2) {
-			System.out.println("Los números forman una progresión aritmética.");
-		}
+        // Comprobar progresión aritmética
+        if ((numero2 - numero1) == (numero3 - numero2)) {
+            System.out.println("Los números forman una progresión aritmética.");
+        } else {
+            System.out.println("Los números no forman una progresión aritmética.");
+        }
 
-		else {
-			System.out.println("Los números no forman una progresión aritmética.");
-		}
-
-		teclado.close();
-	}
+        teclado.close();
+    }
 }

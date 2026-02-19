@@ -12,28 +12,25 @@ import java.util.Scanner;
 
 public class Ejercicio05 {
 	public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-		
-		int n;
-		
-		System.out.print("Introduzca 10 números enteros: ");
-		n=teclado.nextInt();
-		
-		if (n>0) {
-		for(int i=1;i<=10;i++){ //i++ significa que va de uno en uno
+
+		Scanner teclado = new Scanner(System.in);
+
+		int numero;
+		boolean encontrado = false; // variable bandera
+
+		for (int i = 1; i <= 10; i++) {
 			System.out.print("Introduzca un número entero: ");
-			n=teclado.nextInt();
-			
-			if (n==5) {
-				System.out.println("Se ha introducido el número 5.");
-				}
-				else {
-					System.out.println("No se ha introducido el número 5.");
-				}
+			numero = teclado.nextInt();
+
+			if (numero == 5) {
+				encontrado = true;
 			}
 		}
-		else {
-			System.out.print("El numero introducido es incorrecto");
+
+		if (encontrado) {
+			System.out.println("Se ha introducido el número 5.");
+		} else {
+			System.out.println("No se ha introducido el número 5.");
 		}
 
 		teclado.close();

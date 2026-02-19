@@ -10,17 +10,19 @@
 import java.util.Scanner;
 
 public class Ejercicio06 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int nota;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int nota;
 
-		System.out.print("Introduzca el primer número: ");
-		nota = teclado.nextInt();
+        System.out.print("Introduzca la calificación: ");
+        nota = teclado.nextInt();
 
-		if (nota >= 0 && nota <= 10) {
-			System.out.print("Calificacion correcta");
-		}
+        if (nota >= 0 && nota <= 10) {
+            System.out.println("Calificación correcta");
+        } else {
+            System.out.println("Calificación incorrecta");
+        }
 
-		teclado.close();
-	}
+        teclado.close();
+    }
 }

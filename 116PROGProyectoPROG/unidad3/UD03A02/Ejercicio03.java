@@ -12,26 +12,32 @@
  * Autor: Irene RODRIGUEZ RODRIGUEZ
  * Fecha: 14 de febrero de 2026
  */
+
 import java.util.Scanner;
 
 public class Ejercicio03 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int numero1, numero2;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero1, numero2;
 
-		System.out.print("Introduzca un numero entero: ");
-		numero1 = teclado.nextInt();
-		System.out.print("Introduzca otro numero entero: ");
-		numero2 = teclado.nextInt();
+        // Solicitar números positivos
+        do {
+            System.out.print("Introduzca un número entero positivo: ");
+            numero1 = teclado.nextInt();
+        } while (numero1 <= 0);
 
-		if (numero1 % numero2 == 0) {
-			System.out.print("División exacta. Cociente= " + numero1 / numero2);
-		}
+        do {
+            System.out.print("Introduzca otro número entero positivo: ");
+            numero2 = teclado.nextInt();
+        } while (numero2 <= 0);
 
-		else {
-			System.out.print("División no exacta. Cociente= " + numero1 / numero2 + " Resto= " + numero1 % numero2);
-		}
+        // Comprobar si la división es exacta
+        if (numero1 % numero2 == 0) {
+            System.out.println("División exacta. Cociente = " + (numero1 / numero2));
+        } else {
+            System.out.println("División no exacta. Cociente = " + (numero1 / numero2) + " Resto = " + (numero1 % numero2));
+        }
 
-		teclado.close();
-	}
+        teclado.close();
+    }
 }

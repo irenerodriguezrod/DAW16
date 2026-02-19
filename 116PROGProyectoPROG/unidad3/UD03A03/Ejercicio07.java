@@ -11,25 +11,28 @@
 import java.util.Scanner;
 
 public class Ejercicio07 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int nota;
-		String salida;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int nota;
 
-		System.out.print("Introduzca calificacion(1-10): ");
-		nota = teclado.nextInt();
+        System.out.print("Introduzca calificación (0-10): ");
+        nota = teclado.nextInt();
 
-		if (nota <= 1 && nota >= 10) {
-			nota = switch (nota) { // se emplea el switch como expresion para que devuelva un valor
-				case 0, 1, 2, 3, 4 -> salida = ("Suspenso");
-				case 5, 6 -> salida = ("Aprobado");
-				case 7, 8 -> salida = ("Notable");
-				default -> salida = ("Sobresaliente"); // la equivalencia de -> es el break en la anterior version de
-														// Java
-			};
-			System.out.printf(salida);
-		}
+        if (nota < 0 || nota > 10) {
+            System.out.println("Error: calificación inválida");
+        } else {
+            // switch como expresión para asignar directamente a 'salida'
+            String salida = switch (nota) {
+                case 0, 1, 2, 3, 4 -> "Suspenso";
+                case 5, 6 -> "Aprobado";
+                case 7, 8 -> "Notable";
+                case 9, 10 -> "Sobresaliente";
+                default -> "Desconocido"; // nunca se usará, solo por seguridad
+            };
 
-		teclado.close();
-	}
+            System.out.println("Resultado: " + salida);
+        }
+
+        teclado.close();
+    }
 }

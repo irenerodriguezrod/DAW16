@@ -11,19 +11,21 @@
 import java.util.Scanner;
 
 public class Ejercicio03 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int n1, n2;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int n1, n2;
 
-		System.out.print("Introduzca el primer número: ");
-		n1 = teclado.nextInt();
-		System.out.print("Introduzca el segundo número: ");
-		n2 = teclado.nextInt();
+        System.out.print("Introduzca el primer número: ");
+        n1 = teclado.nextInt();
+        System.out.print("Introduzca el segundo número: ");
+        n2 = teclado.nextInt();
 
-		if (n1 == n2) {
-			System.out.print("Los números introducidos son iguales");
-		}
+        if (n1 == n2) {
+            System.out.println("Los números introducidos son iguales");
+        } else {
+            System.out.println("Los números introducidos son distintos");
+        }
 
-		teclado.close();
-	}
+        teclado.close();
+    }
 }

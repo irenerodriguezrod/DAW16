@@ -15,27 +15,23 @@ import java.util.Scanner;
 public class Ejercicio01 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-		int n1, n2, n3;
-		
-		System.out.print("Introduzca el primer número: ");
-		n1=teclado.nextInt();
-		System.out.print("Introduzca el segundo número: ");
-		n2=teclado.nextInt();
-		System.out.print("Introduzca el tercer número: ");
-		n3=teclado.nextInt();
-		
-		if (n1==n2 && n2==n3 && n1==n3) {
-			System.out.print("Los tres números son iguales.");
-		}
-		else { //else if (n1!=n2 && n2!=n3 && n1!=n3) {
-			if (n1!=n2 && n2!=n3 && n1!=n3) {
-			System.out.print("Los tres números son distintos.");
-			}
-			else {
-			System.out.print ("Dos números son diferentes.");
-			}
-		}
+        int n1, n2, n3;
 
-		teclado.close();
-	}
+        System.out.print("Introduzca el primer número: ");
+        n1 = teclado.nextInt();
+        System.out.print("Introduzca el segundo número: ");
+        n2 = teclado.nextInt();
+        System.out.print("Introduzca el tercer número: ");
+        n3 = teclado.nextInt();
+
+        if (n1 == n2 && n2 == n3) {
+            System.out.println("Los tres números son iguales.");
+        } else if (n1 != n2 && n2 != n3 && n1 != n3) {
+            System.out.println("Los tres números son distintos.");
+        } else {
+            System.out.println("Hay dos números iguales.");
+        }
+
+        teclado.close();
+    }
 }

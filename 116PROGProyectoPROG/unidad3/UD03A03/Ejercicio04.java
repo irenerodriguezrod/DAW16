@@ -13,26 +13,23 @@ import java.util.Scanner;
 public class Ejercicio04 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-		int mes;
-		int diasMes;
-		//String salida;
-		
-		System.out.print("Introduzca un mes: ");
-		mes=teclado.nextInt();
-		
-		if(mes>=1 && mes<=12) {
-			diasMes=switch(mes){ //se emplea el switch como expresion para que devuelva un valor
-				case 4,6,9,11 ->30;
-				case 2 -> 28;
-				default ->31; // la equivalencia de -> es el break en la anterior version de Java
-			};
-			System.out.printf("El mes %d tiene %d dias\n",mes,diasMes);
-			
-		}
-		else {
-			System.out.print ("ERROR EN LA ENTRADA");
-		}
+        int mes;
+        int diasMes;
 
-		teclado.close();
-	}
+        System.out.print("Introduzca un mes (1-12): ");
+        mes = teclado.nextInt();
+
+        if (mes >= 1 && mes <= 12) {
+            diasMes = switch (mes) { 
+                case 4, 6, 9, 11 -> 30;
+                case 2 -> 28; // febrero (no se considera bisiesto)
+                default -> 31;
+            };
+            System.out.printf("El mes %d tiene %d días.%n", mes, diasMes);
+        } else {
+            System.out.println("ERROR EN LA ENTRADA");
+        }
+
+        teclado.close();
+    }
 }

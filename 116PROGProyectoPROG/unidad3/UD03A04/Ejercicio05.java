@@ -13,40 +13,38 @@
 import java.util.Scanner;
 
 public class Ejercicio05 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int n, contadorTotal, acumulador, contadorPositivo, contadorNegativo, contadorNulo;
-		double media;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
 
-		contadorTotal = 1;
-		acumulador = 0;
-		contadorPositivo = 0;
-		contadorNegativo = 0;
-		contadorNulo = 0;
+        int n, contadorTotal = 0, acumulador = 0;
+        int contadorPositivo = 0, contadorNegativo = 0, contadorNulo = 0;
+        double media;
 
-		do {
-			System.out.print("Introduzca un número: ");
-			n = teclado.nextInt();
-			if (n > 0) {
-				contadorPositivo++;
-			} else {
-				if (n < 0) {
-					contadorNegativo++;
-				} else {
-					contadorNulo++;
-				}
-			}
+        do {
+            System.out.print("Introduzca un número: ");
+            n = teclado.nextInt();
 
-		} while (acumulador <= 100);
+            acumulador += n;
+            contadorTotal++;
 
-		media = acumulador / contadorTotal;
+            if (n > 0) {
+                contadorPositivo++;
+            } else if (n < 0) {
+                contadorNegativo++;
+            } else {
+                contadorNulo++;
+            }
 
-		System.out.print("El valor de la suma total es " + acumulador);
-		System.out.print("El valor de la media total es " + media);
-		System.out.print("El número total de positivos introducidos es " + contadorPositivo
-				+ ", el número total de negativos es " + contadorNegativo + " y el numero total de nulos es "
-				+ contadorNulo);
+        } while (acumulador < 100); // menor que 100, así termina al llegar o superar 100
 
-		teclado.close();
-	}
+        media = (double) acumulador / contadorTotal;
+
+        System.out.println("\nValor de la suma total: " + acumulador);
+        System.out.println("Valor de la media total: " + media);
+        System.out.println("Número de positivos: " + contadorPositivo);
+        System.out.println("Número de negativos: " + contadorNegativo);
+        System.out.println("Número de nulos: " + contadorNulo);
+
+        teclado.close();
+    }
 }

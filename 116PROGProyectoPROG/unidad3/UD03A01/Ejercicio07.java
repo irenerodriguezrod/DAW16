@@ -12,15 +12,19 @@ import java.util.Scanner;
 public class Ejercicio07 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-		int numeroEntero;
-		
-		System.out.print("Introduzca numero entero (1-12): ");
-		numeroEntero=teclado.nextInt();
-		
-		if (numeroEntero<1 || numeroEntero>12) {
-			System.out.print("Error en la entrada"); 
-		}
+        int numeroEntero;
 
-		teclado.close();
-	}
+        do {
+            System.out.print("Introduzca un número entero (1-12): ");
+            numeroEntero = teclado.nextInt();
+
+            if (numeroEntero < 1 || numeroEntero > 12) {
+                System.out.println("Error en la entrada. Intente de nuevo.");
+            }
+
+        } while (numeroEntero < 1 || numeroEntero > 12);
+
+        System.out.println("Número válido: " + numeroEntero);
+        teclado.close();
+    }
 }

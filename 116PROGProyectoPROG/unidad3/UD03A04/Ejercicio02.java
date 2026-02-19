@@ -14,21 +14,26 @@ import java.util.Scanner;
 public class Ejercicio02 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-		int hora, min, seg;
-		int segTotales;
-		
-		do {
-			System.out.print("Introduzca una hora: ");
-			hora=teclado.nextInt();
-			System.out.print("Introduzca minutos: ");
-			min=teclado.nextInt();
-			System.out.print("Introduzca segundos: ");
-			seg=teclado.nextInt();
-		
-		} while(hora>=0 || hora<=23 || min>=0 || min<=59 || seg>=0 || seg<=59);
-		segTotales=(hora*3600)+(min*60)+seg;
-		System.out.print("Las horas, minutos y segundos introducidos equivalen a "+segTotales);
+        int hora, min, seg;
+        int segTotales;
 
-		teclado.close();
-	}
+        do {
+            System.out.print("Introduzca una hora (0-23): ");
+            hora = teclado.nextInt();
+            System.out.print("Introduzca minutos (0-59): ");
+            min = teclado.nextInt();
+            System.out.print("Introduzca segundos (0-59): ");
+            seg = teclado.nextInt();
+
+            if (hora < 0 || hora > 23 || min < 0 || min > 59 || seg < 0 || seg > 59) {
+                System.out.println("Error: hora, minutos o segundos incorrectos. Intente de nuevo.");
+            }
+
+        } while (hora < 0 || hora > 23 || min < 0 || min > 59 || seg < 0 || seg > 59);
+
+        segTotales = (hora * 3600) + (min * 60) + seg;
+        System.out.println("Las horas, minutos y segundos introducidos equivalen a " + segTotales + " segundos.");
+
+        teclado.close();
+    }
 }

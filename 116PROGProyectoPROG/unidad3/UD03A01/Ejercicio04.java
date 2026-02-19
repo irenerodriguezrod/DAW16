@@ -12,17 +12,20 @@ import java.util.Scanner;
 public class Ejercicio04 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-		int n1, n2;
-		
-		System.out.print("Introduzca el primer número: ");
-		n1=teclado.nextInt();
-		System.out.print("Introduzca el segundo número: ");
-		n2=teclado.nextInt();
-		
-		if (n1>0 && n2>0) {
-			System.out.print((n1+n2)/2.0); //se puede declarar como double o como float para que de decimales
-		}
+        int n1, n2;
 
-		teclado.close();
-	}
+        System.out.print("Introduzca el primer número: ");
+        n1 = teclado.nextInt();
+        System.out.print("Introduzca el segundo número: ");
+        n2 = teclado.nextInt();
+
+        if (n1 > 0 && n2 > 0) {
+            double media = (n1 + n2) / 2.0;
+            System.out.println("La media de los dos números es: " + media);
+        } else {
+            System.out.println("Al menos uno de los números no es positivo, no se puede calcular la media.");
+        }
+
+        teclado.close();
+    }
 }

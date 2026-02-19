@@ -9,30 +9,33 @@
  * Autor: Irene RODRIGUEZ RODRIGUEZ
  * Fecha: 14 de febrero de 2026
  */
+
 import java.util.Scanner;
 
 public class Ejercicio05 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-		int numero1, numero2, numero3, diferencia1, diferencia2;
-		
-		System.out.print("Introduzca el primer numero entero: ");
-		numero1=teclado.nextInt();
-		System.out.print("Introduzca el segundo numero entero: ");
-		numero2=teclado.nextInt();
-		System.out.print("Introduzca el tercer numero entero: ");
-		numero3=teclado.nextInt();
-		
-		diferencia1=-numero3-numero1;
-		diferencia2=numero3-numero2;
-	
-		if (diferencia1>diferencia2) { //if (Math.abs(numero3-numero1)<Math.abs(numero3-numero2)) {
-			System.out.print("El número "+numero3+" está más cerca de: "+numero2);
-		}
-		else {
-			System.out.print("El número "+numero3+" está más cerca de: "+numero1);
-		}
+        int numero1, numero2, numero3;
+        int diferencia1, diferencia2;
 
-		teclado.close();
-	}
+        System.out.print("Introduzca el primer número entero: ");
+        numero1 = teclado.nextInt();
+        System.out.print("Introduzca el segundo número entero: ");
+        numero2 = teclado.nextInt();
+        System.out.print("Introduzca el tercer número entero: ");
+        numero3 = teclado.nextInt();
+
+        diferencia1 = Math.abs(numero3 - numero1);
+        diferencia2 = Math.abs(numero3 - numero2);
+
+        if (diferencia1 < diferencia2) {
+            System.out.println("El número " + numero3 + " está más cerca de: " + numero1);
+        } else if (diferencia2 < diferencia1) {
+            System.out.println("El número " + numero3 + " está más cerca de: " + numero2);
+        } else {
+            System.out.println("El número " + numero3 + " está a la misma distancia de " + numero1 + " y " + numero2);
+        }
+
+        teclado.close();
+    }
 }

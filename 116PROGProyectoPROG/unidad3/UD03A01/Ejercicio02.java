@@ -10,19 +10,19 @@
 import java.util.Scanner;
 
 public class Ejercicio02 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int numero;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero;
 
-		System.out.print("Introduzca un numero: ");
-		numero = teclado.nextInt();
+        System.out.print("Introduzca un número: ");
+        numero = teclado.nextInt();
 
-		if (numero < 0) {
+        if (numero < 0) {
+            numero = -numero; // cambia el signo
+        }
 
-			numero = -numero;
+        System.out.println("El número final es: " + numero);
 
-			System.out.print(-numero);
-		}
-		teclado.close();
-	}
+        teclado.close();
+    }
 }

@@ -17,33 +17,26 @@ import java.util.Scanner;
 
 public class Ejercicio02 {
 	public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-		int n1, n2, n3;
-		
+		Scanner teclado = new Scanner(System.in);
+		int a, b, c;
+
 		System.out.print("Introduzca el primer ángulo del triángulo: ");
-		n1=teclado.nextInt();
+		a = teclado.nextInt();
 		System.out.print("Introduzca el segundo ángulo del triángulo: ");
-		n2=teclado.nextInt();
+		b = teclado.nextInt();
 		System.out.print("Introduzca el tercer ángulo del triángulo: ");
-		n3=teclado.nextInt();
-		//string salida
-		
-		if (n1==90 && n2==90 && n3==90) {
-			System.out.print("No hay error en la entrada");
+		c = teclado.nextInt();
+
+		if (a + b + c != 180) {
+			System.out.println("Error: la suma de los ángulos no es 180. No es un triángulo válido.");
+		} else if (a == 90 || b == 90 || c == 90) {
+			System.out.println("Es un triángulo rectángulo.");
+		} else if (a > 90 || b > 90 || c > 90) {
+			System.out.println("Es un triángulo obtusángulo.");
+		} else { // todos menores de 90
+			System.out.println("Es un triángulo acutángulo.");
 		}
-		
-		if (n1==90 || n2==90 || n3=90){
-			System.out.print("Es un triángulo rectángulo"); // salida="triangulo rectangulo";
-		}
-		else {
-			if (n1>=90 || n2>=90 || n3>=90) {
-				System.out.print("Es un triángulo obtusángulo");// salida="Triangulo obtusangulo";
-			}
-			else {
-				System.out.print("Es un triángulo acutángulo");
-			}
-		}
-		//system.out.print(salida);
+
 		teclado.close();
 	}
 }

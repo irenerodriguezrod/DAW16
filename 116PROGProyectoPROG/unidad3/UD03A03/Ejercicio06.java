@@ -14,15 +14,15 @@ public class Ejercicio06 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int mes;
-        String salida;
 
         System.out.print("Introduzca un número de mes: ");
         mes = teclado.nextInt();
 
         if (mes < 1 || mes > 12) {
-            System.out.print("Error, el número introducido es incorrecto.");
+            System.out.println("Error, el número introducido es incorrecto.");
         } else {
-            salida = switch (mes){
+            // Usando switch como expresión para asignar directamente a 'salida'
+            String salida = switch (mes) {
                 case 1 -> "Enero";
                 case 2 -> "Febrero";
                 case 3 -> "Marzo";
@@ -35,11 +35,12 @@ public class Ejercicio06 {
                 case 10 -> "Octubre";
                 case 11 -> "Noviembre";
                 case 12 -> "Diciembre";
-                default -> "Desconocido";
+                default -> "Desconocido"; // nunca se usará porque ya se validó el rango
             };
-            System.out.print("El mes es: " + salida);
+
+            System.out.println("El mes es: " + salida);
         }
+
         teclado.close();
     }
-
 }

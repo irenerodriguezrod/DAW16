@@ -9,35 +9,42 @@
  * Fecha: 16 de febrero de 2026
  */
 
-
 import java.util.Scanner;
- 
+
 public class Ejercicio03 {
     public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-        int n, i, factorial;
-        
-        System.out.print("Introduzca un numero entero (1-10): ");
+
+        Scanner teclado = new Scanner(System.in);
+        int n;
+        long factorial = 1; // usamos long por buena práctica
+
+        System.out.print("Introduzca un número entero (1-10): ");
         n = teclado.nextInt();
-        
+
         while (n < 1 || n > 10) {
-            System.out.println("Error en la entrada");
-            System.out.print("Introduzca entero (1-10): ");
+            System.out.println("Error en la entrada.");
+            System.out.print("Introduzca un número entero (1-10): ");
             n = teclado.nextInt();
         }
-        
-		factorial=n;
-		System.out.printf("%d! = ",n);
-		if(n>1) {
-			System.out.printf("%d * ",n);
-			for (i=n-1;i>1;i--) {
-				factorial *= i; // Calculando el factorial
-				System.out.printf("%d * ",i);
-			}
-        
-        System.out.printf("1 = %d\n",factorial);
-		}
 
-		teclado.close();
-	}
+        System.out.printf("%d! = ", n);
+
+        if (n == 1) {
+            System.out.println("1");
+        } else {
+            for (int i = n; i >= 1; i--) {
+                factorial *= i;
+
+                if (i > 1) {
+                    System.out.print(i + " * ");
+                } else {
+                    System.out.print(i);
+                }
+            }
+
+            System.out.printf(" = %d%n", factorial);
+        }
+
+        teclado.close();
+    }
 }

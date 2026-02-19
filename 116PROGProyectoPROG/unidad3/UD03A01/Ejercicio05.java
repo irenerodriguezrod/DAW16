@@ -11,23 +11,23 @@
 import java.util.Scanner;
 
 public class Ejercicio05 {
-	public static void main(String[] args) {
-		Scanner teclado = new Scanner(System.in);
-		int n1, n2, aux;
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int n1, n2, aux;
 
-		System.out.print("Introduzca el primer número: ");
-		n1 = teclado.nextInt();
-		System.out.print("Introduzca el segundo número: ");
-		n2 = teclado.nextInt();
+        System.out.print("Introduzca el primer número: ");
+        n1 = teclado.nextInt();
+        System.out.print("Introduzca el segundo número: ");
+        n2 = teclado.nextInt();
 
-		if (n1 > n2) {
-			aux = n1;
-			n1 = n2;
-			n2 = aux;
-		}
+        if (n1 > n2) {
+            aux = n1;
+            n1 = n2;
+            n2 = aux;
+        }
 
-		teclado.close();
+        System.out.printf("Primer número: %d, Segundo número: %d\n", n1, n2);
 
-		System.out.printf("%,%d\n", n1, n2);
-	}
+        teclado.close();
+    }
 }

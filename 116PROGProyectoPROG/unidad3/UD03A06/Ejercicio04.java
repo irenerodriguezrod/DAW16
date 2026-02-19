@@ -13,26 +13,29 @@ import java.util.Scanner;
 
 public class Ejercicio04 {
 	public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-        int n, i, numerosAComprobar;
-        boolean esPrimo;
+		Scanner teclado = new Scanner(System.in);
+		int n, i, numerosAComprobar;
+		boolean esPrimo;
+		int contador = 0;
 		
-		System.out.print("Introduzca los números enteros a comprobar: ");
-		numerosAComprobar=teclado.nextInt();
+		System.out.print("Introduzca el número entero hasta el que comprobar: ");
+		numerosAComprobar = teclado.nextInt();
 		
-		for(n=2;n==numerosAComprobar;n++) {
+		for (n = 2; n <= numerosAComprobar; n++) {
 			esPrimo = true;
-			for(i=2;n/n;i++) {
-				if (n%i=0) {
+			for (i = 2; i <= Math.sqrt(n); i++) {
+				if (n % i == 0) {
 					esPrimo = false;
-					i=n;
+					break;
 				}
 			}
 			if (esPrimo) {
-				System.out.print(n);
+				System.out.println(n);
+				contador++;
 			}
 		}
 
+		System.out.println("Cantidad de primos: " + contador);
 		teclado.close();
 	}
 }
