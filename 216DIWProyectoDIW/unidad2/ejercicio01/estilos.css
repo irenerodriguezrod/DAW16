@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f8ff; /* azul muy claro */
+}
+
+/* CABECERA */
+
+.cabecera {
+    width: 100%;
+    background-color: #2a7f62; /* verde-azulado tipo logo */
+    color: #ffffff;
+    border: 2px solid #1f5c48;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 200px; /* logo más grande */
+    height: auto;
+}
+
+.cabecera-texto {
+    flex: 1;
+}
+
+/*  MENÚ */
+
+.menu {
+    width: 100%;
+    background-color: #3aa78f;
+    border: 2px solid #1f5c48;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 15px 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* MODELO DE CAJAS */
+
+.contenedor {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* 2/3 */
+.contenido-principal {
+    flex: 2;
+    border: 2px solid #1f5c48;
+    background-color: #ffffff;
+    padding: 20px;
+    position: relative;
+}
+
+.imagen-lateral-grande {
+    float: left;
+    width: 450px; 
+    max-width: 50%;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* 1/3 */
+.barra-lateral {
+    flex: 1;
+    border: 2px solid #1f5c48;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* FOOTER */
+
+.pie {
+    width: 100%;
+    background-color: #2a7f62;
+    border: 2px solid #1f5c48;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .cabecera {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+        width: 140px;
+    }
+    .imagen-lateral-grande {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+        width: 80%;
+        max-width: none;
+    }
+    .contenedor {
+        flex-direction: column;
+    }
+}
