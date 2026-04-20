@@ -1,0 +1,183 @@
+/* ===== RESET Y BASE ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+header .subtitle {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ===== SECCIONES (EJERCICIOS) ===== */
+.exercise {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.exercise h2 {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.15rem;
+}
+
+.exercise-content {
+    padding: 1.5rem;
+}
+
+/* ===== EJERCICIO 1: CONTROLES ===== */
+.controls {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.controls button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #2c3e50;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.controls button:hover {
+    background-color: #1a252f;
+}
+
+.media-container {
+    text-align: center;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#multimedia {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    transition: width 0.3s, height 0.3s;
+}
+
+/* ===== EJERCICIO 2: FORMULARIO CAPTIONS ===== */
+.caption-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.caption-form input[type="text"] {
+    flex: 1;
+    padding: 0.6rem 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.caption-form input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.caption-form button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #27ae60;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.caption-form button:hover {
+    background-color: #1e8449;
+}
+
+#captions {
+    min-height: 50px;
+}
+
+#captions p {
+    background-color: #eaf2f8;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #3498db;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#captions p:hover {
+    background-color: #d4e6f1;
+}
+
+/* ===== EJERCICIO 3: GALLERY / SLIDER ===== */
+#gallery img {
+    width: 100%;
+    display: block;
+}
+
+/* Botones NEXT / PREV personalizados (los añade el alumno) */
+.slider-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #e67e22;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.slider-btn:hover {
+    background-color: #d35400;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #888;
+    font-size: 0.85rem;
+}
