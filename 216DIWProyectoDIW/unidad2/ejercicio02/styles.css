@@ -1,0 +1,152 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #999;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.logo {
+    width: 80px;
+    height: 50px;
+    border: 2px solid #999;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-container {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 8px;
+}
+
+.header-btn {
+    padding: 8px 15px;
+}
+
+/* ================= NAV ================= */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 12px;
+    background-color: #ccc;
+    border-bottom: 2px solid #999;
+}
+
+.menu button {
+    padding: 8px 14px;
+    background-color: #bbb;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+/* ================= 3 CUADRADOS GRANDES ================= */
+
+.top-cards {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+.big-card {
+    width: 32%;
+    aspect-ratio: 1 / 1;
+    background-color: #ddd;
+    border: 2px solid #999;
+}
+
+.big-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ================= ZONA INFERIOR ================= */
+
+.bottom-section {
+    display: flex;
+    padding: 20px 30px;
+    gap: 20px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 20%;
+    background-color: #ddd;
+    border: 2px solid #999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar p {
+    font-weight: bold;
+}
+
+/* PRODUCTOS */
+
+.products {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product {
+    background-color: #eee;
+    border: 2px solid #999;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagen */
+
+.product img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom: 2px solid #999;
+}
+
+/* Texto fijo tipo rectángulo */
+
+.product p {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    font-size: 14px;
+    font-weight: bold;
+}
