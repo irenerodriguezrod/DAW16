@@ -229,5 +229,5 @@
 <br>
 
 <div align="right">
-    <p>Última modificación:<i> 25 de enero de 2026</i></p>
+    <p>Última modificación:<i> 6 de octubre de 2026</i></p>
 </div>
