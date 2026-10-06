@@ -1,0 +1,131 @@
+{
+    "curso1": [
+        {
+            "nombre": "Lenguajes de marcas y sistemas de gestión de información",
+            "codigo": "LMSGI",
+            "ruta": "/116LMSGIProyectoLMSGI/index.html",
+            "imagen": "/webroot/media/pokemon/Pikachu.jpg",
+            "alt": "Lenguajes de marcas y sistemas de gestión de información",
+            "id": "Pikachu",
+            "disponible": true
+        },
+        {
+            "nombre": "Bases de datos",
+            "codigo": "BDD",
+            "ruta": "/116BDDProyectoBDD/index.html",
+            "imagen": "/webroot/media/pokemon/Bulbasur.jpg",
+            "alt": "Bases de datos",
+            "id": "Bulbasur",
+            "disponible": true
+        },
+        {
+            "nombre": "Entornos de desarrollo",
+            "codigo": "ED",
+            "imagen": "/webroot/media/pokemon/Charizard.jpg",
+            "alt": "Entornos de desarrollo",
+            "id": "Charizard",
+            "disponible": false
+        },
+        {
+            "nombre": "Sistemas informáticos",
+            "codigo": "SI",
+            "imagen": "/webroot/media/pokemon/Chikorita.jpg",
+            "alt": "Sistemas informáticos",
+            "id": "Chikorita",
+            "disponible": false
+        },
+        {
+            "nombre": "Programación",
+            "codigo": "PROG",
+            "ruta": "/116PROGProyectoPROG/index.html",
+            "imagen": "/webroot/media/pokemon/Eevee.jpg",
+            "alt": "Programación",
+            "id": "Eevee",
+            "disponible": true
+        },
+        {
+            "nombre": "Optativa: Innovación orientada a los sectores productivos",
+            "codigo": "OPT",
+            "imagen": "/webroot/media/pokemon/Jirachi.jpg",
+            "alt": "Optativa: Innovación orientada a los sectores productivos",
+            "id": "Jirachi",
+            "disponible": false
+        },
+        {
+            "nombre": "Inglés",
+            "codigo": "ING",
+            "imagen": "/webroot/media/pokemon/megaGardevoir.jpg",
+            "alt": "Inglés",
+            "id": "megaGardevoir",
+            "disponible": false
+        },
+        {
+            "nombre": "Itinerario Personal para la Empleabilidad",
+            "codigo": "IPE",
+            "imagen": "/webroot/media/pokemon/Mew.jpg",
+            "alt": "Itinerario Personal para la Empleabilidad",
+            "id": "Mew",
+            "disponible": false
+        },
+        {
+            "nombre": "Fundamentos de Contenerización",
+            "codigo": "FC",
+            "imagen": "/webroot/media/pokemon/Rayquaza.jpg",
+            "alt": "Fundamentos de Contenerización",
+            "id": "Rayquaza",
+            "disponible": false
+        }
+    ],
+    "curso2": [
+        {
+            "nombre": "Desarrollo web en entorno cliente",
+            "codigo": "DWEC",
+            "ruta": "/216DWECProyectoDWEC/index.html",
+            "imagen": "/webroot/media/pokemon/Vulpix.jpg",
+            "alt": "Desarrollo web en entorno cliente",
+            "id": "Vulpix",
+            "disponible": true
+        },
+        {
+            "nombre": "Desarrollo web en entorno servidor",
+            "codigo": "DWES",
+            "ruta": "/216DWESProyectoDWES/index.html",
+            "imagen": "/webroot/media/pokemon/Lugia.jpg",
+            "alt": "Desarrollo web en entorno servidor",
+            "id": "Lugia",
+            "disponible": true
+        },
+        {
+            "nombre": "Despliegue de aplicaciones web",
+            "codigo": "DAW",
+            "imagen": "/webroot/media/pokemon/Lucario.jpg",
+            "alt": "Despliegue de aplicaciones web",
+            "id": "Lucario",
+            "disponible": false
+        },
+        {
+            "nombre": "Diseño de interfaces web",
+            "codigo": "DIW",
+            "imagen": "/webroot/media/pokemon/Psyduck.jpg",
+            "alt": "Diseño de interfaces web",
+            "id": "Psyduck",
+            "disponible": false
+        },
+        {
+            "nombre": "Empresa e iniciativa emprendedora",
+            "codigo": "EIE",
+            "imagen": "/webroot/media/pokemon/Snorlax.jpg",
+            "alt": "Empresa e iniciativa emprendedora",
+            "id": "Snorlax",
+            "disponible": false
+        },
+        {
+            "nombre": "Proyecto Final",
+            "codigo": "PROY",
+            "imagen": "/webroot/media/pokemon/Sprigatito.jpg",
+            "alt": "Proyecto Final",
+            "id": "Sprigatito",
+            "disponible": false
+        }
+    ]
+}
