@@ -20,7 +20,7 @@ header h1 {
 }
 
 nav {
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 /* Estilo para el título CFGS DAW */
@@ -208,7 +208,7 @@ footer {
 #versionesAnteriores a {
     color: bisque;
     text-decoration: none;
-    gap: 10px; /* Si quieres que los enlaces también tengan menos espacio */
+    gap: 10px; 
 }
 
 /* 🔹 Diseño Responsive 🔹 */
@@ -261,5 +261,33 @@ footer {
 
     button {
         padding: 12px;
+    }
+
+    .asignaturas {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .titulo-cfgs {
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .curso-content h2 {
+        font-size: 20px;
+    }
+
+    .curso-content {
+        padding: 5px 15px;
+    }
+
+    .imagen-container {
+        height: 250px;
+    }
+
+    footer {
+        font-size: 18px;
+        padding: 15px;
     }
 }
