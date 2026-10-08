@@ -7,28 +7,20 @@
     Fecha de modificación: 17/01/2026
     Descripción: Indice de las asignaturas del CFGS 1º y 2° DAW
 -->
-
+    
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DAW16 | Irene Rodríguez Rodríguez</title>
+    <title>DAW 16 | Irene Rodríguez Rodríguez</title>
 
-    <link rel="icon" href="/webroot/media/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/webroot/media/favicon/favicon.ico">
 
-    <!-- Estilos de la practica -->
-    <link href="/webroot/css/estilos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/webroot/css/fuentes.css">
+    <link rel="stylesheet" href="/webroot/css/estilos.css">
 
-    <!-- Tipografias aplicadas -->
-    <link href="/webroot/css/fuentes.css" rel="stylesheet" type="text/css">
-
-    <!-- Cargar Font Awesome -->
-    <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        rel="stylesheet"
-    >
-
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -37,47 +29,80 @@
 
         <h1>DAW 16 | Irene Rodríguez Rodríguez</h1>
 
-        <nav>
+        <nav aria-label="Seleccionar curso">
             <ul class="curso">
-                <li><label for="curso1" class="curso-btn">1º Curso</label></li>
-                <li><label for="curso2" class="curso-btn">2º Curso</label></li>
+
+                <li>
+                    <button
+                        type="button"
+                        class="curso-btn"
+                        id="curso1-btn"
+                        aria-controls="curso1-content"
+                        aria-pressed="true">
+                        1º Curso
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                        type="button"
+                        class="curso-btn"
+                        id="curso2-btn"
+                        aria-controls="curso2-content"
+                        aria-pressed="false">
+                        2º Curso
+                    </button>
+                </li>
+
             </ul>
         </nav>
 
     </header>
 
-    <!-- Nuevo título CFGS DAW -->
+
     <h2 class="titulo-cfgs">CFGS DAW</h2>
+
 
     <main>
 
-        <!-- 1º Curso -->
-        <input type="radio" id="curso1" name="curso" class="curso" checked />
-
-        <div class="curso-content">
+        <section
+            id="curso1-content"
+            class="curso-content"
+            aria-labelledby="curso1-btn">
 
             <h2>Asignaturas 1º curso</h2>
 
-            <div class="asignaturas" id="asignaturas-curso1">
+            <div
+                class="asignaturas"
+                id="asignaturas-curso1">
+
                 <!-- Las asignaturas se generan desde asignaturas.json -->
+
             </div>
 
-        </div>
+        </section>
 
-        <!-- 2º Curso -->
-        <input type="radio" id="curso2" name="curso" class="curso" />
 
-        <div class="curso-content">
+        <section
+            id="curso2-content"
+            class="curso-content"
+            aria-labelledby="curso2-btn"
+            hidden>
 
             <h2>Asignaturas 2º curso</h2>
 
-            <div class="asignaturas" id="asignaturas-curso2">
+            <div
+                class="asignaturas"
+                id="asignaturas-curso2">
+
                 <!-- Las asignaturas se generan desde asignaturas.json -->
+
             </div>
 
-        </div>
+        </section>
 
     </main>
+
 
     <footer>
 
@@ -86,64 +111,96 @@
             <a
                 href="https://github.com/irenerodriguezrod/DAW16"
                 title="GitHub"
-            >
-                <!-- GitHub -->
-                <i class="fa-brands fa-github github-icon"></i>
+                aria-label="GitHub">
+
+                <i
+                    class="fa-brands fa-github github-icon"
+                    aria-hidden="true">
+                </i>
+
             </a>
+
 
             <a
                 href="https://hub.docker.com/u/irenerodriguez"
                 title="Docker"
-            >
-                <i class="fa-brands fa-docker"></i>
+                aria-label="Docker">
+
+                <i
+                    class="fa-brands fa-docker"
+                    aria-hidden="true">
+                </i>
+
             </a>
 
-            <a href="/feed/canal.xml" title="RSS">
-                <!-- RSS -->
-                <i class="fa-solid fa-rss rss-icon"></i>
+
+            <a
+                href="/feed/canal.xml"
+                title="RSS"
+                aria-label="RSS">
+
+                <i
+                    class="fa-solid fa-rss rss-icon"
+                    aria-hidden="true">
+                </i>
+
             </a>
+
 
             <a
                 href="/webroot/doc/IreneRodriguezR_CurriculumVitae.pdf"
                 title="Curriculum"
-            >
-                <!-- CV -->
-                <i class="fa-solid fa-file"></i>
+                aria-label="Curriculum Vitae">
+
+                <i
+                    class="fa-solid fa-file"
+                    aria-hidden="true">
+                </i>
+
             </a>
+
 
             <a
                 href="https://validator.w3.org/check?uri=https://daw16.vercel.app"
-            >
-                <!-- Validacion W3C -->
+                title="Validar HTML"
+                aria-label="Validar HTML con W3C">
+
                 <img
                     src="/webroot/media/W3C_Icon.svg"
                     alt="Validado por W3C"
                     width="88"
-                    height="31"
-                >
+                    height="31">
+
             </a>
+
 
             <a
                 href="http://validator.w3.org/feed/check.cgi?url=https%3A//daw16.vercel.app/feed/rss.xml"
-            >
-                <!-- Validación RSS -->
+                title="Validar RSS"
+                aria-label="Validar RSS">
+
                 <img
                     src="/webroot/media/valid-rss.png"
                     alt="Valid RSS"
-                    title="Validate my RSS feed"
                     width="88"
-                    height="31"
-                >
+                    height="31">
+
             </a>
 
         </div>
+
 
         <div id="textoDF">
 
             <p>
                 2024-26 Todos los derechos reservados. ©
-                <a href="https://portfolioirene.vercel.app">
+
+                <a
+                    href="https://portfolioirene.vercel.app"
+                    aria-label="Portfolio de Irene Rodríguez Rodríguez">
+
                     Irene Rodríguez Rodríguez
+
                 </a>
             </p>
 
@@ -153,49 +210,46 @@
 
         </div>
 
+
         <div id="versionesAnteriores">
 
-            <a href="/versionesAnteriores/01/index.html" title="Versión 1">
-                <i class="fa-solid fa-1"></i>
+            <a
+                href="/versionesAnteriores/01/index.html"
+                title="Versión 1"
+                aria-label="Versión 1">
+
+                <i
+                    class="fa-solid fa-1"
+                    aria-hidden="true">
+                </i>
+
             </a>
 
-            <i class="fa-solid fa-ellipsis-vertical"></i>
 
-            <a href="/versionesAnteriores/02/index.html" title="Versión 2">
-                <i class="fa-solid fa-2"></i>
+            <i
+                class="fa-solid fa-ellipsis-vertical"
+                aria-hidden="true">
+            </i>
+
+
+            <a
+                href="/versionesAnteriores/02/index.html"
+                title="Versión 2"
+                aria-label="Versión 2">
+
+                <i
+                    class="fa-solid fa-2"
+                    aria-hidden="true">
+                </i>
+
             </a>
 
         </div>
 
     </footer>
 
-    <!-- JavaScript de las asignaturas -->
+
     <script src="/webroot/js/asignaturas.js"></script>
-
-    <!-- estadisticas vercel -->
-    <script>
-        window.va = window.va || function () {
-            (window.vaq = window.vaq || []).push(arguments);
-        };
-    </script>
-
-    <script defer src="/_vercel/insights/script.js"></script>
-
-    <!-- estadisticas velocidad -->
-    <script>
-        window.si = window.si || function () {
-            (window.siq = window.siq || []).push(arguments);
-        };
-    </script>
-
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-
-    <!-- google adsense -->
-    <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6268891554779196"
-        crossorigin="anonymous">
-    </script>
 
 </body>
 

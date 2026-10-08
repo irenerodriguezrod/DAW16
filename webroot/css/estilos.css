@@ -1,10 +1,12 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
+
+
+/* HEADER */
 
 header {
     background-color: #343a40;
@@ -23,25 +25,20 @@ nav {
     margin: 0 auto;
 }
 
-/* Estilo para el título CFGS DAW */
+
+/* TÍTULO */
+
 .titulo-cfgs {
     text-align: center;
     margin-top: 20px;
-    /* reducir para menos espacio */
     margin-bottom: 10px;
-    /* Reducimos el margen inferior */
     font-size: 28px;
     font-weight: bold;
     color: #343a40;
 }
 
-/* Reducir el margen superior del main */
-main {
-    margin-top: 0;
-    /* margen superior de main */
-    margin-bottom: 0;
-}
 
+/* CURSOS */
 
 .curso {
     padding: 0;
@@ -58,37 +55,38 @@ main {
     margin: 0;
     border: none;
     text-align: center;
+    font-size: 16px;
 }
 
 .curso-btn:hover {
     background-color: #555;
 }
 
-/* Estilos para los cursos */
+.curso-btn:focus-visible {
+    outline: 3px solid #F58321;
+    outline-offset: 3px;
+}
+
+
+/* CONTENIDO */
+
 .curso-content {
-    display: none;
     margin-top: 12px;
     padding: 20px;
     text-align: center;
 }
 
-/* contenido solo del curso seleccionado */
-input[type="radio"] {
+.curso-content[hidden] {
     display: none;
-    /* Oculta los radios */
 }
 
-input[type="radio"]:checked+.curso-content {
-    display: block;
-}
 
-/* Estilos para las asignaturas */
+/* ASIGNATURAS */
+
 .asignaturas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 asignaturas por fila */
     gap: 30px;
-    /* Aumentar espacio entre asignaturas */
     margin-top: 20px;
 }
 
@@ -96,7 +94,6 @@ input[type="radio"]:checked+.curso-content {
     position: relative;
     width: 100%;
     height: 350px;
-    /* Aumentar el tamaño de las imágenes */
     overflow: hidden;
     border-radius: 10px;
     transition: 0.3s;
@@ -111,12 +108,10 @@ input[type="radio"]:checked+.curso-content {
 
 .imagen-container:hover img {
     filter: blur(4px);
-    /* Aplica el desenfoque */
 }
 
 .imagen-container:hover .asignatura {
     opacity: 0;
-    /* Elimina la visibilidad de la abreviatura al hacer hover */
 }
 
 .asignatura {
@@ -125,7 +120,6 @@ input[type="radio"]:checked+.curso-content {
     left: 10px;
     color: white;
     font-size: 20px;
-    /* Aumentar tamaño de la abreviatura */
     opacity: 1;
     transition: opacity 0.3s ease;
 }
@@ -136,17 +130,17 @@ input[type="radio"]:checked+.curso-content {
     left: 10px;
     color: white;
     font-size: 16px;
-    /* Ajustar el tamaño de texto */
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .imagen-container:hover .asignatura-full {
     opacity: 1;
-    /* Muestra el nombre completo de la asignatura al hacer hover */
 }
 
-/* Estilos del Footer */
+
+/* FOOTER */
+
 footer {
     background-color: #343a40;
     color: white;
@@ -165,12 +159,19 @@ footer {
 
 #redes-sociales a {
     text-decoration: none;
-    color: white;
+    color: #F58321;
+    font-weight: bold;
     transition: opacity 0.3s ease;
 }
 
 #redes-sociales a:hover {
     opacity: 0.7;
+}
+
+#redes-sociales a:focus-visible {
+    outline: 3px solid #F58321;
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 #redes-sociales i,
@@ -186,11 +187,8 @@ footer {
     transform: scale(1.1);
 }
 
-/* Para la versión en un color diferente */
-#redes-sociales a {
-    font-weight: bold;
-    color: #F58321;
-}
+
+/* TEXTO FOOTER */
 
 #textoDF {
     font-size: 15px;
@@ -200,86 +198,102 @@ footer {
     color: #F58321;
 }
 
+#textoDF p a:focus-visible {
+    outline: 3px solid #F58321;
+    outline-offset: 3px;
+}
+
+
+/* VERSIONES ANTERIORES */
+
 #versionesAnteriores {
-    font-size: 15px; /* tamaño */
-    gap: 10px; /* espacio entre elementos */
+    font-size: 15px;
+    gap: 10px;
 }
 
 #versionesAnteriores a {
     color: bisque;
     text-decoration: none;
-    gap: 10px; 
+    gap: 10px;
 }
 
-/* 🔹 Diseño Responsive 🔹 */
-@media screen and (max-width: 1024px) {
-
-    /* Adaptación para tablets */
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        justify-content: center;
-    }
-
-    form {
-        width: 80%;
-    }
+#versionesAnteriores a:focus-visible {
+    outline: 3px solid #F58321;
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
-@media screen and (max-width: 768px) {
 
-    /* Adaptación para móviles */
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
     header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
         flex-direction: column;
         gap: 10px;
-        padding: 10px;
     }
 
-    nav ul li {
-        text-align: center;
-    }
-
-    form {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    /* Ajustes específicos para pantallas muy pequeñas */
-    header h1 {
-        font-size: 20px;
-    }
-
-    button {
-        padding: 12px;
+    nav {
+        margin: 0;
     }
 
     .asignaturas {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso-btn {
+        display: block;
+        width: 150px;
+    }
+
+    .asignaturas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .imagen-container {
+        height: 300px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+        text-align: center;
     }
 
     .titulo-cfgs {
         font-size: 24px;
-        margin-top: 10px;
-        margin-bottom: 5px;
+    }
+
+    .curso-content {
+        padding: 5px 15px;
     }
 
     .curso-content h2 {
         font-size: 20px;
     }
 
-    .curso-content {
-        padding: 5px 15px;
+    .asignaturas {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .imagen-container {
@@ -290,4 +304,9 @@ footer {
         font-size: 18px;
         padding: 15px;
     }
+
+    #textoDF {
+        font-size: 13px;
+    }
+
 }
