@@ -36,6 +36,7 @@ function mostrarAsignaturas(asignaturas, contenedorId) {
 
         imagen.src = asignatura.imagen;
         imagen.alt = asignatura.alt;
+        imagen.loading = "lazy";
         imagen.id = asignatura.id;
 
 
